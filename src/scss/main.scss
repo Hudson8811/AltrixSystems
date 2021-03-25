@@ -1,0 +1,22 @@
+/* Libs */
+@import 'vendor/fonts.css';
+@import "vendor/font-awesome.min.css";
+@import "vendor/jquery.fancybox.min.css";
+@import 'vendor/reset.css';
+@import 'vendor/jquery.fancybox.min.css';
+@import 'vendor/slick.scss';
+@import 'vendor/jquery.mCustomScrollbar.min.scss';
+
+/* Global */
+@import "utils/vars";
+@import "utils/mixin";
+@import "utils/media";
+@import "utils/glob";
+
+/* Components */
+@import "components/button";
+@import "components/title";
+
+/* Blocks */
+@import "blocks/_header";
+@import "blocks/socials";

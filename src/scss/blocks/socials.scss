@@ -1,0 +1,17 @@
+.socials {
+	display: flex;
+	align-items: center;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 14px;
+		}
+	}
+
+	&__link {
+		i {
+			font-family: $fa;
+			color: $blue;
+		}
+	}
+}

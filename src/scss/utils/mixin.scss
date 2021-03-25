@@ -1,0 +1,44 @@
+/* Media queries */
+@mixin mMax {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mMid {
+	@media (max-width: 758px) {
+		@content;
+	}
+}
+
+@mixin pMax {
+	@media (max-width: 580px) {
+		@content;
+	}
+}
+
+@mixin dMax {
+	@media (max-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin dMin {
+	@media (min-width: 1301px) {
+		@content;
+	}
+}
+
+/* Hover */
+@mixin hover {
+	@media (min-width: 1024px) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+/* Transition */
+@mixin transition($args...) {
+	transition: $args 0.3s ease;
+}
