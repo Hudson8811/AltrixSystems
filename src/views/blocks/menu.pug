@@ -1,1 +1,19 @@
 .menu
+  - let dropdown = ['Блокчейн (Blockchain)', 'Машинное обучение (Machine learning)', 'Безопасность приложений', 'Автоматизация бизнес-процессов', 'Заказная разработка', 'DevOps-консалтинг'];
+  - let MENU_LIST = [{text: 'Информационная безопасность', dropdown: dropdown}, {text: 'Информационные технологии', dropdown: dropdown}, {text: 'Разработка ПО', dropdown: dropdown}, {text: 'Решения под ключ', dropdown: dropdown}, {text: 'Каталог', dropdown: dropdown}, {text: 'О компании', dropdown: dropdown}];
+
+  +logo(page.title === 'index.html')
+
+  ul.menu__list
+    each item in MENU_LIST
+      li.menu__item 
+        a.menu__link(href="#")= item.text
+        .menu__dropdown.dropdown 
+          .dropdown__title= item.text 
+          ul.dropdown__list
+            each subitem in item.dropdown 
+              li.menu__item 
+                a.menu__link(href="#")= subitem
+
+
+

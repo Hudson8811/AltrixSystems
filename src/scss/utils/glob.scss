@@ -1,39 +1,40 @@
 body {
-	margin: 0;
-	font-family: $mainFont;
-	font-size: 15px;
-	line-height: 20px;
-	color: $mainColor;
-	background-color: $white;
+  margin: 0;
+  font-family: $mainFont;
+  font-size: 15px;
+  line-height: 20px;
+  color: $mainColor;
+  background-color: $white;
 }
 
 * {
-	outline: none !important;
+  outline: none !important;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 ul,
 ol {
-	list-style: none;
+  list-style: none;
 }
 
 .container {
-	position: relative;
-	width: calc(100% - 76px);
-	max-width: 1240px;
-	margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .wrapper {
-	position: relative;
-	width: 100%;
-	max-width: 1920px;
-	margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 
-	&-flex {
+  /*&-flex {
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -64,5 +65,5 @@ ol {
 				}
 			}
 		}
-	}
+	}*/
 }

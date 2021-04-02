@@ -1,117 +1,119 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 50px;
-	padding: 10px 22px;
-	background-color: $white;
-	box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1900px;
+  //height: 50px;
+  margin: 0 auto;
+  padding: 10px 22px;
+  background-color: $white;
+  box-sizing: border-box;
 
-	&__left,
-	&__right {
-		display: flex;
-		align-items: center;
-	}
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
 
-	&__phone {
-		display: flex;
-		align-items: center;
-	}
+  &__phone {
+    display: flex;
+    align-items: center;
+  }
 
-	&__burger {
-		display: flex;
-		align-items: center;
-		width: 31px;
-		height: 18px;
-		position: relative;
-		cursor: pointer;
-		transition-duration: 0.4s;
-		margin-left: 64px;
+  &__burger {
+    display: flex;
+    align-items: center;
+    width: 31px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    //margin-left: 64px;
 
-		.icon-left {
-			position: absolute;
-			top: 6px;
-			width: 19px;
-			height: 3px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-left {
+      position: absolute;
+      top: 6px;
+      width: 19px;
+      height: 3px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		.icon-left:before {
-			content: "";
-			width: 19px;
-			height: 3px;
-			position: absolute;
-			top: -6px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-left::before {
+      content: "";
+      width: 19px;
+      height: 3px;
+      position: absolute;
+      top: -6px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		.icon-left:after {
-			content: "";
-			width: 19px;
-			height: 3px;
-			position: absolute;
-			top: 6px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-left::after {
+      content: "";
+      width: 19px;
+      height: 3px;
+      position: absolute;
+      top: 6px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		.icon-right {
-			position: absolute;
-			top: 6px;
-			left: 6px;
-			width: 19px;
-			height: 3px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-right {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 19px;
+      height: 3px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		.icon-right:before {
-			content: "";
-			width: 19px;
-			height: 3px;
-			position: absolute;
-			top: -6px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-right:before {
+      content: "";
+      width: 19px;
+      height: 3px;
+      position: absolute;
+      top: -6px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		.icon-right:after {
-			content: "";
-			width: 19px;
-			height: 3px;
-			position: absolute;
-			top: 6px;
-			transition-duration: 0.4s;
-			background-color: $blue;
-		}
+    .icon-right:after {
+      content: "";
+      width: 19px;
+      height: 3px;
+      position: absolute;
+      top: 6px;
+      transition-duration: 0.4s;
+      background-color: $blue;
+    }
 
-		&.open .icon-left {
-			transition-duration: 0.4s;
-			background: transparent;
-		}
+    &.open .icon-left {
+      transition-duration: 0.4s;
+      background: transparent;
+    }
 
-		&.open .icon-left:before {
-			transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
-		}
+    &.open .icon-left:before {
+      transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+    }
 
-		&.open .icon-left:after {
-			transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
-		}
+    &.open .icon-left:after {
+      transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+    }
 
-		&.open .icon-right {
-			transition-duration: 0.4s;
-			background: transparent;
-		}
+    &.open .icon-right {
+      transition-duration: 0.4s;
+      background: transparent;
+    }
 
-		&.open .icon-right:before {
-			transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
-		}
+    &.open .icon-right:before {
+      transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+    }
 
-		&.open .icon-right:after {
-			transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
-		}
-	}
+    &.open .icon-right:after {
+      transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+    }
+  }
 }

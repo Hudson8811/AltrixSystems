@@ -1,1 +1,48 @@
-.footer
+- let FOOTER_MENU_1 = ['Защита АСУ ТП', 'Сетевая безопасность', 'Криптографическая защита', 'Мониторинг событий безопасности (SIEM)', 'Антивирусная защита', 'Управление привелегированными пользователями (IDM)', 'Защита от несанкционированного доступа', 'Обнаружение и предотвращение вторжений (IDS/IPS)', 'Патч-менеджмент', 'Управление процессами информационной безопасности', 'Киберполигон', 'Безопасный удаленный доступ', 'Резервное копирование информации', 'Реагирование на инциденты (IPR)', 'Подключение к ГосСОПКА'];
+- let FOOTER_MENU_2 = ['Защита критической информационной структуры (187-ФЗ)', 'Защита персональных данных (152-ФЗ)', 'Защита коммерческой тайны (98-ФЗ)', 'Проектирование систем защиты информации', 'Атестация информационных систем', 'Внедрение средств защиты информации', 'Сертификация ПО', 'Оценка эффективности защиты информации', 'Тестирование на проникновение', 'Red Team', 'Киберучения', 'Аудит информационной безопасности', 'Обучение (повышение осведомленности)'];
+- let FOOTER_MENU_3 = ['Корпоративные сети', 'Инфраструктурные решения', 'Интеллектуальное видеонаблюдение и аналитика'];
+- let FOOTER_MENU_4 = ['Блокчейн (Blockchain)', 'Машинное обучение (Machine learning)', 'Безопасность приложений', 'Автоматизация бизнес-процессов', 'Заказная разработка', 'DevOps-консалтинг'];
+- let FOOTER_MENU_5 = ['Наша миссия', 'Контакты', 'Лицензия', 'Карьера', 'Вакансии', 'Новости'];
+
+footer.footer
+  .footer__container.container
+    .footer__column 
+      .footer__menu
+        .footer__menu-title Решение под ключ
+        ul.footer__menu-list
+          each item in FOOTER_MENU_1 
+            li.footer__menu-item 
+              a.footer__menu-link(href="#")= item
+    .footer__column 
+      .footer__menu
+        .footer__menu-title Информационная безопасность
+        ul.footer__menu-list
+          each item in FOOTER_MENU_2
+            li.footer__menu-item 
+              a.footer__menu-link(href="#")= item
+    .footer__column 
+      .footer__menu
+        .footer__menu-title Информационные технологии
+        ul.footer__menu-list
+          each item in FOOTER_MENU_3
+            li.footer__menu-item 
+              a.footer__menu-link(href="#")= item
+      .footer__menu
+        .footer__menu-title Разработка ПО
+        ul.footer__menu-list
+          each item in FOOTER_MENU_4
+            li.footer__menu-item 
+              a.footer__menu-link(href="#")= item
+    .footer__column 
+      .footer__menu
+        .footer__menu-title О компании
+        ul.footer__menu-list
+          each item in FOOTER_MENU_5
+            li.footer__menu-item 
+              a.footer__menu-link(href="#")= item
+    .footer__links 
+      a(href="#") Условия обработки персональных данных
+      a(href="#") Политика конфиденциальности
+    .footer__bottom
+      .footer__copyright © Altirix Systems 2010-2021 
+      .footer__info Адрес обратной связи для сообщений о коррупции: <a href="mailto:doverie@altirix.ru">doverie@altirix.ru</a>

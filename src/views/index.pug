@@ -10,4 +10,166 @@ block vars
 
 
 block main
+	.hero
+		.container
+			section.smart-search
+				.smart-search__title Умный поиск
+				.smart-search__text Мы запустили машинное обучение, пожалуйста, воспользуйтесь нашим интеллектуальным поиском
+				.smart-search__form 
+					form(action="#", method="post")
+						button.smart-search__form-tags(type="button") #
+						label
+							input(type="search", name="search", placeholder="Поиск решений...") 
+						button(type="submit")
+							+icon('loupe')(width="25", height="25")
+		.main-slider.swiper-container
+			.swiper-wrapper 
+				.main-slider__slide.swiper-slide
+					.container
+						.main-slider__slide-content 
+							.main-slider__slide-pretitle Информационная безопасность
+							.main-slider__slide-title Защитная прошивка для IoT
+							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
+							+readmore-btn('main-slider__slide-btn')
 
+
+	section.about-section
+		.about-section__container.container 
+			.about-section__main
+				+title('О компании', 'Некоторый уточняющий подзаголовок', '.about-section__title')
+
+				.about-section__text 
+					p Таким образом, постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям.
+
+					p Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований способствует подготовке и реализации первоочередных требований. Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности.
+
+					p Таким образом, курс на социально-ориентированный национальный проект говорит о возможностях модели развития. А ещё представители современных социальных резервов, инициированные исключительно синтетически, функционально разнесены на независимые элементы.
+
+				+readmore-btn('about-section__btn')
+			.about-section__aside
+				+news-card('about-section__news', 'news-preview-1', 'Итоги IV Кейс-Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.')
+				+news-card('about-section__news', 'news-preview-2', 'Итоги IV Кейс-Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.')
+
+	section.direction-section
+		.direction-section__container.container 
+			+title('Направления деятельности', 'Еще один какой-нибудь уточняющий подзаголовок для этого раздела', 'direction-section__title')
+
+			ul.direction-section__list 
+				li.direction-section__item.dir-card
+					.dir-card__bg
+						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
+					.dir-card__icon 
+						+icon("sphere")( width="91", height="91")
+					.dir-card__bottom
+						.dir-card__title Текстовый текст
+						a.dir-card__readmore(href="#") Подробнее
+				li.direction-section__item.dir-card
+					.dir-card__bg
+						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
+					.dir-card__icon 
+						+icon("notebook")(width="98", height="96")
+					.dir-card__bottom
+						.dir-card__title Текстовый текст
+						a.dir-card__readmore(href="#") Подробнее
+				li.direction-section__item.dir-card
+					.dir-card__bg
+						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
+					.dir-card__icon 
+						+icon("notebook")(width="98", height="96")
+					.dir-card__bottom
+						.dir-card__title Текстовый текст
+						a.dir-card__readmore(href="#") Подробнее
+				li.direction-section__item.dir-card
+					.dir-card__bg
+						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
+					.dir-card__icon 
+						+icon("sphere")( width="91", height="91")
+					.dir-card__bottom
+						.dir-card__title Текстовый текст
+						a.dir-card__readmore(href="#") Подробнее
+				
+	section.projects-section
+		.projects-section__container.container
+			+title('Знаковые проекты', 'Обобщающий подзаголовок о значимости для организации ее проектов', 'projects-section__title')
+
+			- let PROJECTS = ['Проектирование СБ 30КИИ А0 «С0 ЕЭС»', 'Аттестация АСЗИ Конституционного Суда РФ', 'Нагрузочное тестирование АО «Тандер»', 'Киберучения в ПАО «Банк Санкт-Петербург»', 'Проектирование СБ 30КИИ А0 «С0 ЕЭС»'];
+
+			.projects-section__carousel.swiper-container
+				.swiper-wrapper 
+					each title in PROJECTS
+						.swiper-slide
+							.project-preview
+								.project-preview__image
+									img(src="img/project-placeholder.jpg", srcset="img/project-placeholder.jpg 2x", width="150", height="150", alt="")
+								.project-preview__title= title
+								a.project-preview__readmore(href="#") Подробнее
+				
+				.projects-section__carousel-bottom
+					.projects-section__carousel-nav
+						button.nav-btn.nav-btn--prev(type="button")
+							+icon('chevron-left')(width="12", height="20")
+						button.nav-btn.nav-btn--next(type="button")
+							+icon('chevron-right')(width="12", height="20")
+					.projects-section__carousel-pag 
+					a.projects-section__all(href="#") Подробнее
+
+	section.partners 
+		.partners__container.container 
+			+title('Партнеры и статусы', 'Некоторый теплый и уверенный подзаголовок о партнерах с которыми работает организация', 'partners__title')
+
+			ul.partners__list
+				- let j = 1;
+				- let PARTNERS = [{w: '183', h: '40'}, {w: '121', h: '60'}, {w: '184', h: '36'}, {w: '186', h: '33'}, {w: '227', h: '70'}, {w: '129', h: '89'}, {w: '178', h: '49'}, {w: '182', h: '22'}, {w: '217', h: '72'}, {w: '229', h: '40'}, {w: '187', h: '83'}, {w: '223', h: '47'}, {w: '167', h: '84'}, {w: '217', h: '93'}, {w: '226', h: '56'}];
+				each item, index in PARTNERS
+					li.partners__item 
+						img(src="img/partners/" + (index + 1) + ".png", srcset="img/partners/" + (index + 1) + "@2x.png 2x", width= item.w, height= item.h, alt="")
+
+	section.contacts-section
+		.contacts-section__container.container
+			.contacts-section__main 
+				h2.contacts-section__title Контакты
+				.contacts-section__email 
+					+icon('mail')(width="20", height="16")
+					a(href="mailto:Info@altirix.ru") Info@altirix.ru
+				.contacts-section__phones 
+					+icon('phone')(width="12", height="12")
+					a(href="tel:") +7 (812) 716-14-14
+					a(href="tel:") +7 (812) 716-14-14
+				.contacts-section__main-title Адрес
+				address.contacts-section__address 
+					span.contacts-section__address-icon 
+						+icon('pin')(width="14", height="20")
+					| Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация
+				.contacts-section__requisite ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»
+					a(href="#") Посмотреть на карте
+				
+				a.btn.btn--outline(href="#", download) Скачать перезнтацию
+
+			.contacts-section__form
+				.contacts-section__form-title Связаться с нами
+				
+				form(action="#", method="post") 
+					label.contacts-section__field.field
+						span.field__hint ФИО
+						input(type="text", name="name")
+					
+					label.contacts-section__field.field
+					span.field__hint Контактный телефон
+						input(type="tel", name="tel")
+					
+					label.contacts-section__field.field
+						span.field__hint Email
+						input(type="email", name="email")
+					
+					
+					label.contacts-section__field.field
+						span.field__hint Название компании
+						input(type="text", name="company")
+					
+					label.contacts-section__field.field
+						span.field__hint Что Вас интересует?
+						textarea(name="message") 
+					
+					button.contacts-section__send.btn(type="submit") Отправить
+				
+				.contacts-section__form-bottom Нажимая на кнопку «Отправить» вы соглашаетсь с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>
