@@ -1,0 +1,46 @@
+.about-section {
+  padding: 83px 0 77px;
+  background-color: $grey-f8;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin-bottom: 65px;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: 1.7333;
+
+    p {
+      margin: 0;
+    }
+    p + p {
+      margin-top: 32px;
+    }
+  }
+
+  &__aside {
+    width: 100%;
+    max-width: 632px;
+
+    &-bottom {
+      margin-top: 34px;
+      text-align: right;
+    }
+  }
+
+  &__news + &__news {
+    margin-top: 36px;
+  }
+}

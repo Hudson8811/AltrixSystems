@@ -1,0 +1,115 @@
+.smart-search {
+  max-width: 520px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.86667;
+    color: $dark-5a;
+  }
+
+  &__form {
+    &-tags {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      z-index: 1;
+      transform: translateY(-50%);
+      padding: 10px;
+      font-size: 16px;
+      line-height: 1;
+      color: $blue;
+      font-weight: 500;
+      border: none;
+      background-color: transparent;
+      appearance: none;
+      cursor: pointer;
+
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        color: $blue-2;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    form {
+      position: relative;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 16px 50px;
+      font-size: 15px;
+      line-height: 1.1;
+      border: solid 1px $blue;
+      border-radius: 3px;
+      transition: 0.2s;
+      appearance: none;
+
+      &::placeholder {
+        color: $grey-c0;
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        border-color: lighten($blue, 20%);
+      }
+    }
+
+    button[type="submit"] {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      z-index: 1;
+      transform: translateY(-50%);
+      padding: 12px;
+      border: none;
+      background-color: transparent;
+      appearance: none;
+      cursor: pointer;
+      transition: 0.2s;
+
+      svg {
+        display: block;
+        fill: $blue;
+
+        transition: 0.2s;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        svg {
+          fill: $blue-2;
+        }
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}

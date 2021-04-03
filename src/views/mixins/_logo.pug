@@ -1,13 +1,13 @@
-mixin logo(flag)
+mixin logo(flag, cl)
   if flag
-    a.menu__logo.logo
+    a(class= cl ? cl + ' logo' : 'logo')
       .logo__image 
         img(src="img/logo.svg", width="55", height="55", alt="")
       .logo__text 
         b Альтирикс
         | системс
   else 
-    a.menu__logo.logo(href="index.html")
+    a(class= cl ? cl + ' logo' : 'logo', href="index.html")
       .logo__image 
         img(src="img/logo.svg", width="55", height="55", alt="")
       .logo__text 

@@ -16,7 +16,19 @@
 /* Components */
 @import "components/button";
 @import "components/title";
+@import "components/burger";
+@import "components/arrow-link";
 
 /* Blocks */
+@import "blocks/smart-search";
+@import "blocks/news-card";
+@import "blocks/dir-card";
 @import "blocks/_header";
+@import "blocks/logo";
+@import "blocks/dropdown";
+@import "blocks/menu";
 @import "blocks/socials";
+@import "blocks/main-slider";
+@import "blocks/hero";
+@import "blocks/about-section";
+@import "blocks/direction-section";

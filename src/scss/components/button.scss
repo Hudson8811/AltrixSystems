@@ -1,3 +1,59 @@
 .button {
+  $self: &;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 
+  display: inline-flex;
+  padding: 15px 59px;
+  font-size: 19px;
+  line-height: 1.1;
+  color: $white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    margin-left: 8px;
+    align-self: center;
+    transition: 0.2s;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #446bb2;
+    background-image: linear-gradient(
+      270deg,
+      #6d489e 0%,
+      rgba(58, 67, 151, 0) 100%
+    );
+
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    #{$self}__icon {
+      transform: translateX(6px);
+    }
+
+    &::before {
+      opacity: 0.9;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

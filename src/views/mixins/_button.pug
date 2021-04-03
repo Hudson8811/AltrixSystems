@@ -3,9 +3,11 @@ mixin button(text, className, svgName, href)
 		a.button(href=href, class=className, target='_blank')&attributes(attributes)
 			span= text
 			if svgName
-				+icon(svgName)
+				span.button__icon
+					+icon(svgName)
 	else
-		button.button(class=className)&attributes(attributes)
+		button.button(class=className, type="button")&attributes(attributes)
 			span= text
 			if svgName
-				+icon(svgName)
+				span.button__icon
+					+icon(svgName)

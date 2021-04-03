@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: $mainFont;
@@ -18,6 +27,30 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Удалить круглые углы */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+/* Скрыть кнопку отмены */
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Скрыть лупу */
+::-webkit-search-results-button {
+  -webkit-appearance: none;
 }
 
 .container {

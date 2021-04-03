@@ -1,0 +1,42 @@
+.dir-card {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 27px 36px 22px;
+    background-color: $dark-5f;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__title {
+    font-size: 31px;
+    line-height: 1.6129;
+    color: $white;
+    font-weight: 500;
+    align-self: baseline;
+  }
+  &__readmore {
+    color: $white;
+    align-self: baseline;
+
+    svg {
+      fill: $white;
+    }
+  }
+}

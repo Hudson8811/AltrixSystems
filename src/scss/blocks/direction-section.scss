@@ -1,0 +1,46 @@
+.direction-section {
+  position: relative;
+  z-index: 0;
+  padding: 93px 0;
+  background-color: $grey-f8;
+  background-image: linear-gradient(to bottom, transparent 38.38%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 61.62%;
+    background-image: linear-gradient(
+      360deg,
+      #614586 0%,
+      rgba(89, 65, 153, 0.51806) 43.69%,
+      rgba(55, 67, 152, 0) 100%
+    );
+    background-color: #4265ae;
+  }
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: -36px 0 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(50% - 18px);
+    margin-top: 36px;
+  }
+}

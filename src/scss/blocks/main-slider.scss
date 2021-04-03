@@ -1,0 +1,33 @@
+.main-slider {
+  &__slide {
+    &-content {
+      max-width: 530px;
+    }
+
+    &-pretitle {
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 1.4;
+      color: $grey-c0;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      max-width: 440px;
+      margin-bottom: 25px;
+      font-size: 39px;
+      line-height: 1.282;
+      font-weight: 700;
+    }
+
+    &-text {
+      margin-bottom: 32px;
+      font-size: 19px;
+      line-height: 1.1;
+    }
+
+    &-btn {
+    }
+  }
+}

@@ -12,4 +12,5 @@ mixin news-card(className, img, title, text, date, tag)
             span.news-card__date-icon 
               +icon('clock')(width="20", height="20")
             time(datetime= date.attr)= date.text
-        a.news-card__readmore(href="#") Подробнее
+        a.news-card__readmore.arrow-link(href="#") Подробнее
+          +icon('triangle-right')(width="7", height="10")
