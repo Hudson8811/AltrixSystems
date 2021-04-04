@@ -1,0 +1,126 @@
+.footer {
+  padding-top: 88px;
+  background-color: $dark-5f;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: calc(25% - 27px);
+  }
+
+  &__menu {
+    &-title {
+      margin-bottom: 15px;
+      padding-bottom: 18px;
+      font-size: 17px;
+      line-height: 1.2353;
+      color: $white;
+      font-weight: 600;
+      border-bottom: solid 1px $dark-88;
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      margin-bottom: 19px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-link {
+      font-size: 15px;
+      line-height: 1.46666;
+      color: $grey-cf;
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $white;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__menu + &__menu {
+    margin-top: 46px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 52px;
+    margin-bottom: 19px;
+
+    a {
+      font-size: 15px;
+      line-height: 1.46666;
+      color: $grey-cf;
+      transition: 0.2s;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        text-decoration: none;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    a + a {
+      margin-left: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 0 22px;
+    border-top: solid 1px $dark-88;
+  }
+
+  &__copyright {
+    font-size: 15px;
+    line-height: 1.46666;
+    color: $grey-cf;
+  }
+
+  &__info {
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 1.46666;
+    color: $grey-cf;
+
+    a {
+      color: $grey-cf;
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $white;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}

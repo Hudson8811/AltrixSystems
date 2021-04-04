@@ -1,0 +1,11 @@
+.navigate {
+  display: flex;
+
+  &__btn {
+    align-self: center;
+  }
+
+  &__btn + &__btn {
+    margin-left: 14px;
+  }
+}

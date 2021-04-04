@@ -1,11 +1,12 @@
 /* Libs */
 @import "vendor/fonts.css";
-@import "vendor/font-awesome.min.css";
+//@import "vendor/font-awesome.min.css";
 @import "vendor/jquery.fancybox.min.css";
 @import "vendor/reset.css";
-@import "vendor/jquery.fancybox.min.css";
-@import "vendor/slick.scss";
+//@import "vendor/jquery.fancybox.min.css";
+//@import "vendor/slick.scss";
 @import "vendor/jquery.mCustomScrollbar.min.scss";
+@import "vendor/swiper-bundle";
 
 /* Global */
 @import "utils/vars";
@@ -17,13 +18,19 @@
 @import "components/button";
 @import "components/title";
 @import "components/burger";
+@import "components/field";
 @import "components/arrow-link";
+@import "components/nav-btn";
+@import "components/navigate";
+@import "components/paginate";
 
 /* Blocks */
 @import "blocks/smart-search";
 @import "blocks/news-card";
+@import "blocks/project-preview";
 @import "blocks/dir-card";
 @import "blocks/_header";
+@import "blocks/footer";
 @import "blocks/logo";
 @import "blocks/dropdown";
 @import "blocks/menu";
@@ -32,3 +39,6 @@
 @import "blocks/hero";
 @import "blocks/about-section";
 @import "blocks/direction-section";
+@import "blocks/projects-section";
+@import "blocks/partners-section";
+@import "blocks/contacts-section";

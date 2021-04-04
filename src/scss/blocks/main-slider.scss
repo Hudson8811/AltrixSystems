@@ -1,5 +1,6 @@
 .main-slider {
   &__slide {
+    box-sizing: border-box;
     &-content {
       max-width: 530px;
     }
@@ -29,5 +30,9 @@
 
     &-btn {
     }
+  }
+
+  &__bottom {
+    padding-top: 58px;
   }
 }

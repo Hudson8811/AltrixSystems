@@ -22,7 +22,7 @@ block main
 							input(type="search", name="search", placeholder="Поиск решений...") 
 						button(type="submit")
 							+icon('loupe')(width="25", height="25")
-		.main-slider.swiper-container
+		.main-slider.swiper-container.__js_main-slider
 			.swiper-wrapper 
 				.main-slider__slide.swiper-slide
 					.container
@@ -33,7 +33,36 @@ block main
 							a.main-slider__slide-btn.button(href="#") Подробнее
 								span.button__icon 
 									+icon('arrow-right')(width="18", height="12")
-
+				.main-slider__slide.swiper-slide
+					.container
+						.main-slider__slide-content 
+							.main-slider__slide-pretitle Информационная безопасность
+							.main-slider__slide-title Защитная прошивка для IoT
+							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
+							a.main-slider__slide-btn.button(href="#") Подробнее
+								span.button__icon 
+									+icon('arrow-right')(width="18", height="12")
+				.main-slider__slide.swiper-slide
+					.container
+						.main-slider__slide-content 
+							.main-slider__slide-pretitle Информационная безопасность
+							.main-slider__slide-title Защитная прошивка для IoT
+							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
+							a.main-slider__slide-btn.button(href="#") Подробнее
+								span.button__icon 
+									+icon('arrow-right')(width="18", height="12")
+				.main-slider__slide.swiper-slide
+					.container
+						.main-slider__slide-content 
+							.main-slider__slide-pretitle Информационная безопасность
+							.main-slider__slide-title Защитная прошивка для IoT
+							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
+							a.main-slider__slide-btn.button(href="#") Подробнее
+								span.button__icon 
+									+icon('arrow-right')(width="18", height="12")
+			.main-slider__bottom.container
+				.main-slider__pag.paginate
+					
 	section.about-section
 		.about-section__container.container 
 			.about-section__main
@@ -109,36 +138,37 @@ block main
 		.projects-section__container.container
 			+title('Знаковые проекты', 'Обобщающий подзаголовок о значимости для организации ее проектов', 'projects-section__title')
 
-			- let PROJECTS = ['Проектирование СБ 30КИИ А0 «С0 ЕЭС»', 'Аттестация АСЗИ Конституционного Суда РФ', 'Нагрузочное тестирование АО «Тандер»', 'Киберучения в ПАО «Банк Санкт-Петербург»', 'Проектирование СБ 30КИИ А0 «С0 ЕЭС»'];
+			- let PROJECTS = ['Проектирование СБ 30КИИ А0 «С0 ЕЭС»', 'Аттестация АСЗИ Конституционного Суда РФ', 'Нагрузочное тестирование АО «Тандер»', 'Киберучения в ПАО «Банк Санкт-Петербург»', 'Проектирование СБ 30КИИ А0 «С0 ЕЭС»'];
 
-			.projects-section__carousel.swiper-container
+			.projects-section__carousel.swiper-container.__js_projects-carousel
 				.swiper-wrapper 
 					each title in PROJECTS
-						.swiper-slide
-							.project-preview
-								.project-preview__image
-									img(src="img/project-placeholder.jpg", srcset="img/project-placeholder.jpg 2x", width="150", height="150", alt="")
-								.project-preview__title= title
-								a.project-preview__readmore(href="#") Подробнее
+						.project-preview.swiper-slide
+							.project-preview__image
+								img(src="img/project-placeholder.jpg", srcset="img/project-placeholder.jpg 2x", width="150", height="150", alt="")
+							.project-preview__title= title
+							a.project-preview__readmore.arrow-link(href="#") Подробнее
+								+icon('triangle-right')(width="7", height="10")
 				
 				.projects-section__carousel-bottom
-					.projects-section__carousel-nav
-						button.nav-btn.nav-btn--prev(type="button")
+					.projects-section__carousel-nav.navigate
+						button.navigate__btn.nav-btn.nav-btn--prev(type="button")
 							+icon('chevron-left')(width="12", height="20")
-						button.nav-btn.nav-btn--next(type="button")
+						button.navigate__btn.nav-btn.nav-btn--next(type="button")
 							+icon('chevron-right')(width="12", height="20")
-					.projects-section__carousel-pag 
-					a.projects-section__all(href="#") Подробнее
+					.projects-section__carousel-pag.paginate
+					a.projects-section__all.arrow-link(href="#") Все проекты
+						+icon('triangle-right')(width="7", height="10")
 
-	section.partners 
-		.partners__container.container 
-			+title('Партнеры и статусы', 'Некоторый теплый и уверенный подзаголовок о партнерах с которыми работает организация', 'partners__title')
+	section.partners-section
+		.partners-section__container.container 
+			+title('Партнеры и статусы', 'Некоторый теплый и уверенный подзаголовок о партнерах с которыми работает организация', 'partners-section__title')
 
-			ul.partners__list
+			ul.partners-section__list
 				- let j = 1;
 				- let PARTNERS = [{w: '183', h: '40'}, {w: '121', h: '60'}, {w: '184', h: '36'}, {w: '186', h: '33'}, {w: '227', h: '70'}, {w: '129', h: '89'}, {w: '178', h: '49'}, {w: '182', h: '22'}, {w: '217', h: '72'}, {w: '229', h: '40'}, {w: '187', h: '83'}, {w: '223', h: '47'}, {w: '167', h: '84'}, {w: '217', h: '93'}, {w: '226', h: '56'}];
 				each item, index in PARTNERS
-					li.partners__item 
+					li.partners-section__item 
 						img(src="img/partners/" + (index + 1) + ".png", srcset="img/partners/" + (index + 1) + "@2x.png 2x", width= item.w, height= item.h, alt="")
 
 	section.contacts-section
@@ -149,7 +179,7 @@ block main
 					+icon('mail')(width="20", height="16")
 					a(href="mailto:Info@altirix.ru") Info@altirix.ru
 				.contacts-section__phones 
-					+icon('phone')(width="12", height="12")
+					+icon('phone')(width="20", height="20")
 					a(href="tel:") +7 (812) 716-14-14
 					a(href="tel:") +7 (812) 716-14-14
 				.contacts-section__main-title Адрес
@@ -157,36 +187,40 @@ block main
 					span.contacts-section__address-icon 
 						+icon('pin')(width="14", height="20")
 					| Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация
-				.contacts-section__requisite ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»
+				.contacts-section__requisite 
+					p ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»
 					a(href="#") Посмотреть на карте
 				
-				a.btn.btn--outline(href="#", download) Скачать перезнтацию
+				a.contacts-section__btn.button.button--outline(href="#", download) 
+					span.button__icon
+						+icon('download')(width="14", height="17")
+					span Скачать перезнтацию
 
 			.contacts-section__form
 				.contacts-section__form-title Связаться с нами
 				
 				form(action="#", method="post") 
-					label.contacts-section__field.field
+					label.contacts-section__form-field.field
 						span.field__hint ФИО
 						input(type="text", name="name")
 					
-					label.contacts-section__field.field
-					span.field__hint Контактный телефон
+					label.contacts-section__form-field.contacts-section__form-field--half.field
+						span.field__hint Контактный телефон
 						input(type="tel", name="tel")
 					
-					label.contacts-section__field.field
+					label.contacts-section__form-field.contacts-section__form-field--half.field
 						span.field__hint Email
 						input(type="email", name="email")
 					
 					
-					label.contacts-section__field.field
+					label.contacts-section__form-field.field
 						span.field__hint Название компании
 						input(type="text", name="company")
 					
-					label.contacts-section__field.field
+					label.contacts-section__form-field.field
 						span.field__hint Что Вас интересует?
 						textarea(name="message") 
 					
-					button.contacts-section__send.button(type="submit") Отправить
+					button.contacts-section__form-send.button(type="submit") Отправить
 				
 				.contacts-section__form-bottom Нажимая на кнопку «Отправить» вы соглашаетсь с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>

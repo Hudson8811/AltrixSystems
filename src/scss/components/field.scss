@@ -1,0 +1,36 @@
+.field {
+  display: block;
+  width: 100%;
+
+  &__hint {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1;
+    color: $dark-5a;
+  }
+
+  input,
+  textarea {
+    padding: 10px 16px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    border: solid 1px $grey-e9;
+    border-radius: 5px;
+    appearance: none;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $dark-5a;
+    }
+  }
+
+  textarea {
+    min-height: 88px;
+    resize: none;
+  }
+}
