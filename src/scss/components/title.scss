@@ -4,11 +4,19 @@
     font-size: 39px;
     line-height: 1.282;
     font-weight: 700;
+
+    @include pMax {
+      font-size: 30px;
+    }
   }
 
   &__subtitle {
     margin-top: 8px;
     font-size: 19px;
     line-height: 1.1;
+
+    @include pMax {
+      font-size: 16px;
+    }
   }
 }

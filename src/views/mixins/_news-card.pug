@@ -4,7 +4,7 @@ mixin news-card(className, img, title, text, date, tag)
     .news-card__image 
       img(src="img/" + img + ".jpg", srcset="img/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
     .news-card__main 
-      .news-card__title= title
+      .news-card__title!= title
       .news-card__text= text
       .news-card__bottom 
         if date

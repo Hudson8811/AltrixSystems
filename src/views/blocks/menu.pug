@@ -1,6 +1,6 @@
 .menu
   - let dropdown = ['Блокчейн (Blockchain)', 'Машинное обучение (Machine learning)', 'Безопасность приложений', 'Автоматизация бизнес-процессов', 'Заказная разработка', 'DevOps-консалтинг'];
-  - let MENU_LIST = [{text: 'Информационная безопасность', dropdown: dropdown}, {text: 'Информационные технологии', dropdown: dropdown}, {text: 'Разработка ПО', dropdown: dropdown}, {text: 'Решения под ключ', dropdown: dropdown}, {text: 'Каталог', dropdown: dropdown}, {text: 'О компании', dropdown: dropdown}];
+  - let MENU_LIST = [{text: 'Информационная безопасность', dropdown: dropdown}, {text: 'Информационные технологии', dropdown: dropdown}, {text: 'Разработка ПО', dropdown: dropdown}, {text: 'Решения под ключ', dropdown: dropdown}, {text: 'Каталог', dropdown: dropdown}, {text: 'О компании', dropdown: dropdown}];
     
     .menu__container
       .menu__start
@@ -18,4 +18,3 @@
                     each subitem in item.dropdown 
                       li.dropdown__item 
                         a.dropdown__link(href="#")= subitem
-

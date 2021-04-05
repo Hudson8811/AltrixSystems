@@ -30,7 +30,7 @@ block main
 							.main-slider__slide-pretitle Информационная безопасность
 							.main-slider__slide-title Защитная прошивка для IoT
 							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
-							a.main-slider__slide-btn.button(href="#") Подробнее
+							a.main-slider__slide-btn.button.button--large(href="#") Подробнее
 								span.button__icon 
 									+icon('arrow-right')(width="18", height="12")
 				.main-slider__slide.swiper-slide
@@ -39,7 +39,7 @@ block main
 							.main-slider__slide-pretitle Информационная безопасность
 							.main-slider__slide-title Защитная прошивка для IoT
 							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
-							a.main-slider__slide-btn.button(href="#") Подробнее
+							a.main-slider__slide-btn.button.button--large(href="#") Подробнее
 								span.button__icon 
 									+icon('arrow-right')(width="18", height="12")
 				.main-slider__slide.swiper-slide
@@ -48,7 +48,7 @@ block main
 							.main-slider__slide-pretitle Информационная безопасность
 							.main-slider__slide-title Защитная прошивка для IoT
 							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
-							a.main-slider__slide-btn.button(href="#") Подробнее
+							a.main-slider__slide-btn.button.button--large(href="#") Подробнее
 								span.button__icon 
 									+icon('arrow-right')(width="18", height="12")
 				.main-slider__slide.swiper-slide
@@ -57,7 +57,7 @@ block main
 							.main-slider__slide-pretitle Информационная безопасность
 							.main-slider__slide-title Защитная прошивка для IoT
 							.main-slider__slide-text Создавайте IoT-устройства “безопасные по дизайну”
-							a.main-slider__slide-btn.button(href="#") Подробнее
+							a.main-slider__slide-btn.button.button--large(href="#") Подробнее
 								span.button__icon 
 									+icon('arrow-right')(width="18", height="12")
 			.main-slider__bottom.container
@@ -80,8 +80,10 @@ block main
 						+icon('arrow-right')(width="18", height="12")
 
 			.about-section__aside
-				+news-card('about-section__news', 'news-preview-1', 'Итоги IV Кейс‑Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.')
-				+news-card('about-section__news', 'news-preview-2', 'Итоги IV Кейс‑Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.')
+				ul.about-section__news
+					+news-card('about-section__news-item', 'news-preview-1', 'Итоги IV <br>Кейс-Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.', null, 'li')
+					+news-card('about-section__news-item', 'news-preview-2', 'Итоги IV <br>Кейс-Чемпионата', 'Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.', null, 'li')
+					
 				
 				.about-section__aside-bottom
 					a.about-section__aside-all.arrow-link(href="#") Все новости
@@ -94,7 +96,7 @@ block main
 
 			ul.direction-section__list 
 				li.direction-section__item.dir-card
-					.dir-card__bg
+					.dir-card__image
 						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
 					.dir-card__content
 						.dir-card__icon 
@@ -104,27 +106,27 @@ block main
 							a.dir-card__readmore.arrow-link(href="#") Подробнее
 								+icon('triangle-right')(width="7", height="10")
 				li.direction-section__item.dir-card
-					.dir-card__bg
+					.dir-card__image
 						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
 					.dir-card__content
 						.dir-card__icon 
 							+icon("notebook")(width="98", height="96")
 						.dir-card__bottom
-							.dir-card__title Текстовый текст
+							.dir-card__title Киберучения
 							a.dir-card__readmore.arrow-link(href="#") Подробнее
 								+icon('triangle-right')(width="7", height="10")
 				li.direction-section__item.dir-card
-					.dir-card__bg
+					.dir-card__image
 						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
 					.dir-card__content
 						.dir-card__icon 
 							+icon("notebook")(width="98", height="96")
 						.dir-card__bottom
-							.dir-card__title Текстовый текст
+							.dir-card__title Киберучения
 							a.dir-card__readmore.arrow-link(href="#") Подробнее
 								+icon('triangle-right')(width="7", height="10")
 				li.direction-section__item.dir-card
-					.dir-card__bg
+					.dir-card__image
 						img(src="img/direction-1.jpg", srcset="img/direction-1@2x.jpg 2x", width="632", height="316", alt="")
 					.dir-card__content
 						.dir-card__icon 
@@ -221,6 +223,6 @@ block main
 						span.field__hint Что Вас интересует?
 						textarea(name="message") 
 					
-					button.contacts-section__form-send.button(type="submit") Отправить
+					button.contacts-section__form-send.button.button--large(type="submit") Отправить
 				
 				.contacts-section__form-bottom Нажимая на кнопку «Отправить» вы соглашаетсь с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>

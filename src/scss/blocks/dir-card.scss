@@ -1,6 +1,24 @@
 .dir-card {
   position: relative;
 
+  &__image {
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @include pMax {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 275px;
+      }
+    }
+  }
+
   &__content {
     position: absolute;
     top: 0;
@@ -10,8 +28,12 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 27px 36px 22px;
+    padding: 36px 36px 22px;
     background-color: $dark-5f;
+
+    @include pMax {
+      padding: 24px;
+    }
   }
 
   &__icon {
@@ -22,18 +44,33 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+
+    @include pMax {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
+    margin-right: 12px;
     font-size: 31px;
     line-height: 1.6129;
     color: $white;
     font-weight: 500;
     align-self: baseline;
+
+    @include pMax {
+      margin-top: 6px;
+      font-size: 24px;
+    }
   }
+
   &__readmore {
     color: $white;
     align-self: baseline;
+
+    @include pMax {
+      margin-top: 6px;
+    }
 
     svg {
       fill: $white;

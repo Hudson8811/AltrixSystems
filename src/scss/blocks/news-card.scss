@@ -3,28 +3,49 @@
   background-color: $white;
   box-shadow: 2px 2px 19px rgba(33, 43, 70, 0.05);
 
+  @include tMax {
+    //max-width: 324px;
+    flex-direction: column;
+  }
+
   &__image {
-    width: 250px;
+    width: 40%;
+    max-width: 250px;
     flex-shrink: 0;
+
+    @include tMax {
+      width: 100%;
+      max-width: none;
+    }
 
     img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
   &__main {
     display: flex;
     flex-direction: column;
-    padding: 28px 32px;
+    padding: 29px 32px 28px;
+
+    @include dMax {
+      padding: 20px;
+    }
   }
 
   &__title {
-    margin: 0 0 20px;
+    margin: 0 0 23px;
     font-size: 24px;
     line-height: 1.3333;
     font-weight: 700;
+
+    @include dMax {
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
   }
 
   &__text {

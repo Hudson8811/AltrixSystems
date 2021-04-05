@@ -12,6 +12,11 @@
   border-bottom: solid 1px $grey;
   box-sizing: border-box;
 
+  @include dMax {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   &__left,
   &__right {
     display: flex;
@@ -27,6 +32,10 @@
 
   &__phone {
     display: flex;
+
+    @include mMax {
+      display: none;
+    }
 
     & > * {
       align-self: center;
@@ -65,6 +74,10 @@
 
   &__social {
     margin-left: 36px;
+
+    @include tMax {
+      display: none;
+    }
   }
 
   &__burger {

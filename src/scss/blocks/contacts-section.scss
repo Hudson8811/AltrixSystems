@@ -1,13 +1,25 @@
 .contacts-section {
-  padding: 58px 0 93px;
+  padding: 58px 0 96px;
 
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include tMax {
+      display: block;
+    }
   }
 
   &__main {
-    max-width: 440px;
+    max-width: 460px;
+    margin-right: 20px;
+    padding-top: 47px;
+
+    @include tMax {
+      margin-right: 0;
+      margin-bottom: 50px;
+      padding-top: 0;
+    }
 
     &-title {
       margin-bottom: 4px;
@@ -52,11 +64,13 @@
   }
 
   &__phones {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 
     svg {
       margin-right: 8px;
       fill: $blue;
+
+      transform: translateY(4px);
     }
 
     a {
@@ -84,7 +98,7 @@
 
   &__address {
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding-left: 27px;
     font-family: $secondFont;
     font-size: 19px;
@@ -124,11 +138,28 @@
   }
 
   &__form {
-    width: 690px;
+    width: 100%;
+    max-width: 690px;
     padding: 42px 58px 48px;
     border: solid 1px $grey-ef;
     border-radius: 5px;
     background-color: $grey-f8;
+
+    @include dMax {
+      max-width: 580px;
+    }
+
+    @include tMax {
+      max-width: none;
+    }
+
+    @include mMax {
+      padding: 24px 32px;
+    }
+
+    @include pMax {
+      padding: 15px;
+    }
 
     &-title {
       margin: 0 0 20px;
@@ -149,15 +180,25 @@
 
       &--half {
         width: calc(50% - 11px);
+
+        @include pMax {
+          width: 100%;
+        }
       }
     }
 
     &-send {
-      margin-top: 12px;
+      display: inline-block;
+      min-width: 260px;
+      margin-top: 9px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
     }
 
     &-bottom {
       margin-top: 22px;
+      font-family: $secondFont;
       font-size: 14px;
       line-height: 1.85714;
       color: $grey-cf;

@@ -18,7 +18,19 @@
     display: flex;
     justify-content: center;
     width: 20%;
-    margin-top: 42px;
+    margin-top: 53px;
+
+    @include dMax {
+      width: 33.33%;
+    }
+
+    @include mMax {
+      width: 50%;
+    }
+
+    @include pMax {
+      width: 100%;
+    }
 
     img {
       max-width: 100%;

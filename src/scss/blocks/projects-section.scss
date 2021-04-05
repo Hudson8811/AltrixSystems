@@ -6,7 +6,7 @@
   }
 
   &__title {
-    margin: 0 0 40px;
+    margin: 0 0 57px;
   }
 
   &__carousel {
@@ -27,15 +27,28 @@
     &-bottom {
       display: flex;
       margin-top: 58px;
+
+      @include mMax {
+        display: block;
+        margin-top: 32px;
+      }
     }
 
     &-nav {
       align-self: center;
       margin-right: 36px;
+
+      @include mMax {
+        display: none;
+      }
     }
 
     &-pag {
       align-self: center;
+
+      @include mMax {
+        margin-bottom: 20px;
+      }
     }
   }
 
