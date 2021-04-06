@@ -4,6 +4,7 @@
   position: relative;
   z-index: 1;
   padding-top: 15px;
+  padding-bottom: 17px;
   //background-color: $white;
 
   &__container {
@@ -55,7 +56,6 @@
     //min-width: 350px;
     flex-grow: 1;
     margin-left: 3.38541vw;
-    background-color: red;
     //height: 40px;
 
     @include customMax(1700px) {

@@ -1,0 +1,53 @@
+section.contacts-section
+  .contacts-section__container.container
+    .contacts-section__main 
+      h2.contacts-section__title Контакты
+      .contacts-section__email 
+        +icon('mail')(width="20", height="16")
+        a(href="mailto:Info@altirix.ru") Info@altirix.ru
+      .contacts-section__phones 
+        +icon('phone')(width="20", height="20")
+        a(href="tel:") +7 (812) 716-14-14
+        a(href="tel:") +7 (812) 716-14-14
+      .contacts-section__main-title Адрес
+      address.contacts-section__address 
+        span.contacts-section__address-icon 
+          +icon('pin')(width="14", height="20")
+        | Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация
+      .contacts-section__requisite 
+        p ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»
+        a(href="#") Посмотреть на карте
+      
+      a.contacts-section__btn.button.button--outline(href="#", download) 
+        span.button__icon
+          +icon('download')(width="14", height="17")
+        span Скачать перезнтацию
+
+    .contacts-section__form
+      .contacts-section__form-title Связаться с нами
+      
+      form(action="#", method="post") 
+        label.contacts-section__form-field.field
+          span.field__hint ФИО
+          input(type="text", name="name")
+        
+        label.contacts-section__form-field.contacts-section__form-field--half.field
+          span.field__hint Контактный телефон
+          input(type="tel", name="tel")
+        
+        label.contacts-section__form-field.contacts-section__form-field--half.field
+          span.field__hint Email
+          input(type="email", name="email")
+        
+        
+        label.contacts-section__form-field.field
+          span.field__hint Название компании
+          input(type="text", name="company")
+        
+        label.contacts-section__form-field.field
+          span.field__hint Что Вас интересует?
+          textarea(name="message") 
+        
+        button.contacts-section__form-send.button.button--large(type="submit") Отправить
+      
+      .contacts-section__form-bottom Нажимая на кнопку «Отправить» вы соглашаетсь с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>

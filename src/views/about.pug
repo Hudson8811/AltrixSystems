@@ -1,0 +1,101 @@
+extends templates/default
+
+block vars
+  -
+    const page = {
+      title: 'about.html'
+    };
+
+    let ARCHIVE_LIST = [{text: 'Руководство по эксплуатации', icon: 'file-pdf'}, {text: 'Руководство по оборудованию', icon: 'file-doc'}, {text: 'Оборудование по руководству', icon: 'file-xls'}];
+
+
+block main
+  article.inner-page
+    header.inner-page__header 
+      .container
+        +breadcrumbs(['О нас'], 'inner-page__breadcrumbs')
+        h1.inner-page__title.inner-page__title--flex 
+          span О нас
+          a.share-link(href="#")
+            +icon('share')(width="20", height="20")
+        +date({attr: '2021-03-18', text: '18.03.21'}, 'inner-page__date')
+
+    
+    .inner-page__main 
+      .container 
+        .inner-page__about.about-block 
+          .about-block__main
+            p Таким образом, постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям.
+
+            p Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований способствует подготовке и реализации первоочередных требований. Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности.
+
+            p Таким образом, курс на социально-ориентированный национальный проект говорит о возможностях модели развития. А ещё представители современных социальных резервов, инициированные исключительно синтетически, функционально разнесены на независимые элементы.
+
+            ul.about-block__list 
+              each item in ARCHIVE_LIST
+                li 
+                  +download-link(item.icon, item.text, null, null)
+
+          .about-block__image 
+            img(src="img/about/about-1.jpg", srcset="img/about/about-1.jpg 2x", width="629", height="512", alt="")
+        .inner-page__about.about-block.about-block--reverse
+          .about-block__main
+            .about-block__title Идейные соображения 1 порядка
+            p Таким образом, постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям.
+
+            p Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований способствует подготовке и реализации первоочередных требований. Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности.
+
+            p Таким образом, курс на социально-ориентированный национальный проект говорит о возможностях модели развития. А ещё представители современных социальных резервов, инициированные исключительно синтетически, функционально разнесены на независимые элементы.
+
+            
+            ul.about-block__list 
+              each item in ARCHIVE_LIST
+                li 
+                  +download-link(item.icon, item.text, null, null)
+          .about-block__image 
+            img(src="img/about/about-2.jpg", srcset="img/about/about-2.jpg 2x", width="632", height="566", alt="")
+        .inner-page__about.about-block 
+          .about-block__main
+            .about-block__title В равной мере раскладка меняется
+            p Таким образом, постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям.
+
+            p Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований способствует подготовке и реализации первоочередных требований. Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности.
+
+            p Таким образом, курс на социально-ориентированный национальный проект говорит о возможностях модели развития. А ещё представители современных социальных резервов, инициированные исключительно синтетически, функционально разнесены на независимые элементы.
+
+            ul.about-block__list 
+              each item in ARCHIVE_LIST
+                li 
+                  +download-link(item.icon, item.text, null, null)
+          .about-block__image 
+            img(src="img/about/about-3.jpg", srcset="img/about/about-3.jpg 2x", width="631", height="566", alt="")
+
+  section.inner-page__archive.archive-section
+    .archive-section__container.container 
+      +title('Архив документов', null, 'archive-section__title')
+
+      .archive-section__column
+        ul.archive-section__list 
+          each item in ARCHIVE_LIST
+            li 
+              +download-link(item.icon, item.text, null, null)
+          each item in ARCHIVE_LIST
+            li 
+              +download-link(item.icon, item.text, null, null)
+      
+      .archive-section__column
+        ul.archive-section__list 
+          each item in ARCHIVE_LIST
+            li 
+              +download-link(item.icon, item.text, null, null)
+          each item in ARCHIVE_LIST
+            li 
+              +download-link(item.icon, item.text, null, null)
+      
+      .archive-section__column
+        ul.archive-section__list 
+          each item in ARCHIVE_LIST
+            li 
+              +download-link(item.icon, item.text, null, null)
+
+  include blocks/contacts-section

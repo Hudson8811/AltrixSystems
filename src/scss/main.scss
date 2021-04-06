@@ -23,6 +23,10 @@
 @import "components/nav-btn";
 @import "components/navigate";
 @import "components/paginate";
+@import "components/date";
+@import "components/share-link";
+@import "components/breadcrumbs";
+@import "components/download-link";
 
 /* Blocks */
 @import "blocks/smart-search";
@@ -36,11 +40,14 @@
 @import "blocks/socials";
 @import "blocks/main-slider";
 @import "blocks/hero";
+@import "blocks/about-block";
 @import "blocks/about-section";
 @import "blocks/direction-section";
 @import "blocks/projects-section";
 @import "blocks/partners-section";
 @import "blocks/contacts-section";
+@import "blocks/archive-section";
 
+@import "blocks/inner-page";
 @import "blocks/_header";
 @import "blocks/footer";

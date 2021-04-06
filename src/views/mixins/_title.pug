@@ -1,4 +1,5 @@
 mixin title(title, subtitle, className)
-	.title(class=className)
+	div(class= className ? className + ' title' : 'title')
 		h2.title__text!= title
-		.title__subtitle!= subtitle
+		if subtitle
+			.title__subtitle!= subtitle

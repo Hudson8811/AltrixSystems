@@ -1,0 +1,16 @@
+.share-link {
+  svg {
+    display: block;
+    fill: $grey-cf;
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: $mainColor;
+    }
+  }
+}

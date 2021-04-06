@@ -1,0 +1,4 @@
+mixin download-link(icon, text, href, cl)
+  a(class= cl ? cl + ' download-link' : 'download-link', href= href ? href : '#', download)
+    +icon(icon)(width="25", height="25")
+    span= text

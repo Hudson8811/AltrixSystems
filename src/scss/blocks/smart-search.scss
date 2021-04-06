@@ -1,4 +1,6 @@
 .smart-search {
+  $self: &;
+
   &__title {
     margin-bottom: 10px;
     font-size: 22px;
@@ -59,7 +61,7 @@
       font-size: 15px;
       line-height: 1.1;
       border: solid 1px $blue;
-      border-radius: 3px;
+      border-radius: 5px;
       transition: 0.2s;
       appearance: none;
 
@@ -107,6 +109,26 @@
 
       &:active {
         opacity: 0.7;
+      }
+    }
+  }
+
+  &--simple {
+    #{$self}__form {
+      input {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border-color: $grey-e7;
+
+        &::placeholder {
+          color: $grey-c6;
+        }
+
+        &:hover,
+        &:focus {
+          outline: none;
+          border-color: $grey-8e;
+        }
       }
     }
   }

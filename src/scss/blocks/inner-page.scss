@@ -1,0 +1,68 @@
+.inner-page {
+  border-top: solid 1px $grey;
+  padding-bottom: 93px;
+
+  @include tMax {
+    padding-bottom: 50px;
+  }
+
+  &__header {
+    padding-top: 68px;
+    padding-bottom: 32px;
+
+    @include tMax {
+      padding-top: 32px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: 39px;
+    line-height: 1.282;
+    font-weight: 700;
+
+    @include tMax {
+      margin-bottom: 20px;
+    }
+
+    @include pMax {
+      font-size: 30px;
+    }
+
+    &--flex {
+      display: flex;
+
+      span {
+        align-self: baseline;
+      }
+    }
+
+    .share-link {
+      margin-left: 10px;
+      align-self: baseline;
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 62px;
+
+    @include tMax {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__main {
+  }
+
+  &__about + &__about {
+    margin-top: 58px;
+  }
+
+  &__archive {
+    margin-bottom: 35px;
+
+    @include tMax {
+      margin-bottom: 0;
+    }
+  }
+}

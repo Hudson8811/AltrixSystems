@@ -15,3 +15,14 @@
                   each subitem in item.dropdown 
                     li.dropdown__item 
                       a.dropdown__link(href="#")= subitem
+    
+    if page.title !== 'index.html'
+      .menu__end
+        .menu__search.smart-search.smart-search--simple
+          .smart-search__form
+            form(action="#", method="post")
+              button.smart-search__form-tags(type="button") #
+              label(aria-label="Поиск решений")
+                input(type="search", name="search", placeholder="Поиск решений...") 
+              button(type="submit")
+                +icon('loupe')(width="17", height="17")

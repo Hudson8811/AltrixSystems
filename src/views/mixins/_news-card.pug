@@ -8,9 +8,6 @@ mixin news-card(className, img, title, text, date, tag)
       .news-card__text= text
       .news-card__bottom 
         if date
-          .news-card__date 
-            span.news-card__date-icon 
-              +icon('clock')(width="20", height="20")
-            time(datetime= date.attr)= date.text
+          +date(date, 'news-card__date')
         a.news-card__readmore.arrow-link(href="#") Подробнее
           +icon('triangle-right')(width="7", height="10")

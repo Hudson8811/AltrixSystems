@@ -50,6 +50,7 @@
       line-height: 1.36842;
       color: $mainColor;
       transition: 0.2s;
+      // white-space: nowrap;
 
       &:hover,
       &:focus {
@@ -79,6 +80,8 @@
       line-height: 1.36842;
       color: $mainColor;
       transition: 0.2s;
+
+      //white-space: nowrap;
 
       &:hover,
       &:focus {
