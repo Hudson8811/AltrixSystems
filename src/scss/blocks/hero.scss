@@ -1,15 +1,24 @@
 .hero {
   position: relative;
-  height: 101vh;
+  height: 975px;
   margin-top: -120px;
   padding: 150px 0;
   background-image: url("../img/main-bg.png");
   background-color: $grey-e5;
   background-position: right 20px top 0;
 
+  @include tMax {
+    height: 780px;
+    padding: 150px 0 50px;
+  }
+
   &__container {
     position: relative;
     padding-top: 103px;
+
+    @include tMax {
+      padding-top: 40px;
+    }
   }
 
   &__search {

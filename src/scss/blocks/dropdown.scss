@@ -36,6 +36,10 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    &--column {
+      display: block;
+    }
   }
 
   &__item {

@@ -5,6 +5,10 @@
   background-color: $grey-f8;
   background-image: linear-gradient(to bottom, transparent 38.38%);
 
+  @include tMax {
+    padding: 0 0 70px;
+  }
+
   &::after {
     content: "";
     position: absolute;

@@ -1,3 +1,6 @@
+- let dropdown = ['Блокчейн (Blockchain)', 'Машинное обучение (Machine learning)', 'Безопасность приложений', 'Автоматизация бизнес-процессов', 'Заказная разработка', 'DevOps-консалтинг'];
+- let MENU_LIST = [{text: 'Информационная безопасность', dropdown: dropdown}, {text: 'Информационные технологии', dropdown: dropdown}, {text: 'Разработка ПО', dropdown: dropdown}, {text: 'Решения под ключ', dropdown: dropdown}, {text: 'Каталог', dropdown: dropdown}, {text: 'О компании', dropdown: dropdown}];
+
 header.header
 	.header__left
 		button.header__burger.burger(type="button", aria-label="Меню")
@@ -13,4 +16,28 @@ header.header
 		a.header__login(href="#")
 			+icon('login')(width='16', height='16')
 			span Личный кабинет
+	
+	section.aside-menu
+		.aside-menu__inner
+			+logo(page.title === 'index.html', 'aside-menu__logo')
+			ul.aside-menu__list
+				each item in MENU_LIST
+					li.aside-menu__item 
+						a.aside-menu__link.aside-menu__link--dropdown(href="#")= item.text
+						.aside-menu__dropdown.dropdown 
+							ul.dropdown__list.dropdown__list--column
+								each subitem in item.dropdown 
+									li.dropdown__item 
+										a.dropdown__link(href="#")= subitem
+			.aside-menu__bottom
+				a.aside-menu__email(href="mailto:Info@altirix.ru") 
+					+icon('mail')(width="20", height="16")
+					span Info@altirix.ru
+				a.aside-menu__phone(href='tel:+78127161414')
+					+icon('phone')(class="aside-menu__phone-icon", width='20', height='20')
+					span +7 (812) 716-14-14
+
+				a.aside-menu__phone(href='tel:+78002018702')
+					+icon('phone')(class="aside-menu__phone-icon", width='20', height='20')
+					span +7 (800) 201-87-02
 

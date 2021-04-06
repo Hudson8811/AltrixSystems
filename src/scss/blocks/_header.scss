@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,10 +81,21 @@
   }
 
   &__burger {
+    position: relative;
+    z-index: 1000;
     margin-right: 24px;
+
+    &.is-active {
+      position: fixed;
+
+      & + .header__lang {
+        margin-left: 45px;
+      }
+    }
   }
 
   &__lang {
+    //margin-left: 45px;
     font-size: 16px;
     line-height: 1.25;
     color: $blue;
