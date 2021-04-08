@@ -127,4 +127,25 @@
       }
     }
   }
+
+  &__text {
+    margin-bottom: 93px;
+
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: 1.73333;
+    color: $dark-5a;
+
+    @include tMax {
+      margin-bottom: 50px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 30px;
+    }
+  }
 }
