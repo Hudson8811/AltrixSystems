@@ -56,15 +56,16 @@
   }
 
   &__bottom {
+    display: flex;
+    height: 25px;
     margin-top: auto;
   }
 
   &__date {
-    &-icon {
-      svg {
-      }
-    }
-    time {
+    margin-right: auto;
+
+    & > * {
+      align-self: center;
     }
   }
 

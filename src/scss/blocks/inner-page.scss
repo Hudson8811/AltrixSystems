@@ -1,6 +1,7 @@
 .inner-page {
   border-top: solid 1px $grey;
   padding-bottom: 93px;
+  overflow: hidden;
 
   @include tMax {
     padding-bottom: 50px;
@@ -147,5 +148,17 @@
     p + p {
       margin-top: 30px;
     }
+  }
+
+  &__news {
+    margin-top: 36px;
+
+    @include pMax {
+      margin-top: 0;
+    }
+  }
+
+  &__pagination {
+    margin-top: 93px;
   }
 }

@@ -1,0 +1,46 @@
+.pagination {
+  $self: &;
+  overflow: hidden;
+  //padding-top: 12px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px 0 0 -12px;
+    padding: 0;
+  }
+
+  &__item {
+    margin-left: 12px;
+    margin-top: 12px;
+
+    &--current {
+      #{$self}__link {
+        pointer-events: none;
+        color: $white;
+        background-color: $blue;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 34px;
+    color: $mainColor;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px $blue;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
