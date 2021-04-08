@@ -27,6 +27,7 @@
 @import "components/share-link";
 @import "components/breadcrumbs";
 @import "components/download-link";
+@import "components/tag";
 
 /* Blocks */
 @import "blocks/smart-search";
@@ -47,6 +48,9 @@
 @import "blocks/partners-section";
 @import "blocks/contacts-section";
 @import "blocks/archive-section";
+@import "blocks/catalog-accordion";
+@import "blocks/method.scss";
+@import "blocks/tags.scss";
 
 @import "blocks/inner-page";
 @import "blocks/_header";

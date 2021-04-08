@@ -76,6 +76,29 @@ $(document).ready(function(){
     } else {
       $(this).addClass('aside-menu__link--active').next().slideDown();
     }
-  })
+  });
+
+
+  const catalogAccordionItems = $('.catalog-accordion__item-head');
+  const modifierClass = 'catalog-accordion__item--active';
+  //const contentClass = '.catalog-accordion__item-content';
+
+  catalogAccordionItems.on('click', function() {
+    let btn = $(this);
+    let parent = btn.parent();
+
+    parent.siblings().removeClass(modifierClass).find('.catalog-accordion__item-content').slideUp();
+    
+
+      if (parent.hasClass(modifierClass)) {
+        parent.removeClass(modifierClass);
+        btn.next().slideUp();
+      } else {
+        parent.addClass(modifierClass);
+        btn.next().slideDown();
+      }
+
+    
+  });
   
 });
