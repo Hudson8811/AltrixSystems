@@ -98,4 +98,57 @@
       margin-bottom: 24px;
     }
   }
+
+  &__modal {
+    width: 90%;
+    max-width: 632px;
+    padding: 50px;
+    background-color: $white;
+
+    &-title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    &-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      appearance: none;
+      cursor: pointer;
+
+      svg {
+        display: block;
+        fill: $blue;
+        transition: 0.2s;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        svg {
+          color: $blue-2;
+        }
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    &-content {
+      font-family: $secondFont;
+      font-size: 15px;
+      line-height: 1.73333;
+      color: $dark-5a;
+    }
+  }
 }

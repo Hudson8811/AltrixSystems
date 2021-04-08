@@ -71,8 +71,16 @@ $(document).ready(function(){
         parent.addClass(modifierClass);
         btn.next().slideDown();
       }
-
-    
   });
   
+
+
+  $('.__js_vacancy-modal').fancybox({
+    smallBtn: false,
+    toolbar: false
+  });
+
+  $('.vacancy-card__modal-close').on('click', function() {
+    $.fancybox.close();
+  });
 });
