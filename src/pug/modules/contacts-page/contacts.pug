@@ -1,0 +1,43 @@
+section.contacts
+  .contacts__container.container 
+    .contacts__main
+      +title('Контактная информация', null, 'contacts__title')
+
+      .contacts__main-wrap
+        .contacts__column
+          h3.contacts__column-title Контакты
+          .contacts__item
+            span.contacts__item-icon
+              +svg('#altrix_mail')(width="20", height="16")
+            a(href="mailto:Info@altirix.ru") Info@altirix.ru
+          .contacts__item
+            span.contacts__item-icon
+              +svg('#altrix_phone')(width="24", height="24")
+            a(href="tel:") +7 (812) 716-14-14
+          .contacts__item
+            span.contacts__item-icon
+              +svg('#altrix_phone')(width="24", height="24")
+            a(href="tel:") +7 (812) 716-14-14
+          address.contacts__address 
+            span.contacts__address-icon 
+              +svg('#altrix_pin')(width="14", height="20")
+            | Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация
+        .contacts__column
+          h3.contacts__column-title Юридическая информация
+          ul.contacts__column-list
+            li
+              span ИНН: 
+              | 7811463860
+            li
+              span ОГРН:
+              | 1107847150806
+            li
+              span КПП:
+              | 781301001
+            li
+              span ОКПО: 
+              | 65990686
+      
+    .contacts__map#map
+  
+  .gradient

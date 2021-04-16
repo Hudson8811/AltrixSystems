@@ -1,0 +1,14 @@
+extends template/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'main_page'
+  - var isHome = true;
+
+block content
+  include modules/hero-section/hero-section
+  include modules/about-section/about-section
+  include modules/direction-section/direction-section
+  include modules/projects-section/projects-section
+  include modules/partners-section/partners-section
+  include modules/common/contacts-section

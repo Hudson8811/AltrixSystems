@@ -1,0 +1,60 @@
+.tariff {
+  padding: 93px 0;
+  overflow: hidden;
+
+  @include respond-to("tablet-middle") {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include respond-to("tablet-middle") {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 58px 0;
+    padding: 0;
+    display: flex;
+    margin-left: -36px;
+
+    @include respond-to("desktop") {
+      margin-left: -24px;
+    }
+
+    @include respond-to("tablet-middle") {
+      margin: 42px 0;
+      display: block;
+    }
+  }
+
+  &__item {
+    width: calc(33.33% - 36px);
+    margin-left: 36px;
+
+    @include respond-to("desktop") {
+      width: calc(33.33% - 24px);
+      margin-left: 24px;
+    }
+
+    @include respond-to("tablet-middle") {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-dark-5a;
+  }
+}

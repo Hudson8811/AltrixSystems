@@ -1,0 +1,155 @@
+// Header styles for Altrix project
+.header {
+  position: relative;
+  z-index: 999;
+  padding: 15px 22px 14px;
+  background-color: $color-white;
+  border-bottom: solid 1px $color-grey;
+  box-sizing: border-box;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+
+  @include respond-to("desktop") {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+  }
+
+  &__phone {
+    display: flex;
+
+    @include respond-to("tablet") {
+      display: none;
+    }
+
+    & > * {
+      align-self: center;
+    }
+
+    & + & {
+      margin-left: 22px;
+    }
+
+    &-icon {
+      display: block;
+      margin-right: 8px;
+      fill: $color-blue-2;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 1.28571;
+      color: $color-main;
+      transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      span {
+        color: $color-blue-2;
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__social {
+    margin-left: 36px;
+
+    @include respond-to("tablet-middle") {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 1000;
+    margin-right: 24px;
+
+    &.is-active {
+      position: fixed;
+
+      & + .header__lang {
+        margin-left: 45px;
+      }
+    }
+  }
+
+  &__lang {
+    //margin-left: 45px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $color-blue;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-blue-2;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__login {
+    display: flex;
+    margin-left: 34px;
+
+    & > * {
+      align-self: center;
+    }
+
+    svg {
+      margin-right: 9px;
+      fill: $color-blue;
+      transition: 0.2s;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 1.21428;
+      color: $color-blue;
+      transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      span {
+        color: $color-blue-2;
+      }
+      svg {
+        fill: $color-blue-2;
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

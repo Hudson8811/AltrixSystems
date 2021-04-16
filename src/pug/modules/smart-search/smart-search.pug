@@ -1,0 +1,10 @@
+section.hero-section__search.smart-search
+	.smart-search__title Умный поиск
+	.smart-search__text Мы запустили машинное обучение, пожалуйста, воспользуйтесь нашим интеллектуальным поиском
+	.smart-search__form 
+		form(action="#", method="post")
+			button.smart-search__form-tags.__js_show-tags(type="button", data-src="#tags") #
+			label(aria-label="Поиск решений")
+				input(type="search", name="search", placeholder="Поиск решений...") 
+			button(type="submit")
+				+svg('#altrix_loupe')(width="25", height="25")

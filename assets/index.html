@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="main_page">
+    <script>
+      let marketsConfig = {
+      	defaults: {
+      		market: "USD",
+      		// Market table field by which data will be sorted by default
+      		sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+      		tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+      		mode: "widget", // widget, page
+      		exchange: "https://www.b2bx.exchange/advanced/",
+      	},
+      	//table columns names, phrases and etc
+      	lang: {
+      		markets: "Markets",
+      		alts: "ALTS",
+      		stable: "USDⓈ",
+      		percent: "%",
+      		symbol: "$",
+      		item: "item",
+      		favorites: "Favorites",
+      		pair: "Pair",
+      		coin: "Coin",
+      		price: "Last price",
+      		spread: "Spread",
+      		change: "Change, 24h",
+      		high: "High, 24h",
+      		low: "Low, 24h",
+      		volume: "Volume, 24h",
+      		result: "No result",
+      		loading: "Loading...",
+      		search: "Search",// "Search",
+      		all: "All",// "All",
+      	},
+      	//SignalR link
+      	stagingUrl: "https://b2bx.cloud",
+      	infoUrl: "/marketdata/info/",
+      	frontOfficeUrl: "/frontoffice/api/info",
+      	frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+      };
+    </script>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__left">
+            <button class="header__burger burger" type="button" aria-label="Меню"><span></span></button><a class="header__lang" href="#">En</a>
+          </div>
+          <div class="header__right"><a class="header__phone" href="tel:+78127161414">
+              <svg class="header__phone-icon" width="12" height="12">
+                <use xlink:href="images/svg/symbol/sprite.svg#altrix_phone"></use>
+              </svg><span>+7 (812) 716-14-14</span></a><a class="header__phone" href="tel:+78002018702"><span>+7 (800) 201-87-02</span></a>
+            <ul class="social header__social">
+              <li class="social__item"><a class="social__link" href="#" target="_blank">
+                  <svg width="18" height="18">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_facebook-square"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" target="_blank">
+                  <svg width="18" height="18">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_twitter-square"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" target="_blank">
+                  <svg width="18" height="18">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_linkedin"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" target="_blank">
+                  <svg width="23" height="23">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_youtube"></use>
+                  </svg></a></li>
+            </ul><a class="header__login" href="#">
+              <svg width="16" height="16">
+                <use xlink:href="images/svg/symbol/sprite.svg#altrix_login"></use>
+              </svg><span>Личный кабинет</span></a>
+          </div>
+        </div>
+        <section class="aside-menu">
+          <div class="aside-menu__inner"><a class="aside-menu__logo logo"><img src="images/altrix/logo.svg" width="326" height="21" alt=""></a>
+            <ul class="aside-menu__list">
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">Информационная безопасность</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">Информационные технологии</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">Разработка&amp;nbsp;ПО</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">Решения под ключ</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">Каталог</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="aside-menu__item"> <a class="aside-menu__link aside-menu__link--dropdown" href="#">О компании</a>
+                <div class="aside-menu__dropdown dropdown"> 
+                  <ul class="dropdown__list dropdown__list--column">
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                    <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="aside-menu__bottom"><a class="aside-menu__email" href="mailto:Info@altirix.ru"> 
+                <svg width="20" height="16">
+                  <use xlink:href="images/svg/symbol/sprite.svg#altrix_mail"></use>
+                </svg><span>Info@altirix.ru</span></a><a class="aside-menu__phone" href="tel:+78127161414">
+                <svg class="aside-menu__phone-icon" width="20" height="20">
+                  <use xlink:href="images/svg/symbol/sprite.svg#altrix_phone"></use>
+                </svg><span>+7 (812) 716-14-14</span></a><a class="aside-menu__phone" href="tel:+78002018702">
+                <svg class="aside-menu__phone-icon" width="20" height="20">
+                  <use xlink:href="images/svg/symbol/sprite.svg#altrix_phone"></use>
+                </svg><span>+7 (800) 201-87-02</span></a></div>
+          </div>
+        </section>
+      </header>
+      <div class="menu">
+        <div class="menu__container">
+          <div class="menu__start"><a class="menu__logo logo"><img src="images/altrix/logo.svg" width="243" height="15" alt=""></a>
+          </div>
+          <div class="menu__middle">
+            <ul class="menu__list">
+              <li class="menu__item"> <a class="menu__link" href="#">Информационная безопасность</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>Информационная безопасность</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"> <a class="menu__link" href="#">Информационные технологии</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>Информационные технологии</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"> <a class="menu__link" href="#">Разработка&nbsp;ПО</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>Разработка&amp;nbsp;ПО</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"> <a class="menu__link" href="#">Решения под ключ</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>Решения под ключ</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"> <a class="menu__link" href="#">Каталог</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>Каталог</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"> <a class="menu__link" href="#">О компании</a>
+                <div class="menu__dropdown dropdown"> 
+                  <div class="dropdown__container container">
+                    <div class="dropdown__title"><span>О компании</span></div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Блокчейн (Blockchain)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Машинное обучение (Machine learning)</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Безопасность приложений</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Автоматизация бизнес-процессов</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">Заказная разработка</a></li>
+                      <li class="dropdown__item"> <a class="dropdown__link" href="#">DevOps-консалтинг</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="contact-button __js_show-form" type="button" data-src="#modalForm"><span class="contact-button__icon">
+          <svg width="20" height="20">
+            <use xlink:href="images/svg/symbol/sprite.svg#altrix_phone-arrow"></use>
+          </svg></span><span class="contact-button__text">Связаться</span></button>
+      <main class="site-content" id="content">
+        <div class="content">
+          <div class="hero-section">
+            <div class="hero-section__container container">
+              <section class="hero-section__search smart-search">
+                <div class="smart-search__title">Умный поиск</div>
+                <div class="smart-search__text">Мы запустили машинное обучение, пожалуйста, воспользуйтесь нашим интеллектуальным поиском</div>
+                <div class="smart-search__form"> 
+                  <form action="#" method="post">
+                    <button class="smart-search__form-tags __js_show-tags" type="button" data-src="#tags">#</button>
+                    <label aria-label="Поиск решений">
+                      <input type="search" name="search" placeholder="Поиск решений...">
+                    </label>
+                    <button type="submit">
+                      <svg width="25" height="25">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_loupe"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </section>
+            </div>
+            <div class="main-slider swiper-container __js_main-slider">
+              <div class="swiper-wrapper"> 
+                <div class="main-slider__slide swiper-slide">
+                  <div class="container">
+                    <div class="main-slider__slide-content"> 
+                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                          <svg width="18" height="12">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                          </svg></span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-slider__slide swiper-slide">
+                  <div class="container">
+                    <div class="main-slider__slide-content"> 
+                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                          <svg width="18" height="12">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                          </svg></span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-slider__slide swiper-slide">
+                  <div class="container">
+                    <div class="main-slider__slide-content"> 
+                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                          <svg width="18" height="12">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                          </svg></span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-slider__slide swiper-slide">
+                  <div class="container">
+                    <div class="main-slider__slide-content"> 
+                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                          <svg width="18" height="12">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                          </svg></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-slider__bottom container">
+                <div class="main-slider__pag paginate"></div>
+              </div>
+            </div>
+          </div>
+          <section class="about-section" style="background-color: #f3f6f8">
+            <div class="about-section__container container"> 
+              <div class="about-section__main">
+                <div class="about-section__title title">
+                  <h2 class="title__text">О компании</h2>
+                  <div class="title__subtitle">Некоторый уточняющий подзаголовок</div>
+                </div>
+                <div class="about-section__text"> 
+                  <p>Таким образом, постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям.</p>
+                  <p>Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований способствует подготовке и реализации первоочередных требований. Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности.</p>
+                  <p>Таким образом, курс на социально-ориентированный национальный проект говорит о возможностях модели развития. А ещё представители современных социальных резервов, инициированные исключительно синтетически, функционально разнесены на независимые элементы.</p>
+                </div><a class="about-section__btn button" href="#">Подробнее<span class="button__icon"> 
+                    <svg width="18" height="12">
+                      <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                    </svg></span></a>
+              </div>
+              <div class="about-section__aside">
+                <ul class="about-section__news">
+                  <li class="about-section__news-item news-card">
+                    <div class="news-card__image"> <img src="images/altrix/news-preview-1.jpg" srcset="images/altrix/news-preview-1@2x.jpg 2x" width="250" height="250" alt=""/></div>
+                    <div class="news-card__main"> 
+                      <div class="news-card__title">Итоги IV <br>Кейс-Чемпионата</div>
+                      <div class="news-card__text">Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.</div>
+                      <div class="news-card__bottom"> <a class="news-card__readmore arrow-link" href="#">Подробнее
+                          <svg width="7" height="10">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="about-section__news-item news-card">
+                    <div class="news-card__image"> <img src="images/altrix/news-preview-2.jpg" srcset="images/altrix/news-preview-2@2x.jpg 2x" width="250" height="250" alt=""/></div>
+                    <div class="news-card__main"> 
+                      <div class="news-card__title">Итоги IV <br>Кейс-Чемпионата</div>
+                      <div class="news-card__text">Господа, сплочённость команды профессионалов, в своём классическом представлении, допускает внедрение.</div>
+                      <div class="news-card__bottom"> <a class="news-card__readmore arrow-link" href="#">Подробнее
+                          <svg width="7" height="10">
+                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="about-section__aside-bottom"><a class="about-section__aside-all arrow-link" href="#">Все новости
+                    <svg width="7" height="10">
+                      <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </section>
+          <section class="direction-section">
+            <div class="direction-section__container container"> 
+              <div class="direction-section__title title">
+                <h2 class="title__text">Направления деятельности</h2>
+                <div class="title__subtitle">Еще один какой-нибудь уточняющий подзаголовок для этого раздела</div>
+              </div>
+              <ul class="direction-section__list"> 
+                <li class="direction-section__item dir-card">
+                  <div class="dir-card__image"><img src="images/altrix/direction-1.jpg" srcset="images/altrix/direction-1@2x.jpg 2x" width="632" height="316" alt=""></div>
+                  <div class="dir-card__content">
+                    <div class="dir-card__icon"> 
+                      <svg width="91" height="91">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_sphere"></use>
+                      </svg>
+                    </div>
+                    <div class="dir-card__bottom">
+                      <div class="dir-card__title">Текстовый текст</div><a class="dir-card__readmore arrow-link" href="#">Подробнее
+                        <svg width="7" height="10">
+                          <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="direction-section__item dir-card">
+                  <div class="dir-card__image"><img src="images/altrix/direction-1.jpg" srcset="images/altrix/direction-1@2x.jpg 2x" width="632" height="316" alt=""></div>
+                  <div class="dir-card__content">
+                    <div class="dir-card__icon"> 
+                      <svg width="98" height="96">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_notebook"></use>
+                      </svg>
+                    </div>
+                    <div class="dir-card__bottom">
+                      <div class="dir-card__title">Киберучения</div><a class="dir-card__readmore arrow-link" href="#">Подробнее
+                        <svg width="7" height="10">
+                          <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="direction-section__item dir-card">
+                  <div class="dir-card__image"><img src="images/altrix/direction-1.jpg" srcset="images/altrix/direction-1@2x.jpg 2x" width="632" height="316" alt=""></div>
+                  <div class="dir-card__content">
+                    <div class="dir-card__icon"> 
+                      <svg width="98" height="96">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_notebook"></use>
+                      </svg>
+                    </div>
+                    <div class="dir-card__bottom">
+                      <div class="dir-card__title">Киберучения</div><a class="dir-card__readmore arrow-link" href="#">Подробнее
+                        <svg width="7" height="10">
+                          <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="direction-section__item dir-card">
+                  <div class="dir-card__image"><img src="images/altrix/direction-1.jpg" srcset="images/altrix/direction-1@2x.jpg 2x" width="632" height="316" alt=""></div>
+                  <div class="dir-card__content">
+                    <div class="dir-card__icon"> 
+                      <svg width="91" height="91">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_sphere"></use>
+                      </svg>
+                    </div>
+                    <div class="dir-card__bottom">
+                      <div class="dir-card__title">Текстовый текст</div><a class="dir-card__readmore arrow-link" href="#">Подробнее
+                        <svg width="7" height="10">
+                          <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="gradient" style="height: 61.62%"></div>
+          </section>
+          <section class="projects-section">
+            <div class="projects-section__container container">
+              <div class="projects-section__title title">
+                <h2 class="title__text">Знаковые проекты</h2>
+                <div class="title__subtitle">Обобщающий подзаголовок о значимости для организации ее проектов</div>
+              </div>
+              <div class="projects-section__carousel swiper-container __js_projects-carousel">
+                <div class="swiper-wrapper"> 
+                  <div class="project-preview swiper-slide">
+                    <div class="project-preview__image"><img src="images/altrix/project-placeholder.jpg" srcset="images/altrix/project-placeholder.jpg 2x" width="150" height="150" alt=""></div>
+                    <div class="project-preview__title">Проектирование СБ 30КИИ А0 «С0 ЕЭС»</div><a class="project-preview__readmore arrow-link" href="#">Подробнее
+                      <svg width="7" height="10">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="project-preview swiper-slide">
+                    <div class="project-preview__image"><img src="images/altrix/project-placeholder.jpg" srcset="images/altrix/project-placeholder.jpg 2x" width="150" height="150" alt=""></div>
+                    <div class="project-preview__title">Аттестация АСЗИ Конституционного Суда РФ</div><a class="project-preview__readmore arrow-link" href="#">Подробнее
+                      <svg width="7" height="10">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="project-preview swiper-slide">
+                    <div class="project-preview__image"><img src="images/altrix/project-placeholder.jpg" srcset="images/altrix/project-placeholder.jpg 2x" width="150" height="150" alt=""></div>
+                    <div class="project-preview__title">Нагрузочное тестирование АО «Тандер»</div><a class="project-preview__readmore arrow-link" href="#">Подробнее
+                      <svg width="7" height="10">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="project-preview swiper-slide">
+                    <div class="project-preview__image"><img src="images/altrix/project-placeholder.jpg" srcset="images/altrix/project-placeholder.jpg 2x" width="150" height="150" alt=""></div>
+                    <div class="project-preview__title">Киберучения в ПАО «Банк Санкт-Петербург»</div><a class="project-preview__readmore arrow-link" href="#">Подробнее
+                      <svg width="7" height="10">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="project-preview swiper-slide">
+                    <div class="project-preview__image"><img src="images/altrix/project-placeholder.jpg" srcset="images/altrix/project-placeholder.jpg 2x" width="150" height="150" alt=""></div>
+                    <div class="project-preview__title">Проектирование СБ 30КИИ А0 «С0 ЕЭС»</div><a class="project-preview__readmore arrow-link" href="#">Подробнее
+                      <svg width="7" height="10">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="projects-section__carousel-bottom">
+                  <div class="projects-section__carousel-nav navigate">
+                    <button class="navigate__btn nav-btn nav-btn--prev" type="button">
+                      <svg width="12" height="20">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_chevron-left"></use>
+                      </svg>
+                    </button>
+                    <button class="navigate__btn nav-btn nav-btn--next" type="button">
+                      <svg width="12" height="20">
+                        <use xlink:href="images/svg/symbol/sprite.svg#altrix_chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="projects-section__carousel-pag paginate"></div><a class="projects-section__all arrow-link" href="#">Все проекты
+                    <svg width="7" height="10">
+                      <use xlink:href="images/svg/symbol/sprite.svg#altrix_triangle-right"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="partners-section" style="background-color: #f3f6f8">
+            <div class="partners-section__container container"> 
+              <div class="partners-section__title title">
+                <h2 class="title__text">Партнеры и статусы</h2>
+                <div class="title__subtitle">Некоторый теплый и уверенный подзаголовок о партнерах с которыми работает организация</div>
+              </div>
+              <ul class="partners-section__list">
+                <li class="partners-section__item"> <img src="images/altrix/partners/1.png" srcset="images/altrix/partners/1@2x.png 2x" width="183" height="40" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/2.png" srcset="images/altrix/partners/2@2x.png 2x" width="121" height="60" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/3.png" srcset="images/altrix/partners/3@2x.png 2x" width="184" height="36" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/4.png" srcset="images/altrix/partners/4@2x.png 2x" width="186" height="33" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/5.png" srcset="images/altrix/partners/5@2x.png 2x" width="227" height="70" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/6.png" srcset="images/altrix/partners/6@2x.png 2x" width="129" height="89" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/7.png" srcset="images/altrix/partners/7@2x.png 2x" width="178" height="49" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/8.png" srcset="images/altrix/partners/8@2x.png 2x" width="182" height="22" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/9.png" srcset="images/altrix/partners/9@2x.png 2x" width="217" height="72" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/10.png" srcset="images/altrix/partners/10@2x.png 2x" width="229" height="40" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/11.png" srcset="images/altrix/partners/11@2x.png 2x" width="187" height="83" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/12.png" srcset="images/altrix/partners/12@2x.png 2x" width="223" height="47" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/13.png" srcset="images/altrix/partners/13@2x.png 2x" width="167" height="84" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/14.png" srcset="images/altrix/partners/14@2x.png 2x" width="217" height="93" alt=""></li>
+                <li class="partners-section__item"> <img src="images/altrix/partners/15.png" srcset="images/altrix/partners/15@2x.png 2x" width="226" height="56" alt=""></li>
+              </ul>
+            </div>
+          </section>
+          <section class="contacts-section">
+            <div class="contacts-section__container container">
+              <div class="contacts-section__main"> 
+                <div class="contacts-section__title title">
+                  <h2 class="title__text">Контакты</h2>
+                </div>
+                <div class="contacts-section__email"> 
+                  <svg width="20" height="16">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_mail"></use>
+                  </svg><a href="mailto:Info@altirix.ru">Info@altirix.ru</a>
+                </div>
+                <div class="contacts-section__phones"> 
+                  <svg width="20" height="20">
+                    <use xlink:href="images/svg/symbol/sprite.svg#altrix_phone"></use>
+                  </svg><a href="tel:">+7 (812) 716-14-14</a><a href="tel:">+7 (812) 716-14-14</a>
+                </div>
+                <div class="contacts-section__main-title">Адрес</div>
+                <address class="contacts-section__address"> <span class="contacts-section__address-icon"> 
+                    <svg width="14" height="20">
+                      <use xlink:href="images/svg/symbol/sprite.svg#altrix_pin"></use>
+                    </svg></span>Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация</address>
+                <div class="contacts-section__requisite"> 
+                  <p>ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»</p><a href="#">Посмотреть на карте</a>
+                </div><a class="contacts-section__btn button button--outline" href="#" download> <span class="button__icon">
+                    <svg width="14" height="17">
+                      <use xlink:href="images/svg/symbol/sprite.svg#altrix_download"></use>
+                    </svg></span><span>Скачать перезнтацию</span></a>
+              </div>
+              <div class="contacts-section__form">
+                <div class="contacts-section__form-title">Связаться с нами</div>
+                <form class="application-form" action="#" method="post">
+                  <label class="application-form-label">
+                    <input type="text"><span>ФИО</span>
+                  </label>
+                  <div class="application-form-row">
+                    <label class="application-form-label">
+                      <input type="tel"><span>Контактный телефон</span>
+                    </label>
+                    <label class="application-form-label">
+                      <input type="email"><span>Email</span>
+                    </label>
+                  </div>
+                  <label class="application-form-label">
+                    <input type="text"><span>Название компании</span>
+                  </label>
+                  <label class="application-form-label application-form-label-for_text">
+                    <textarea></textarea><span>Что Вас интересует?</span>
+                  </label>
+                  <div class="application-form-submit">
+                    <div class="application-form-polic">
+                      <label class="application-form-polic-check">
+                        <input type="checkbox"><b></b>
+                      </label>
+                      <p>Я согласен с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a></p>
+                    </div>
+                    <!-- класс .__js_demo-modal-success-message и атрибут data-src для демонстрацции модального окна с сообщением об успешной отправки формы-->
+                    <button class="__js_demo-modal-success-message calc-btn" type="submit" data-src="#success-message">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__column"> 
+            <div class="footer__menu">
+              <div class="footer__menu-title">Решение под ключ</div>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Защита АСУ ТП</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Сетевая безопасность</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Криптографическая защита</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Мониторинг событий безопасности (SIEM)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Антивирусная защита</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Управление привелегированными пользователями (IDM)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Защита от несанкционированного доступа</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Обнаружение и предотвращение вторжений (IDS/IPS)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Патч-менеджмент</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Управление процессами информационной безопасности</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Киберполигон</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Безопасный удаленный доступ</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Резервное копирование информации</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Реагирование на инциденты (IPR)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Подключение к ГосСОПКА</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column"> 
+            <div class="footer__menu">
+              <div class="footer__menu-title">Информационная безопасность</div>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Защита критической информационной структуры (187-ФЗ)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Защита персональных данных (152-ФЗ)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Защита коммерческой тайны (98-ФЗ)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Проектирование систем защиты информации</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Атестация информационных систем</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Внедрение средств защиты информации</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Сертификация ПО</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Оценка эффективности защиты информации</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Тестирование на проникновение</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Red Team</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Киберучения</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Аудит информационной безопасности</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Обучение (повышение осведомленности)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column"> 
+            <div class="footer__menu">
+              <div class="footer__menu-title">Информационные технологии</div>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Корпоративные сети</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Инфраструктурные решения</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Интеллектуальное видеонаблюдение и аналитика</a></li>
+              </ul>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-title">Разработка ПО</div>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Блокчейн (Blockchain)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Машинное обучение (Machine learning)</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Безопасность приложений</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Автоматизация бизнес-процессов</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Заказная разработка</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">DevOps-консалтинг</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column"> 
+            <div class="footer__menu">
+              <div class="footer__menu-title">О компании</div>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Наша миссия</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Контакты</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Лицензия</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Карьера</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Вакансии</a></li>
+                <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Новости</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__links"> <a href="#">Условия обработки персональных данных</a><a href="#">Политика конфиденциальности</a></div>
+          <div class="footer__bottom">
+            <div class="footer__copyright">© Altirix Systems 2010-2021 </div>
+            <div class="footer__info">Адрес обратной связи для сообщений о коррупции: <a href="mailto:doverie@altirix.ru">doverie@altirix.ru</a></div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" id="modalForm" style="display: none;">
+        <h2 class="modal__title">Связаться с нами</h2>
+        <button class="modal__close __js_modal-close" type="button">
+          <svg width="14" height="14">
+            <use xlink:href="images/svg/symbol/sprite.svg#altrix_close"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <form class="application-form" action="#" method="post">
+            <label class="application-form-label">
+              <input type="text"><span>ФИО</span>
+            </label>
+            <label class="application-form-label">
+              <input type="tel"><span>Контактный телефон</span>
+            </label>
+            <label class="application-form-label">
+              <input type="email"><span>Email</span>
+            </label>
+            <div class="application-form-submit">
+              <button class="calc-btn" type="submit">Отправить</button>
+              <div class="application-form-polic">
+                <label class="application-form-polic-check">
+                  <input type="checkbox"><b></b>
+                </label>
+                <p>Я согласен с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="success-message" style="display: none;">
+        <h2 class="modal__title">Ваша заявка принята</h2>
+        <button class="modal__close __js_modal-close" type="button">
+          <svg width="14" height="14">
+            <use xlink:href="images/svg/symbol/sprite.svg#altrix_close"></use>
+          </svg>
+        </button>
+        <div class="modal__content">Спасибо за обращение. Наш менеджер свяжеться с Вами в течение 60 минут</div>
+      </div>
+      <div class="modal modal--tags" id="tags" style="display: none;">
+        <button class="modal__close __js_modal-close" type="button">
+          <svg width="14" height="14">
+            <use xlink:href="images/svg/symbol/sprite.svg#altrix_close"></use>
+          </svg>
+        </button>
+        <div class="modal__content"><a class="tags__item tag" href="#">АСУ</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">Blockchain</a><a class="tags__item tag" href="#">Антивирус</a><a class="tags__item tag" href="#">SIEM</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">Автоматизация</a><a class="tags__item tag" href="#">SIEM</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">АСУ</a><a class="tags__item tag" href="#">Blockchain</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">Автоматизация</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">Антивирус</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">АСУ</a><a class="tags__item tag" href="#">Blockchain</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">Автоматизация</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">Антивирус</a><a class="tags__item tag" href="#">Патч-менеджмент</a>
+        </div>
+      </div>
+      <div class="cookie-confirm">
+        <div class="cookie-confirm__container container">
+          <div class="cookie-confirm__title">Мы используем фалы Cookie</div>
+          <button class="cookie-confirm__btn __js_cookie-confirm" type="button">Хорошо</button>
+          <div class="cookie-confirm__text">Эти файлы cookie необходимы для функционирования веб-сайта и не могут быть отключены в наших системах. Как правило, они активируются только в ответ на ваши действия, аналогичные запросу услуг, такие как настройка уровня конфиденциальности, вход в систему или заполнение форм. Вы можете настроить браузер таким образом, чтобы он блокировал эти файлы cookie или уведомлял вас об их использовании, но в таком случае возможно, что некоторые разделы веб-сайта не будут работать.</div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

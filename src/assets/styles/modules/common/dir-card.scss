@@ -1,0 +1,127 @@
+.dir-card {
+  $self: &;
+  position: relative;
+  z-index: 0;
+  min-height: 316px;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+
+    @include respond-to("phablet") {
+      min-height: 275px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 36px 36px 22px;
+    background-color: $color-dark-5f;
+
+    @include respond-to("phablet") {
+      padding: 24px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    @include respond-to("phablet") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    margin-right: 12px;
+    font-size: 31px;
+    line-height: 1.6129;
+    color: $color-white;
+    font-weight: 500;
+    align-self: baseline;
+
+    @include respond-to("phablet") {
+      margin-top: 6px;
+      font-size: 24px;
+    }
+  }
+
+  &__readmore {
+    color: $color-white;
+    align-self: baseline;
+
+    @include respond-to("phablet") {
+      margin-top: 6px;
+    }
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-white;
+  }
+
+  &--simple {
+    #{$self}__image {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include respond-to("phablet") {
+          //position: relative;
+          //left: 50%;
+          //transform: translateX(-50%);
+          //width: auto;
+          //height: 275px;
+        }
+      }
+    }
+
+    #{$self}__content {
+      padding: 36px;
+      padding-bottom: 31px;
+      background-color: transparent;
+
+      @include respond-to("phablet") {
+        padding: 24px;
+      }
+    }
+
+    #{$self}__title {
+      margin: 0 0 30px;
+    }
+
+    #{$self}__readmore {
+      margin-top: auto;
+    }
+  }
+}

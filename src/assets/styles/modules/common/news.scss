@@ -1,0 +1,39 @@
+.news {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -36px 0 0 -36px !important;
+    padding: 0;
+
+    @include respond-to("tablet-middle") {
+      margin-left: -15px !important;
+      margin-top: -15px !important;
+    }
+
+    @include respond-to("phablet") {
+      margin-left: 0 !important;
+    }
+  }
+
+  &__item {
+    width: calc(50% - 36px);
+    margin-left: 36px;
+    margin-top: 36px;
+
+    @include respond-to("tablet-middle") {
+      width: calc(33.33% - 15px);
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+
+    @include respond-to("tablet") {
+      width: calc(50% - 15px);
+    }
+
+    @include respond-to("phablet") {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

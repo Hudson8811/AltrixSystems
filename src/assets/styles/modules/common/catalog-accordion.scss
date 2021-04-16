@@ -1,0 +1,104 @@
+.catalog-accordion {
+  &__item {
+    $item: &;
+
+    //padding: 10px 0;
+    border-top: solid 1px $color-grey-6e9;
+    border-bottom: solid 1px $color-grey-6e9;
+
+    &-head {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 10px 18px 10px 0;
+      font-family: $mainFont;
+      font-size: 24px;
+      line-height: 1.3333;
+      font-weight: 700;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+      appearance: none;
+      cursor: pointer;
+      transition: 0.2s;
+
+      @include respond-to("tablet") {
+        font-size: 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='4' width='1' height='9' rx='.5' fill='%23AFB4BF'/%3e%3crect y='5' width='1' height='9' rx='.5' transform='rotate(-90 0 5)' fill='%23AFB4BF'/%3e%3c/svg%3e");
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-blue;
+
+        &::before {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='4' width='1' height='9' rx='.5' fill='%23446cb2'/%3e%3crect y='5' width='1' height='9' rx='.5' transform='rotate(-90 0 5)' fill='%23446cb2'/%3e%3c/svg%3e");
+        }
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    &-content {
+      padding: 20px 0;
+
+      display: none;
+
+      #{$item}--nested {
+        &:first-child {
+          margin-top: -20px;
+        }
+        &:last-child {
+          margin-bottom: -21px;
+        }
+      }
+    }
+
+    &--active {
+      & > #{$item}-content {
+        //display: block;
+      }
+
+      & > #{$item}-head {
+        color: $color-blue;
+
+        &::before {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect y='5' width='1' height='9' rx='.5' transform='rotate(-90 0 5)' fill='%23446cb2'/%3e%3c/svg%3e");
+        }
+      }
+    }
+
+    &--nested {
+      #{$item}-head {
+        padding-left: 44px;
+        font-size: 19px;
+        line-height: 1.68421;
+
+        @include respond-to("tablet") {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .method + .method {
+      margin-top: 30px;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: -1px;
+  }
+}

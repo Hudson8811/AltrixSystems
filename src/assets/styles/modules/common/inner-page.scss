@@ -1,0 +1,331 @@
+.inner-page {
+  $self: &;
+  border-top: solid 1px $color-grey;
+  padding-bottom: 93px;
+  overflow: hidden;
+
+  @include respond-to("tablet-middle") {
+    padding-bottom: 50px;
+  }
+
+  &__header {
+    padding-top: 68px;
+    padding-bottom: 32px;
+
+    @include respond-to("tablet-middle") {
+      padding-top: 32px;
+    }
+
+    &-wrapper {
+      position: relative;
+      margin-top: 62px;
+      padding: 130px 0;
+
+      @include respond-to("tablet-middle") {
+        margin-top: 32px;
+        padding: 70px 0;
+      }
+
+      @include respond-to("phablet") {
+        padding: 40px 0;
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 400px;
+      overflow: hidden;
+
+      @include respond-to("tablet-middle") {
+        max-height: 280px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &--single {
+      position: relative;
+
+      @include respond-to("tablet-middle") {
+        padding-bottom: 0;
+      }
+
+      #{$self}__title {
+        margin: 0;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__short {
+    margin-top: 58px;
+    margin-bottom: -130px;
+    padding: 58px;
+    background-color: $color-white;
+    box-shadow: 2px 2px 19px rgba(33, 43, 70, 0.05);
+
+    @include respond-to("tablet-middle") {
+      //margin-top: 40px;
+      margin-bottom: -70px;
+      padding: 40px;
+    }
+
+    @include respond-to("phablet") {
+      margin-top: 40px;
+      margin-bottom: -40px;
+      padding: 32px 24px;
+    }
+
+    &-title {
+      margin: 0 0 32px;
+      font-size: 19px;
+      line-height: calc(28 / 19);
+      font-weight: 700;
+
+      @include respond-to("phablet") {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-text {
+      font-family: $secondFont;
+      font-size: 15px;
+      line-height: calc(26 / 15);
+      color: $color-dark-5a;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin: 62px 0 32px;
+    font-size: 39px;
+    line-height: 1.282;
+    font-weight: 700;
+
+    @include respond-to("tablet-middle") {
+      margin-top: 32px;
+      margin-bottom: 20px;
+    }
+
+    @include respond-to("phablet") {
+      font-size: 30px;
+    }
+
+    &--flex {
+      display: flex;
+
+      span {
+        align-self: baseline;
+      }
+    }
+
+    .share-btn {
+      margin-left: 10px;
+      align-self: baseline;
+    }
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__main {
+    position: relative;
+
+    &--pb {
+      padding-bottom: 93px;
+
+      @include respond-to("tablet-middle") {
+        padding-bottom: 50px;
+      }
+    }
+
+    h2,
+    h3 {
+      margin: 0 0 32px;
+      font-size: 19px;
+      line-height: calc(32 / 19);
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 15px;
+      font-family: $secondFont;
+      font-size: 15px;
+      line-height: calc(26 / 15);
+      color: $color-dark-5a;
+    }
+
+    * + h2,
+    * + h3 {
+      margin-top: 42px;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: $secondFont;
+      font-size: 15px;
+      line-height: calc(26 / 15);
+      color: $color-dark-5a;
+
+      &.stylized {
+        li {
+          position: relative;
+          margin-bottom: 9px;
+          padding-left: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $color-blue;
+          }
+        }
+      }
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__about + &__about {
+    margin-top: 58px;
+  }
+
+  &__archive {
+    margin-bottom: 35px;
+
+    @include respond-to("tablet-middle") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 50px;
+  }
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 58px;
+
+    @include respond-to("tablet") {
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      width: 100%;
+      margin: 0 0 40px;
+      font-size: 24px;
+      line-height: 1.33333;
+      font-weight: 700;
+
+      @include respond-to("tablet") {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-select {
+      width: 100%;
+      max-width: 334px;
+      padding: 12px 60px 13px 15px;
+      font-size: 15px;
+      line-height: 1;
+      color: $color-dark-5a;
+      border: solid 1px $color-grey-e9;
+      border-radius: 5px;
+      background-repeat: no-repeat;
+      background-position: right 15px top 50%;
+      background-size: 20px auto;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.885 0L0 .902 5 6l5-5.098L9.115 0 5 4.195.885 0z' fill='%23446CB2'/%3e%3c/svg%3e");
+      transition: 0.2s;
+      appearance: none;
+
+      @include respond-to("tablet") {
+        max-width: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: $color-blue;
+      }
+    }
+
+    &-select + &-select {
+      margin-left: 30px;
+
+      @include respond-to("tablet") {
+        margin-left: 0;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 93px;
+
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: 1.73333;
+    color: $color-dark-5a;
+
+    @include respond-to("tablet-middle") {
+      margin-bottom: 50px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 30px;
+    }
+  }
+
+  &__news {
+    margin-top: 36px;
+
+    @include respond-to("phablet") {
+      margin-top: 0;
+    }
+  }
+
+  &__pagination {
+    margin-top: 93px;
+  }
+
+  &__reference + &__reference {
+    margin-top: 58px;
+
+    @include respond-to("tablet") {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,5 +1,0 @@
-mixin date(date, cl)
-  div(class= cl ? cl + ' date' : 'date')
-    span.date__icon 
-      +icon('clock')(width="20", height="20")
-    time.date__text(datetime= date.attr)= date.text

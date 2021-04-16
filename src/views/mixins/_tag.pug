@@ -1,5 +1,0 @@
-mixin tag(target, text, isButton, cl)
-  if isButton 
-    button(class= cl ? cl + ' tag' : 'tag', data-target= target ? target : '#', type="button")= text
-  else
-    a(class= cl ? cl + ' tag' : 'tag', href= target ? target : '#')= text

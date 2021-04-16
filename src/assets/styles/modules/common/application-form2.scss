@@ -1,0 +1,151 @@
+.application-form {
+  $self: &;
+
+  &-label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+
+    input,
+    textarea {
+      padding: 10px 16px;
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 1;
+      border: solid 1px $color-grey-e9;
+      border-radius: 5px;
+      appearance: none;
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: $color-dark-5a;
+      }
+    }
+
+    textarea {
+      min-height: 88px;
+      resize: none;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      line-height: 1;
+      color: $color-dark-5a;
+      order: -1;
+    }
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to("phablet") {
+      flex-direction: column;
+    }
+
+    #{$self}-label {
+      width: calc(50% - 11px);
+
+      @include respond-to("phablet") {
+        width: 100%;
+      }
+    }
+  }
+
+  &-submit {
+    display: flex;
+    margin-top: 32px;
+    font-family: $secondFont;
+    font-size: 14px;
+    line-height: 1.85714;
+    color: $color-grey-cf;
+
+    & > * {
+      align-self: flex-start;
+    }
+
+    @include respond-to("tablet") {
+      flex-direction: column;
+    }
+
+    .calc-btn {
+      @extend .button;
+      display: inline-block;
+      min-width: 260px;
+
+      padding: 15px 20px;
+      font-family: $mainFont;
+      font-size: 19px;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: capitalize;
+
+      @include respond-to("tablet") {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &-polic {
+    display: flex;
+
+    &-check {
+      cursor: pointer;
+      align-self: flex-start;
+
+      b {
+        display: block;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        border: solid 1px $color-grey-e9;
+        background-color: $color-white;
+        align-self: flex-start;
+        flex-shrink: 0;
+      }
+
+      input {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+      }
+
+      input:checked + b {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.885 5L0 5.902 5 11 15 .902 14.115 0 5 9.196.885 5z' fill='%23446CB2'/%3e%3c/svg%3e");
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $color-grey-cf;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        text-decoration: none;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}

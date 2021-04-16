@@ -1,0 +1,521 @@
+ul,
+ol,
+p,
+h2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $mainFont;
+  color: $color-main;
+  background-color: $color-white;
+
+  &.fancybox-active {
+    //overflow: hidden;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.more_btn {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #426cff;
+
+  span {
+    display: block;
+    padding-right: 8px;
+  }
+
+  svg {
+    display: block;
+    height: 14px;
+    width: 26px;
+  }
+}
+
+.section_title {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 2px;
+    margin-left: 121px;
+    background: #426cff;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #262c36;
+
+    span {
+      color: #426cff;
+    }
+  }
+
+  @include respond-to("tablet-wide") {
+    width: 100%;
+    display: flex;
+
+    span {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #262c36;
+    }
+
+    &:after {
+      margin-left: auto;
+    }
+  }
+}
+
+.radio-input {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+  background: #f4f4f4;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    & + b {
+      position: relative;
+      z-index: 2;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border: 1px solid #e1e5ed;
+      border-radius: 50%;
+    }
+
+    &:checked {
+      & + b:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: #426cff;
+      }
+
+      & ~ span {
+        color: #f4f4f4;
+      }
+
+      & ~ i {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #688aff;
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #262c36;
+  }
+}
+
+/* TO-DO: вынести в отдельный файл
+.application-form-label {
+  position: relative;
+  box-sizing: border-box;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #e1e5ed;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: border-radius 0.2s linear, border-color 0.2s linear;
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 5px 16px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    color: #2d3139;
+    font-family: "Roboto", sans-serif;
+  }
+
+  span {
+    position: absolute;
+    left: 16px;
+    bottom: 30%;
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2d3139;
+
+    transition: 0.2s linear;
+  }
+
+  &.is-active {
+    border-radius: 3px;
+    border-color: #5b83fd;
+
+    span {
+      bottom: 100%;
+      left: -1px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 135%;
+      color: #fff;
+      padding: 1px 5px;
+      background: #5b83fd;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+}
+
+.application-form-label-for_file {
+  cursor: pointer;
+
+  input {
+    opacity: 0;
+  }
+
+  .application-form-file-name {
+    position: absolute;
+    left: 16px;
+    opacity: 0;
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    color: #2d3139;
+  }
+
+  .application-form-file-btn {
+    position: absolute;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 102px;
+    height: 40px;
+    background: #d8dae0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b7285;
+    margin-top: 0;
+  }
+
+  &.is-active .application-form-file-name {
+    opacity: 1;
+  }
+}
+
+.application-form-submit {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.application-form-polic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20px;
+
+  p {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #2a2d34;
+
+    a {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: #2a68fb;
+    }
+  }
+}
+
+.application-form-polic-check {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+
+  input {
+    display: none;
+  }
+
+  b {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #d6d6d8;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+
+  input:checked + b:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5b83fd;
+  }
+}*/
+
+.calc-btn {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 164px;
+  min-height: 40px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #5b83fd;
+  border-radius: 3px;
+  border: 0;
+  padding: 0 24px;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  svg {
+    display: block;
+    width: 10px;
+    height: 15px;
+    margin-left: auto;
+  }
+}
+
+.fancybox-bg {
+  opacity: 1 !important;
+  background: rgba(20, 33, 56, 0.5) !important;
+}
+
+.blue_btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 11px 0 24px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  background: #426cff;
+  border-radius: 3px;
+
+  span {
+    display: block;
+    padding-right: 19px;
+    text-align: left;
+  }
+
+  svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.mounting_page {
+  .site-content {
+    box-sizing: border-box;
+    padding-top: 137px;
+
+    @include respond-to("desktop") {
+      padding-top: 71px;
+    }
+  }
+
+  .header {
+    background-color: #384359;
+  }
+}
+
+/* TO-DO вынести в отдельный файл
+.breadcroumbs {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 15px;
+
+    &:before {
+      content: "/";
+      display: block;
+      padding-right: 17px;
+    }
+
+    a {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 135%;
+      color: #262c36;
+      text-decoration: none;
+
+      @include respond-to("tablet-middle") {
+        font-size: 13px;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      a {
+        pointer-events: none;
+        color: #6b7285;
+      }
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+*/
+/* TO-DO: вынести в отдельный файл
+.application-form-label-textarea {
+  height: 109px;
+
+  span {
+    bottom: 70%;
+  }
+}*/
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  #content {
+    flex-grow: 1;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

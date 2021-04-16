@@ -1,0 +1,90 @@
+.condition {
+    display: flex;
+    align-items: center;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        width: 26px;
+        height: 20px;
+        position: relative;
+
+        &>input:active+.condition-custom-chekbox::before {
+            background-color: #b3d7ff;
+            border-color: #b3d7ff;
+        }
+
+        &>input:checked+.condition-custom-checkbox::after {
+            background-color: #0b76ef;
+
+        }
+
+
+    }
+
+    &-checkbox {
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &-custom-checkbox {
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid #D6D6D8;
+            border-radius: 50%;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+            box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        &::after {
+            position: absolute;
+            top: 39%;
+            left: 39%;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
+
+    &-text {
+        font-size: 14px;
+        line-height: 120%;
+        padding-left: 6px;
+    }
+
+    &-link {
+        color: #0000FF;
+        text-decoration: underline;
+    }
+}

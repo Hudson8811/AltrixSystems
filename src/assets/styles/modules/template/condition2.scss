@@ -1,0 +1,116 @@
+.condition {
+  display: flex;
+  //align-items: center;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-label {
+    //display: inline-flex;
+    //align-items: center;
+    user-select: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    align-self: flex-start;
+    flex-shrink: 0;
+
+    & > input:hover + .condition-custom-chekbox {
+      border-color: $color-blue;
+    }
+
+    & > input:checked + .condition-custom-checkbox {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.885 5L0 5.902 5 11 15 .902 14.115 0 5 9.196.885 5z' fill='%23446CB2'/%3e%3c/svg%3e");
+    }
+  }
+
+  &-checkbox {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &-custom-checkbox {
+    //width: 1em;
+    //height: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px $color-grey-e9;
+    background-color: $color-white;
+    align-self: flex-start;
+
+    /*&::before {
+      content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #d6d6d8;
+      border-radius: 50%;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      position: absolute;
+      top: 39%;
+      left: 39%;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }*/
+  }
+
+  &-text {
+    font-family: $secondFont;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    color: $color-grey-cf;
+
+    a {
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-send {
+    margin-left: 24px;
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    @include respond-to("phablet") {
+      margin-left: 0;
+      margin-top: 24px;
+      order: -1;
+    }
+  }
+}

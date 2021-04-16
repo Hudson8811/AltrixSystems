@@ -1,0 +1,36 @@
+.input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #688AFF;
+    border-radius: 3px;
+    color: #262C36;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    position: relative;
+
+    &::placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+    }
+}
+
+.input-name-wrapper {
+    position: relative;
+}
+
+.input-name-decor {
+    position: absolute;
+    background-color: #5B83FD;
+    font-size: 10px;
+    line-height: 135%;
+    color: #fff;
+    top: -13px;
+    border-radius: 5px 5px 0 0;
+    padding: 0px 5px;
+}
+
+.input-group {
+    display: flex;
+}

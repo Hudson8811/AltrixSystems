@@ -1,0 +1,16 @@
+- let ARCHIVE_LIST = [{text: 'Руководство по эксплуатации', icon: 'altrix_file-pdf'}, {text: 'Руководство по оборудованию', icon: 'altrix_file-doc'}, {text: 'Оборудование по руководству', icon: 'altrix_file-xls'}];
+
+article.inner-page
+  header.inner-page__header 
+    .container
+      +breadcrumbs2(['О нас'], 'inner-page__breadcrumbs')
+      h1.inner-page__title.inner-page__title--flex 
+        span О нас
+        button.share-btn(type="button")
+          +svg('#altrix_share')(width="20", height="20")
+      +date({attr: '2021-03-18', text: '18.03.21'}, 'inner-page__date')
+
+  
+  .inner-page__main
+    //-.container
+    include about-blocks

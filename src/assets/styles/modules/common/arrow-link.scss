@@ -1,0 +1,30 @@
+.arrow-link {
+  display: inline-flex;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  color: $color-blue;
+  transition: 0.2s;
+  align-items: center;
+
+  svg {
+    margin-left: 12px;
+    fill: $color-blue;
+    transition: 0.2s;
+    align-self: center;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-blue-2;
+
+    svg {
+      fill: $color-blue-2;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,285 @@
+mixin menu-content(...items)
+    ul.header-sub_menu_content
+        each item in items
+            li.header-sub_menu_content-item
+                a.header-sub_menu_content-link(href="#")= item
+
+mixin footer-link(title)
+    li.footer-row-item
+        a.footer-row-link(href="#")= title
+
+mixin footer-heading(title)
+    li.footer-row-item
+        a.footer-row-heading(href="#")= title
+
+mixin sl-banner(title)
+    a.index_banner-item(href="#")
+        svg
+            use(xlink:href='images/svg/symbol/sprite.svg#build')
+        span= title
+
+mixin desc(number, desc)
+    .a_company-item
+        .a_company-number= number
+        .a_company-desc=desc
+
+mixin m_btn
+    a.more_btn(href="#")
+        span подробнее
+        svg
+            use(xlink:href='images/svg/symbol/sprite.svg#more_btn')
+
+mixin s_title(black, blue)
+    .section_title
+        span=black 
+            span=blue
+
+mixin stages-item(title, desc, svg)
+    .stages-item
+        .stages-icon
+            svg
+                use(xlink:href=`images/svg/symbol/sprite.svg${svg}`)
+        .stages-text
+            span=title
+            p=desc
+
+mixin svg(svg)
+    svg&attributes(attributes)
+        use(xlink:href=`images/svg/symbol/sprite.svg${svg}`)
+
+mixin ob-item(img, title)
+    .objects-item(style=`background-image: url(images/objects/${img});`)
+        .objects-text
+            span.objects-title= title
+            a.objects-btn(href="#")
+                span Рассчитать
+                +svg('#objects-svg')
+
+mixin fact(icon, title, desc)
+    .facts-item
+        .facts-icon= icon
+        .facts-text
+            span= title
+            p= desc
+
+mixin arrow_btn(title)
+    a.more_btn(href="#")
+        span= title
+        svg
+            use(xlink:href='images/svg/symbol/sprite.svg#more_btn')
+
+mixin form_btn(text, mod) 
+    button.button(type="submit" class=`${mod}__button`)= text
+        .button__icon
+            svg.button__arrow()
+                use(xlink:href='images/svg/symbol/sprite.svg#arrow')
+
+mixin pack-card(title,desc)
+    .pack__card
+        img.pack__img(src="images/engineering/card-img.png")
+        .pack__card-content
+            .pack__title= title
+            .pack__desc= desc
+
+mixin design-card(number,desc)
+    .design__card-wrapper
+        .design__card
+            .design__number-wrapper
+                .design__number= number
+            .design__desc= desc
+            .design__decor
+
+mixin order-card(img,title,desc)
+    .order__card-wrapper
+        .order__card
+            img.order__card-img(src=`images/order/${img}.png`)
+            .order__content-wrapper
+                .order__card-title= title
+                .order__card-desc= desc
+
+mixin radio-input(name, title)
+    label.radio-input
+        input(type="radio", name=`${name}`)
+        b
+        i
+        span= title
+
+mixin blue_btn(title)
+    a.blue_btn(href="#")
+        span= title
+        +svg('#calc-arrow')
+
+mixin breadcroumbs(...items)
+    ul.breadcroumbs
+        each item in items
+            li
+                a(href="#")= item
+
+mixin breadcrumbs2(arr, cl)
+  ul(class= cl ? cl + ' breadcrumbs' : 'breadcrumbs')
+    li
+      a(href="index.html") Главная
+        +svg('#altrix_separator')(width="8", height="14")
+    each item, index in arr 
+      if index === arr.length - 1
+        li
+          a= item
+      else
+        li
+          a(href="#")= item
+            +svg('#altrix_separator')(width="8", height="14")
+
+mixin services-table-content(...items)
+    each item in items
+        td
+            div= item
+
+mixin input-name(mod)
+    label.application-form-label(class=`${mod}__input-name`)
+        input(type="text")
+        span ФИО
+
+mixin input-company(mod)
+    label.application-form-label(class=`${mod}__input-company`)
+        input(type="text")
+        span Название компании
+
+mixin input-group(mod)
+    label.application-form-label(class=`${mod}__input-mail`)
+        input(type="email")
+        span email адрес
+    label.application-form-label(class=`${mod}__input-tel`)
+        input(type="text")
+        span номер телефона
+
+mixin input-mail(mod)
+    label.application-form-label(class=`${mod}__input-mail`)
+        input(type="email")
+        span email адрес
+
+mixin input-file(mod)
+    label.application-form-label.application-form-label-for_file(class=`${mod}__form-file-label`)
+        input(type="file")
+        span Добавить файл
+        p.application-form-file-name
+        p.application-form-file-btn выбрать
+
+mixin textarea(mod)
+    label.application-form-label.application-form-label-textarea(class = `${mod}__textarea`)
+        textarea
+        span Сообщение
+
+mixin condition(mod)
+    .condition-wrapper(class=`${mod}__condition-wrapper`)
+        .condition(class=`${mod}__condition`)
+            label.condition-label.label
+                input.condition-checkbox(type="checkbox")
+                span.condition-custom-checkbox
+            span.condition-text(class=`${mod}__condition-text`) Я принимаю условия <br>
+                a.condition-link(href="#") пользовательского соглашения
+        +form_btn("отправить",`${mod}`)
+
+mixin condition2(mod)
+    .condition-wrapper(class=`${mod}__condition-wrapper`)
+        .condition(class=`${mod}__condition`)
+            label.condition-label.label
+                input.condition-checkbox(type="checkbox")
+                span.condition-custom-checkbox
+            span.condition-text(class=`${mod}__condition-text`) Я согласен с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>
+
+        button.condition-send.button.button--large(type="submit") Отправить
+
+mixin social(arr, className)
+    ul.social(class= className)
+        each item in arr
+            li.social__item
+                a.social__link(href='#', target='_blank')
+                    +svg('#' + item.id)(width= item.w, height= item.h)
+
+mixin date(date, cl)
+    div(class= cl ? cl + ' date' : 'date')
+        span.date__icon 
+            +svg('#altrix_clock')(width="20", height="20")
+        time.date__text(datetime= date.attr)= date.text
+
+mixin news-card(className, img, title, text, date, tag)
+    - let tg = tag ? tag : 'div';
+    #{tg}(class= className ? className + ' news-card' : 'news-card')
+        .news-card__image 
+            img(src="images/altrix/" + img + ".jpg", srcset="images/altrix/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
+        .news-card__main 
+            .news-card__title!= title
+            .news-card__text= text
+            .news-card__bottom 
+                if date
+                    +date(date, 'news-card__date')
+                a.news-card__readmore.arrow-link(href="#") Подробнее
+                    +svg('#altrix_triangle-right')(width="7", height="10")
+
+mixin title(title, subtitle, className)
+    div(class= className ? className + ' title' : 'title')
+        h2.title__text!= title
+        if subtitle
+            .title__subtitle!= subtitle
+
+mixin download-link(icon, text, href, cl)
+    a(class= cl ? cl + ' download-link' : 'download-link', href= href ? href : '#', download)
+        +svg('#' + icon)(width="25", height="25")
+        span= text
+
+mixin tag(target, text, isButton, cl)
+    if isButton 
+        button(class= cl ? cl + ' tag' : 'tag', data-target= target ? target : '#', type="button")= text
+    else
+        a(class= cl ? cl + ' tag' : 'tag', href= target ? target : '#')= text
+
+mixin method(image, title)
+    .method
+        .method__image 
+            img(src="images/altrix/" + image + ".jpg", srcset="images/altrix/" + image + "@2x.jpg 2x", width="298", height="305", alt="")
+        .method__main
+            .method__title= title 
+            .method__text Не следует, однако забывать, что укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Задача организации, в особенности же консультация с широким активом требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации позволяет выполнять важные задания по разработке соответствующий условий активизации. Равным образом рамки и место обучения кадров требуют от нас анализа новых предложений.
+            .method__bottom
+                +download-link('altrix_file-pdf', 'Брошюра', null, 'method__link')
+                +download-link('altrix_file-doc', 'Опросный лист', null, 'method__link')
+
+mixin pagination(cl, num)
+    - let count = num ? num : 5;
+    div(class= cl ? cl + ' pagination' : 'pagination')
+        .pagination__container.container
+            a.pagination__btn.nav-btn.nav-btn--prev(href="#")
+                +svg('#altrix_chevron-left')(width="12", height="20")
+                span.visually-hidden Предыдущая
+            a.pagination__btn.nav-btn.nav-btn--next(href="#")
+                +svg('#altrix_chevron-right')(width="12", height="20")
+                span.visually-hidden Следующая
+            ul.pagination__list
+                - let i = 1;
+                while i <= count
+                    if i === 1
+                        li.pagination__item.pagination__item--current 
+                            a.pagination__link= i 
+                    else 
+                        li.pagination__item 
+                            a.pagination__link(href="#")= i 
+                    - i++;
+
+mixin reference-block(item, cl)
+    div(class= cl ? cl + ' text-image-block' : 'text-image-block')
+        .text-image-block__image
+            img(src="images/altrix/references/" + item.img.n + ".png", srcset="images/altrix/references/" + item.img.n + ".png 2x", width= item.img.w, height= item.img.h, alt="")
+        .text-image-block__main
+            h3.text-image-block__title= item.title
+            .text-image-block__text!= item.text
+
+mixin dir-card2(item, tg, cl)
+    - let tag = tg ? tg : 'div';
+    #{tag}(class= cl ? cl + ' dir-card dir-card--simple' : 'dir-card dir-card--simple')
+        .dir-card__image
+            img(src="images/altrix/" + item.img + ".jpg", srcset="images/altrix/" + item.img + ".jpg 2x", width="632", height="413", alt="")
+        .dir-card__content
+            .dir-card__title= item.title
+            .dir-card__text= item.text
+            a.dir-card__readmore.arrow-link(href="#") Подробнее
+                +svg('#altrix_triangle-right')(width="7", height="10")

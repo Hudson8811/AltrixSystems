@@ -1,0 +1,25 @@
+section.projects-section
+  .projects-section__container.container
+    +title('Знаковые проекты', 'Обобщающий подзаголовок о значимости для организации ее проектов', 'projects-section__title')
+
+    - let PROJECTS = ['Проектирование СБ 30КИИ А0 «С0 ЕЭС»', 'Аттестация АСЗИ Конституционного Суда РФ', 'Нагрузочное тестирование АО «Тандер»', 'Киберучения в ПАО «Банк Санкт-Петербург»', 'Проектирование СБ 30КИИ А0 «С0 ЕЭС»'];
+
+    .projects-section__carousel.swiper-container.__js_projects-carousel
+      .swiper-wrapper 
+        each title in PROJECTS
+          .project-preview.swiper-slide
+            .project-preview__image
+              img(src="images/altrix/project-placeholder.jpg", srcset="images/altrix/project-placeholder.jpg 2x", width="150", height="150", alt="")
+            .project-preview__title= title
+            a.project-preview__readmore.arrow-link(href="#") Подробнее
+              +svg('#altrix_triangle-right')(width="7", height="10")
+      
+      .projects-section__carousel-bottom
+        .projects-section__carousel-nav.navigate
+          button.navigate__btn.nav-btn.nav-btn--prev(type="button")
+            +svg('#altrix_chevron-left')(width="12", height="20")
+          button.navigate__btn.nav-btn.nav-btn--next(type="button")
+            +svg('#altrix_chevron-right')(width="12", height="20")
+        .projects-section__carousel-pag.paginate
+        a.projects-section__all.arrow-link(href="#") Все проекты
+          +svg('#altrix_triangle-right')(width="7", height="10")

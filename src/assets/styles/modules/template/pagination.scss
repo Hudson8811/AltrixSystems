@@ -1,0 +1,64 @@
+.pagination {
+  $self: &;
+  overflow: hidden;
+  //padding-top: 12px;
+
+  &__container {
+    display: flex;
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__btn {
+    margin-right: 12px;
+    margin-bottom: 12px;
+
+    &--next {
+    }
+    &--prev {
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin-right: 12px;
+    margin-bottom: 12px;
+
+    &--current {
+      #{$self}__link {
+        pointer-events: none;
+        color: $color-white;
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 34px;
+    color: $color-main;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px $color-blue;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-white;
+      background-color: $color-blue;
+    }
+  }
+}

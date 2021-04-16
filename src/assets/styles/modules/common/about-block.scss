@@ -1,0 +1,95 @@
+.about-block {
+  $self: &;
+
+  &__container {
+    display: flex;
+
+    @include respond-to("tablet") {
+      flex-direction: column;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-dark-5a;
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 30px;
+
+      @include respond-to("tablet-middle") {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: $mainFont;
+    font-size: 19px;
+    line-height: calc(21 / 19);
+    color: $color-main;
+
+    @include respond-to("tablet-middle") {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 35px 0 0 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 13px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 632px;
+    max-height: 566px;
+    margin-left: 36px;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    @include respond-to("tablet-middle") {
+      max-width: 50%;
+    }
+
+    @include respond-to("tablet") {
+      max-width: none;
+      margin: 0 0 36px;
+      order: -1;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto; //100%;
+      //object-fit: cover;
+    }
+  }
+
+  &--reverse {
+    #{$self}__image {
+      margin-right: 36px;
+      margin-left: 0;
+      order: -1;
+
+      @include respond-to("tablet") {
+        margin: 0 0 36px;
+      }
+    }
+  }
+}

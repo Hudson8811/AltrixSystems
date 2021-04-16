@@ -1,0 +1,21 @@
+.text-icon-block {
+  display: flex;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    background-color: $color-blue;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+
+  &__main {
+    padding: 0 15px;
+
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-dark-5a;
+  }
+}

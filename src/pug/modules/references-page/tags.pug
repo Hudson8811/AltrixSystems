@@ -1,0 +1,7 @@
+- const TAGS = [{text: 'здравоохранение'}, {text: 'наука'}, {text: 'транспорт'}, {text: 'телекоммуникации'}, {text: 'финансовый сектор'}, {text: 'ТЭК'}, {text: 'атомная энергия'}, {text: 'Антивирус'}, {text: 'Сетевая безопасность'}, {text: 'АСУ'}, {text: 'Blockchain'}, {text: 'Киберучения'}, {text: 'Сетевая безопасность'}, {text: 'Автоматизация'}, {text: 'Патч-менеджмент'}, {text: 'Патч-менеджмент'} ];
+
+.inner-page__tags.tags
+  each item in TAGS 
+    +tag(null, item.text, false, 'tags__item')
+  a.tags__more(href="#") Все теги
+    

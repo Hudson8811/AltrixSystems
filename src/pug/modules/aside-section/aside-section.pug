@@ -1,0 +1,30 @@
+section.aside-menu
+  .aside-menu__inner
+    if isHome
+      a.aside-menu__logo.logo
+        img(src="images/altrix/logo.svg", width="326", height="21", alt="")
+    else 
+      a.aside-menu__logo.logo(href="index.html")
+        img(src="images/altrix/logo.svg", width="326", height="21", alt="")
+
+
+    ul.aside-menu__list
+      each item in MENU_LIST
+        li.aside-menu__item 
+          a.aside-menu__link.aside-menu__link--dropdown(href="#")= item.text
+          .aside-menu__dropdown.dropdown 
+            ul.dropdown__list.dropdown__list--column
+              each subitem in item.dropdown 
+                li.dropdown__item 
+                  a.dropdown__link(href="#")= subitem
+    .aside-menu__bottom
+      a.aside-menu__email(href="mailto:Info@altirix.ru") 
+        +svg('#altrix_mail')(width="20", height="16")
+        span Info@altirix.ru
+      a.aside-menu__phone(href='tel:+78127161414')
+        +svg('#altrix_phone')(class="aside-menu__phone-icon", width='20', height='20')
+        span +7 (812) 716-14-14
+
+      a.aside-menu__phone(href='tel:+78002018702')
+        +svg('#altrix_phone')(class="aside-menu__phone-icon", width='20', height='20')
+        span +7 (800) 201-87-02

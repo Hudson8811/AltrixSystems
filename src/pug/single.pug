@@ -1,0 +1,15 @@
+extends template/main
+
+block variables
+  - var title = 'Защита АСУ ТП'
+  //- var pageClass = 'main_page'
+  - var isHome = false;
+
+
+block content
+  include modules/single-page/inner-page
+  include modules/single-page/effect
+  include modules/common/accordion2
+  include modules/single-page/cost
+  include modules/common/tariff
+  

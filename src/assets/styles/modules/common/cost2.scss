@@ -1,0 +1,165 @@
+.cost {
+  &__form-wrapper {
+    padding: 43px 58px;
+    background: $color-grey-f8;
+
+    @include respond-to("tablet") {
+      padding: 24px 32px;
+    }
+
+    @include respond-to("phablet") {
+      padding: 24px;
+    }
+  }
+
+  &__form-title {
+    margin-bottom: 19px;
+  }
+
+  &__form-content {
+    //display: flex;
+    //flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @include respond-to("tablet-wide") {
+      //flex-direction: column;
+    }
+
+    @include respond-to("phablet") {
+      //margin-bottom: 20px;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    //width: 50%;
+
+    position: relative;
+
+    @include respond-to("tablet-wide") {
+      width: 100%;
+    }
+  }
+
+  &__name-wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__input-name {
+    width: calc(50% - 11px);
+    margin-right: 22px;
+    margin-bottom: 20px;
+
+    @include respond-to("tablet") {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__input-company {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__input-group {
+    width: calc(50% - 11px);
+    margin-bottom: 20px;
+    display: flex;
+
+    @include respond-to("tablet") {
+      width: 100%;
+    }
+
+    @include respond-to("phablet") {
+      flex-direction: column;
+    }
+  }
+
+  &__input-mail {
+    border: none;
+    margin-right: 22px;
+    width: 100%;
+    margin-bottom: 0;
+
+    @include respond-to("phablet") {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input-tel {
+    border: none;
+    width: 100%;
+    margin-bottom: 0;
+
+    @include respond-to("phablet") {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__form-file-label {
+    margin: 0;
+
+    @include respond-to("tablet-wide") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input-file {
+    background: #ffffff;
+    border: none;
+  }
+
+  &__textarea-wrapper {
+    width: 100%;
+  }
+
+  &__textarea {
+    height: 100%;
+    box-sizing: border-box;
+
+    span {
+      bottom: 82%;
+
+      @include respond-to("tablet-wide") {
+        bottom: 70%;
+      }
+    }
+
+    @include respond-to("tablet-wide") {
+      height: 109px;
+    }
+  }
+
+  &__condition-wrapper {
+    @include respond-to("phablet") {
+      flex-direction: column-reverse;
+
+      .blue_btn {
+        display: none;
+      }
+    }
+  }
+
+  &__condition {
+    @include respond-to("phablet") {
+      .blue_btn {
+        display: none;
+      }
+
+      //margin-top: 20px;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    @include respond-to("tablet-middle") {
+    }
+
+    @include respond-to("phablet") {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.tag {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 22px 11px;
+
+  font-family: $thirdFont;
+  font-size: 13px;
+  line-height: 1.23;
+  color: $color-dark-5a;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-grey-5f9;
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken($color-grey-5f9, 5%);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

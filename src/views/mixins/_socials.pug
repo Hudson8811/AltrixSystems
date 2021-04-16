@@ -1,7 +1,0 @@
-mixin socials(arr, className)
-	ul.socials(class= className)
-		each item in arr
-			li.socials__item
-				a.socials__link(href='#', target='_blank')
-					//-i(class='fa ' + item, aria-hidden='true')
-					+icon(item.id)(width= item.w, height= item.h)

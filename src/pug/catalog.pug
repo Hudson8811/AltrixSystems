@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+  - var title = 'Каталог решений'
+  //- var pageClass = 'main_page'
+  - var isHome = false;
+  - const ACCORDION = ['Hard Drive Inspector', 'Hard Drive Inspector for Notebooks', 'Хронограф', 'Hard Drive Inspector', 'Hard Drive Inspector for Notebooks'];
+
+
+block content
+  include modules/catalog-page/inner-page

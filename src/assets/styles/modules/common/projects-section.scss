@@ -1,0 +1,63 @@
+.projects-section {
+  padding: 140px 0 93px;
+  overflow: hidden;
+
+  @include respond-to("tablet-middle") {
+    padding: 50px 0 70px;
+  }
+
+  &__container {
+  }
+
+  &__title {
+    margin: 0 0 57px;
+  }
+
+  &__carousel {
+    //overflow: visible;
+
+    /*&::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      z-index: 2;
+      transform: translateX(-100%);
+      width: 100%;
+      height: calc(100% + 40px);
+      background-color: $color-white;
+    }*/
+
+    &-bottom {
+      display: flex;
+      margin-top: 58px;
+
+      @include respond-to("tablet") {
+        display: block;
+        margin-top: 32px;
+      }
+    }
+
+    &-nav {
+      align-self: center;
+      margin-right: 36px;
+
+      @include respond-to("tablet") {
+        display: none;
+      }
+    }
+
+    &-pag {
+      align-self: center;
+
+      @include respond-to("tablet") {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__all {
+    margin-left: auto;
+    align-self: center;
+  }
+}

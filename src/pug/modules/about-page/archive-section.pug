@@ -1,0 +1,27 @@
+section.archive-section(style="background-color: #f3f6f8;")
+  .archive-section__container.container 
+    +title('Архив документов', null, 'archive-section__title')
+
+    .archive-section__column
+      ul.archive-section__list 
+        each item in ARCHIVE_LIST
+          li 
+            +download-link(item.icon, item.text, null, null)
+        each item in ARCHIVE_LIST
+          li 
+            +download-link(item.icon, item.text, null, null)
+    
+    .archive-section__column
+      ul.archive-section__list 
+        each item in ARCHIVE_LIST
+          li 
+            +download-link(item.icon, item.text, null, null)
+        each item in ARCHIVE_LIST
+          li 
+            +download-link(item.icon, item.text, null, null)
+    
+    .archive-section__column
+      ul.archive-section__list 
+        each item in ARCHIVE_LIST
+          li 
+            +download-link(item.icon, item.text, null, null)

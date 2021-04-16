@@ -1,0 +1,131 @@
+.accordion {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 93px;
+
+  @include respond-to("tablet-middle") {
+    padding-bottom: 50px;
+  }
+
+  .small-title {
+    margin-bottom: 58px;
+
+    @include respond-to("tablet-middle") {
+      margin-bottom: 32px;
+    }
+  }
+
+  //@include respond-to("tablet-wide") {}
+
+  &-item {
+    padding-bottom: 21px;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: #52525a;
+    border: 1px solid #446cb2;
+    border-radius: 5px;
+
+    background-color: #fff;
+    transition: 0.2s;
+
+    & + & {
+      margin-top: 32px;
+    }
+
+    @include respond-to("tablet-middle") {
+      padding-bottom: 10px;
+      & + & {
+        margin-top: 24px;
+      }
+    }
+
+    &.is-active {
+      background-color: #f3f6f8;
+      border-color: #f3f6f8;
+
+      b {
+        &::before {
+          transform: scale(1, -1);
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #f3f6f8;
+      border-color: #f3f6f8;
+    }
+  }
+
+  &-heading {
+    position: relative;
+    padding: 41px 100px 20px 41px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    @include respond-to("tablet-middle") {
+      padding: 20px 72px 10px 20px;
+    }
+
+    & > * {
+      align-self: center;
+    }
+
+    p {
+      margin: 0;
+      padding-right: 15px;
+      font-family: $secondFont;
+      font-size: 15px;
+      line-height: calc(26 / 15);
+      color: #52525a;
+      font-weight: 700;
+    }
+
+    b {
+      position: absolute;
+      top: calc(50% + 10px);
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border: 1px solid #446cb2;
+      border-radius: 5px;
+      background-color: #fff;
+
+      @include respond-to("tablet-middle") {
+        top: calc(50% + 5px);
+        width: 40px;
+        height: 40px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 12px;
+        align-self: center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23446CB2' d='M.885 0L0 .902 5 6l5-5.098L9.115 0 5 4.195.885 0z'/%3e%3c/svg%3e");
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &-content {
+    display: none;
+    padding: 0 100px 21px 41px;
+
+    @include respond-to("tablet-middle") {
+      padding: 0 72px 10px 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

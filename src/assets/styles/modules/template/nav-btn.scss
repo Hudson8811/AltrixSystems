@@ -1,0 +1,32 @@
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 5px;
+  border: solid 1px $color-blue;
+  background-color: $color-white;
+  transition: 0.2s;
+  appearance: none;
+  cursor: pointer;
+
+  svg {
+    fill: $color-blue;
+    align-self: center;
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $color-blue-2;
+
+    svg {
+      fill: $color-blue-2;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

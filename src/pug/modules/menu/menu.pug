@@ -1,0 +1,39 @@
+.menu
+  .menu__container
+    .menu__start
+      if isHome
+        a.menu__logo.logo
+          img(src="images/altrix/logo.svg", width="243", height="15", alt="")
+      else 
+        a.menu__logo.logo(href="index.html")
+          img(src="images/altrix/logo.svg", width="243", height="15", alt="")
+
+    .menu__middle
+      ul.menu__list
+        each item in MENU_LIST
+          li.menu__item 
+            a.menu__link(href="#")!= item.text
+            .menu__dropdown.dropdown 
+              .dropdown__container.container
+                .dropdown__title
+                  span= item.text 
+                ul.dropdown__list
+                  each subitem in item.dropdown 
+                    li.dropdown__item 
+                      a.dropdown__link(href="#")= subitem
+    
+    if !isHome
+      .menu__end
+        .menu__search.smart-search.smart-search--simple
+        
+          button.smart-search__toggle(type="button")
+            +svg('#altrix_loupe')(class="smart-search__toggle-loupe", width="17", height="17")
+            +svg('#altrix_close')(class="smart-search__toggle-close", width="17", height="17")
+            
+          .smart-search__form
+            form(action="#", method="post")
+              button.smart-search__form-tags.__js_show-tags(type="button", data-src="#tags") #
+              label(aria-label="Поиск решений")
+                input(type="search", name="search", placeholder="Поиск решений...") 
+              button(type="submit")
+                +svg('#altrix_loupe')(width="17", height="17")

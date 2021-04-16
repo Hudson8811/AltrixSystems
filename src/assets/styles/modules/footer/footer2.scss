@@ -1,0 +1,217 @@
+.footer {
+  padding-top: 88px;
+  background-color: $color-dark-5f;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: calc(25% - 27px);
+
+    @include respond-to("tablet-middle") {
+      width: calc(50% - 16px);
+
+      &:nth-child(n + 3) {
+        margin-top: 50px;
+      }
+    }
+
+    @include respond-to("phablet") {
+      width: 100%;
+
+      &:nth-child(n + 2) {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__menu {
+    $menu: &;
+
+    @include respond-to("phablet") {
+    }
+
+    &-title {
+      position: relative;
+      margin-bottom: 15px;
+      padding-bottom: 18px;
+      font-size: 17px;
+      line-height: calc(21 / 17);
+      color: $color-white;
+      font-weight: 600;
+      border-bottom: solid 1px $color-dark-88;
+      transition: 0.3s;
+
+      @include respond-to("phablet") {
+        margin-bottom: 0;
+        padding-right: 42px;
+
+        &.is-active {
+          margin-bottom: 15px;
+
+          &::before {
+            transform: translateY(-50%) rotate(90deg) scale(-1, 1);
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 40%;
+        transform: translateY(-50%) rotate(90deg);
+        width: 20px;
+        height: 20px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 12 20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 18.23L1.77 20l10-10-10-10L0 1.77 8.23 10 0 18.23z' fill='%23fff'/%3e%3c/svg%3e");
+        transition: 0.2s;
+
+        display: none;
+
+        @include respond-to("phablet") {
+          display: block;
+        }
+      }
+    }
+
+    &-list {
+      list-style: none;
+      //margin: 15px 0 0 0;
+      margin: 0;
+      padding: 0;
+      transition: 0.2s;
+
+      @include respond-to("phablet") {
+        display: none;
+        margin: 0;
+        //padding: 15px 0 32px;
+      }
+    }
+
+    &-item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      font-size: 15px;
+      line-height: calc(22 / 15);
+      color: $color-grey-cf;
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-white;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__menu + &__menu {
+    margin-top: 50px;
+
+    @include respond-to("phablet") {
+      margin-top: 18px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 52px;
+    margin-bottom: 19px;
+
+    @include respond-to("phablet") {
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 15px;
+      line-height: calc(22 / 15);
+      color: $color-grey-cf;
+      transition: 0.2s;
+      text-decoration: underline;
+
+      @include respond-to("phablet") {
+        align-self: flex-start;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        text-decoration: none;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    a + a {
+      margin-left: 20px;
+
+      @include respond-to("phablet") {
+        margin-left: 0;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 0 22px;
+    border-top: solid 1px $color-dark-88;
+
+    @include respond-to("phablet") {
+      display: block;
+    }
+  }
+
+  &__copyright {
+    font-size: 15px;
+    line-height: calc(22 / 15);
+    color: $color-grey-cf;
+  }
+
+  &__info {
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: calc(22 / 15);
+    color: $color-grey-cf;
+
+    @include respond-to("phablet") {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+
+    a {
+      color: $color-grey-cf;
+      transition: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-white;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}

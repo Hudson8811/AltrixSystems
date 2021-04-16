@@ -1,0 +1,16 @@
+section.cost
+  .cost__container.container
+
+    .cost__form-wrapper
+      .cost__form-title.small-title Получить коммерческое предложение
+      form.cost__form
+        .cost__form-content
+          .cost__input-wrapper
+            +input-name("cost")
+            .cost__input-group
+              +input-group("cost")
+            +input-company("cost")
+          .cost__textarea-wrapper
+            +textarea("cost")
+        +condition2("cost")
+

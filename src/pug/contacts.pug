@@ -1,0 +1,14 @@
+extends template/main
+
+block variables
+  - var title = 'Контакты'
+  //- var pageClass = 'main_page'
+  - var isHome = false;
+
+
+block content
+  include modules/contacts-page/inner-page
+
+block script
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=a6470789-2472-438c-a958-ca1bc6b9cdf4&lang=ru_RU")
+  script(src="js/map.js")

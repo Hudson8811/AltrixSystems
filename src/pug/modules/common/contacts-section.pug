@@ -1,0 +1,58 @@
+section.contacts-section
+  .contacts-section__container.container
+    .contacts-section__main 
+      +title('Контакты', null, 'contacts-section__title')
+      .contacts-section__email 
+        +svg('#altrix_mail')(width="20", height="16")
+        a(href="mailto:Info@altirix.ru") Info@altirix.ru
+      .contacts-section__phones 
+        +svg('#altrix_phone')(width="20", height="20")
+        a(href="tel:") +7 (812) 716-14-14
+        a(href="tel:") +7 (812) 716-14-14
+      .contacts-section__main-title Адрес
+      address.contacts-section__address 
+        span.contacts-section__address-icon 
+          +svg('#altrix_pin')(width="14", height="20")
+        | Аптекарский пр-т, д. 2, г. Санкт-Петербург 197022, Российская Федерация
+      .contacts-section__requisite 
+        p ИНН 7811463860 / ОГРН 1107847150806 Общество с ограниченной ответственностью «Альтирикс Системс»
+        a(href="#") Посмотреть на карте
+      
+      a.contacts-section__btn.button.button--outline(href="#", download) 
+        span.button__icon
+          +svg('#altrix_download')(width="14", height="17")
+        span Скачать перезнтацию
+
+    .contacts-section__form
+      .contacts-section__form-title Связаться с нами
+      form.application-form(action="#", method="post")
+        label.application-form-label
+          input(type="text")
+          span ФИО
+
+        .application-form-row
+          label.application-form-label
+            input(type="tel")
+            span Контактный телефон
+          label.application-form-label
+            input(type="email")
+            span Email
+
+        label.application-form-label
+          input(type="text")
+          span Название компании
+
+        label.application-form-label.application-form-label-for_text
+          textarea
+          span Что Вас интересует?
+
+        .application-form-submit
+          .application-form-polic
+            label.application-form-polic-check
+              input(type="checkbox")
+              b
+
+            p Я согласен с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>
+          // класс .__js_demo-modal-success-message и атрибут data-src для демонстрацции модального окна с сообщением об успешной отправки формы
+          button(type="submit", data-src="#success-message").__js_demo-modal-success-message.calc-btn Отправить
+        

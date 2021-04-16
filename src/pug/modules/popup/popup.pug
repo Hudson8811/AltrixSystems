@@ -1,0 +1,49 @@
+.modal#modalForm(style="display: none;")
+  h2.modal__title Связаться с нами
+  button.modal__close.__js_modal-close(type="button")
+    +svg('#altrix_close')(width="14", height="14")
+  .modal__content
+    form.application-form(action="#", method="post")
+      label.application-form-label
+        input(type="text")
+        span ФИО
+
+      label.application-form-label
+        input(type="tel")
+        span Контактный телефон
+        
+      label.application-form-label
+        input(type="email")
+        span Email
+
+      .application-form-submit
+        button(type="submit").calc-btn Отправить
+        .application-form-polic
+          label.application-form-polic-check
+            input(type="checkbox")
+            b
+          p Я согласен с <a href="#">условиями обработки персональных данных</a> и <a href="#">политикой конфиденциальности</a>
+
+
+.modal#success-message(style="display: none;")
+  h2.modal__title Ваша заявка принята
+  button.modal__close.__js_modal-close(type="button")
+    +svg('#altrix_close')(width="14", height="14")
+  .modal__content Спасибо за обращение. Наш менеджер свяжеться с Вами в течение 60 минут
+
+
+- const TAGS_M = [{text: 'АСУ'}, {text: 'Сетевая безопасность'}, {text: 'Киберучения'}, {text: 'Blockchain'}, {text: 'Антивирус'}, {text: 'SIEM'}, {text: 'Патч-менеджмент'}, {text: 'Автоматизация'}, {text: 'SIEM'}, {text: 'Киберучения'}, {text: 'АСУ'}, {text: 'Blockchain'}, {text: 'Киберучения'}, {text: 'Сетевая безопасность'}, {text: 'Автоматизация'}, {text: 'Патч-менеджмент'}, {text: 'Антивирус'}, {text: 'Патч-менеджмент'}, {text: 'АСУ'}, {text: 'Blockchain'}, {text: 'Киберучения'}, {text: 'Сетевая безопасность'}, {text: 'Автоматизация'}, {text: 'Патч-менеджмент'}, {text: 'Антивирус'}, {text: 'Патч-менеджмент'} ];
+
+.modal.modal--tags#tags(style="display: none;")
+  button.modal__close.__js_modal-close(type="button")
+    +svg('#altrix_close')(width="14", height="14")
+  .modal__content
+    each item in TAGS_M
+      +tag(null, item.text, false, 'tags__item')
+
+.cookie-confirm
+  .cookie-confirm__container.container
+    .cookie-confirm__title Мы используем фалы Cookie
+    button.cookie-confirm__btn.__js_cookie-confirm(type="button") Хорошо
+    .cookie-confirm__text Эти файлы cookie необходимы для функционирования веб-сайта и не могут быть отключены в наших системах. Как правило, они активируются только в ответ на ваши действия, аналогичные запросу услуг, такие как настройка уровня конфиденциальности, вход в систему или заполнение форм. Вы можете настроить браузер таким образом, чтобы он блокировал эти файлы cookie или уведомлял вас об их использовании, но в таком случае возможно, что некоторые разделы веб-сайта не будут работать.
+

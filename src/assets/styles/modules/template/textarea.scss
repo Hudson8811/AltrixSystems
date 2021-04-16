@@ -1,0 +1,17 @@
+.textarea {
+    padding: 16px;
+    width: 100%;
+    resize: none;
+    border: none;
+    color: #262C36;
+    font-size: 15px;
+    outline: none;
+
+    &::placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}

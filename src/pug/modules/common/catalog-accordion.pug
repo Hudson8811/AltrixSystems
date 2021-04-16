@@ -1,0 +1,17 @@
+section.catalog-accordion
+  .catalog-accordion__container.container
+    .catalog-accordion__item
+      //-.catalog-accordion__item--active
+      button.catalog-accordion__item-head(type="button") Программное обеспечение
+
+      .catalog-accordion__item-content 
+
+        each item, index in ACCORDION 
+          - let addCl = index === 22 ? 'catalog-accordion__item--active' : '';
+            
+          .catalog-accordion__item.catalog-accordion__item--nested(class= addCl)
+            button.catalog-accordion__item-head(type="button")= item
+
+            .catalog-accordion__item-content
+              +method('method-1', 'Решение 1 - решение вопроса')
+              +method('method-2', 'Решение 2 - решение вопроса')

@@ -1,0 +1,21 @@
+.share-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    fill: $color-grey-cf;
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: $color-main;
+    }
+  }
+}

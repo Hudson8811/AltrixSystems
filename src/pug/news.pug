@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+  - var title = 'Новости'
+  //- var pageClass = 'main_page'
+  - var isHome = false;
+
+
+block content
+  include modules/news-page/inner-page

@@ -1,0 +1,40 @@
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin respond-to-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin custom-respond-to($val) {
+  @media (max-width: $val) {
+    @content;
+  }
+}
+
+// Подключение шрифтов
+@mixin font-face($font-family, $file-name, $weight, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("../fonts/#{$file-name}.woff2") format("woff2"),
+      url("../fonts/#{$file-name}.woff") format("woff");
+
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

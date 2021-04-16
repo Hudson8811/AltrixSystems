@@ -1,0 +1,22 @@
+.title {
+  &__text {
+    margin: 0 !important;
+    font-size: 39px !important;
+    line-height: calc(50 / 39) !important;
+    font-weight: 700;
+
+    @include respond-to("phablet") {
+      font-size: 30px !important;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    font-size: 19px;
+    line-height: 1.1;
+
+    @include respond-to("phablet") {
+      font-size: 16px;
+    }
+  }
+}

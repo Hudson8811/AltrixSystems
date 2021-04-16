@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'О нас'
+  //- var pageClass = 'main_page'
+  - var isHome = false;
+
+
+block content
+  include modules/about-page/inner-page
+  include modules/about-page/archive-section
+  include modules/common/contacts-section

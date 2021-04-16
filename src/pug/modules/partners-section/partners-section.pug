@@ -1,0 +1,10 @@
+section.partners-section(style="background-color: #f3f6f8")
+  .partners-section__container.container 
+    +title('Партнеры и статусы', 'Некоторый теплый и уверенный подзаголовок о партнерах с которыми работает организация', 'partners-section__title')
+
+    ul.partners-section__list
+      - let j = 1;
+      - let PARTNERS = [{w: '183', h: '40'}, {w: '121', h: '60'}, {w: '184', h: '36'}, {w: '186', h: '33'}, {w: '227', h: '70'}, {w: '129', h: '89'}, {w: '178', h: '49'}, {w: '182', h: '22'}, {w: '217', h: '72'}, {w: '229', h: '40'}, {w: '187', h: '83'}, {w: '223', h: '47'}, {w: '167', h: '84'}, {w: '217', h: '93'}, {w: '226', h: '56'}];
+      each item, index in PARTNERS
+        li.partners-section__item 
+          img(src="images/altrix/partners/" + (index + 1) + ".png", srcset="images/altrix/partners/" + (index + 1) + "@2x.png 2x", width= item.w, height= item.h, alt="")

@@ -1,0 +1,21 @@
+- let dropdown = ['Блокчейн (Blockchain)', 'Машинное обучение (Machine learning)', 'Безопасность приложений', 'Автоматизация бизнес-процессов', 'Заказная разработка', 'DevOps-консалтинг'];
+- let MENU_LIST = [{text: 'Информационная безопасность', dropdown: dropdown}, {text: 'Информационные технологии', dropdown: dropdown}, {text: 'Разработка&nbsp;ПО', dropdown: dropdown}, {text: 'Решения под ключ', dropdown: dropdown}, {text: 'Каталог', dropdown: dropdown}, {text: 'О компании', dropdown: dropdown}];
+
+header.header
+  .header__inner
+    .header__left
+      button.header__burger.burger(type="button", aria-label="Меню")
+        span
+      a.header__lang(href="#") En
+    .header__right
+      a.header__phone(href='tel:+78127161414')
+        +svg('#altrix_phone')(class="header__phone-icon", width='12', height='12')
+        span +7 (812) 716-14-14
+      a.header__phone(href='tel:+78002018702')
+        span +7 (800) 201-87-02
+      +social([{id: 'altrix_facebook-square', w: '18', h: '18'}, {id: 'altrix_twitter-square', w: '18', h: '18'}, {id: 'altrix_linkedin', w: '18', h: '18'}, {id: 'altrix_youtube', w: '23', h: '23'}], 'header__social')
+      a.header__login(href="#")
+        +svg('#altrix_login')(width='16', height='16')
+        span Личный кабинет
+
+  include ../aside-section/aside-section
