@@ -78,6 +78,7 @@
 
     @include respond-to("phablet") {
       max-width: calc(100% - 80px);
+      min-width: auto;
       margin-left: 0;
     }
   }
