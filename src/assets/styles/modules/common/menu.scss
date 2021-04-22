@@ -81,6 +81,11 @@
       min-width: auto;
       margin-left: 0;
     }
+
+    @include respond-to-min("desktop-huge") {
+      max-width: 547px;
+      margin-left: 65px;
+    }
   }
 
   &__logo {
@@ -104,6 +109,10 @@
 
     @include custom-respond-to(1450px) {
       //min-width: calc(100% / 6);
+    }
+
+    @include respond-to-min("desktop-huge") {
+      margin-right:56px;
     }
 
     &:last-child {
