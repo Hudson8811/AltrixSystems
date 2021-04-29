@@ -278,6 +278,7 @@
       <main class="site-content" id="content">
         <div class="content">
           <div class="hero-section">
+            <canvas id="nCanvasRender"></canvas>
             <div class="hero-section__container container">
               <section class="hero-section__search smart-search">
                 <div class="smart-search__title">Умный поиск</div>
@@ -296,60 +297,60 @@
                   </form>
                 </div>
               </section>
-            </div>
-            <div class="main-slider swiper-container __js_main-slider">
-              <div class="swiper-wrapper"> 
-                <div class="main-slider__slide swiper-slide">
-                  <div class="container">
-                    <div class="main-slider__slide-content"> 
-                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
-                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
-                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
-                          <svg width="18" height="12">
-                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
-                          </svg></span></a>
+              <div class="main-slider swiper-container __js_main-slider">
+                <div class="swiper-wrapper"> 
+                  <div class="main-slider__slide swiper-slide">
+                    <div class="container">
+                      <div class="main-slider__slide-content"> 
+                        <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                        <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                        <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                            <svg width="18" height="12">
+                              <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                            </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-slider__slide swiper-slide">
+                    <div class="container">
+                      <div class="main-slider__slide-content"> 
+                        <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                        <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                        <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                            <svg width="18" height="12">
+                              <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                            </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-slider__slide swiper-slide">
+                    <div class="container">
+                      <div class="main-slider__slide-content"> 
+                        <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                        <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                        <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                            <svg width="18" height="12">
+                              <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                            </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-slider__slide swiper-slide">
+                    <div class="container">
+                      <div class="main-slider__slide-content"> 
+                        <div class="main-slider__slide-pretitle">Информационная безопасность</div>
+                        <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
+                        <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
+                            <svg width="18" height="12">
+                              <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
+                            </svg></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="main-slider__slide swiper-slide">
-                  <div class="container">
-                    <div class="main-slider__slide-content"> 
-                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
-                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
-                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
-                          <svg width="18" height="12">
-                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
-                          </svg></span></a>
-                    </div>
-                  </div>
+                <div class="main-slider__bottom container">
+                  <div class="main-slider__pag paginate"></div>
                 </div>
-                <div class="main-slider__slide swiper-slide">
-                  <div class="container">
-                    <div class="main-slider__slide-content"> 
-                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
-                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
-                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
-                          <svg width="18" height="12">
-                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
-                          </svg></span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-slider__slide swiper-slide">
-                  <div class="container">
-                    <div class="main-slider__slide-content"> 
-                      <div class="main-slider__slide-pretitle">Информационная безопасность</div>
-                      <div class="main-slider__slide-title">Защитная прошивка для IoT</div>
-                      <div class="main-slider__slide-text">Создавайте IoT-устройства “безопасные по дизайну”</div><a class="main-slider__slide-btn button button--large" href="#">Подробнее<span class="button__icon"> 
-                          <svg width="18" height="12">
-                            <use xlink:href="images/svg/symbol/sprite.svg#altrix_arrow-right"></use>
-                          </svg></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-slider__bottom container">
-                <div class="main-slider__pag paginate"></div>
               </div>
             </div>
           </div>
@@ -777,6 +778,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

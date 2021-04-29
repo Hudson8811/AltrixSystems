@@ -20,7 +20,7 @@ body {
   font-family: $mainFont;
   color: $color-main;
   background-color: $color-white;
-
+  overflow-x: hidden;
   &.fancybox-active {
     //overflow: hidden;
   }

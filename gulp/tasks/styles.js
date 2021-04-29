@@ -20,9 +20,9 @@ module.exports = function () {
             .pipe(autoprefixer({
                  overrideBrowserslist:  ['last 3 versions']
             }))
-            .pipe(sourcemaps.write())
             .pipe(rename('styles.min.css'))
             .pipe(cleanCSS({compatibility: 'ie8'}))
+            .pipe(sourcemaps.write('.map'))
             .pipe($.gulp.dest(stylesPATH.output))
             .on('end', $.browserSync.reload);
     });
@@ -34,9 +34,9 @@ module.exports = function () {
             .pipe(autoprefixer({
                 overrideBrowserslist:  ['last 3 versions']
             }))
-            .pipe(sourcemaps.write())
             .pipe(rename('before.min.css'))
             .pipe(cleanCSS({compatibility: 'ie8'}))
+            .pipe(sourcemaps.write('.map'))
             .pipe($.gulp.dest(stylesPATH.output))
             .on('end', $.browserSync.reload);
     });
