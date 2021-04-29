@@ -149,11 +149,16 @@
       font-size: 15px;
       line-height: 1.73333;
       color: $color-dark-5a;
+
+      max-height: 720px;
+      overflow: auto;
+      > * + *{
+        margin-top: 32px;
+      }
     }
 
     ul {
       list-style: none;
-      margin: 32px 0 0 0;
       padding: 0;
     }
 

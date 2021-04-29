@@ -518,3 +518,40 @@ body {
   padding: 0;
   border: 0;
 }
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #446cb2;
+  border: 0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #446cb2;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #446cb2;
+}
+::-webkit-scrollbar-track {
+  background: #ebebf0;
+  border: 0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ebebf0;
+}
+::-webkit-scrollbar-track:active {
+  background: #ebebf0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

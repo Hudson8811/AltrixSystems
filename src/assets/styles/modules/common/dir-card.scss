@@ -13,6 +13,7 @@
     height: 100%;
     overflow: hidden;
     z-index: 1;
+    display: block;
 
     @include respond-to("phablet") {
       min-height: 275px;
@@ -69,7 +70,6 @@
   &__readmore {
     color: $color-white;
     align-self: baseline;
-    pointer-events: auto;
 
     @include respond-to("phablet") {
       margin-top: 6px;
@@ -91,18 +91,7 @@
   &--simple {
     #{$self}__image {
       img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        @include respond-to("phablet") {
-          //position: relative;
-          //left: 50%;
-          //transform: translateX(-50%);
-          //width: auto;
-          //height: 275px;
-        }
+        display: none;
       }
     }
 

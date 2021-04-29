@@ -9,7 +9,7 @@
   }
 
   &__header {
-    padding-top: 68px;
+    padding-top: 48px;
     padding-bottom: 32px;
 
     @include respond-to("tablet-middle") {
@@ -109,7 +109,7 @@
   }
 
   &__title {
-    margin: 62px 0 32px;
+    margin: 48px 0 28px;
     font-size: 39px;
     line-height: 1.282;
     font-weight: 700;
@@ -227,21 +227,49 @@
   }
 
   &__tags {
-    margin-bottom: 50px;
+    margin-bottom: 22px;
+    &--refer{
+      margin-top: -20px;
+      margin-bottom: 58px;
+      @include respond-to("tablet-middle") {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &__reset{
+    margin-bottom: 58px;
+    &-btn{
+      font-size: 13px;
+      line-height: 16px;
+      color: #53565A;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 32px;
+      border: solid 1px $color-blue;
+      box-sizing: border-box;
+      border-radius: 5px;
+      transition: 0.2s;
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $color-blue;
+      }
+    }
   }
 
   &__filter {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 58px;
+    margin-bottom: 36px;
 
     @include respond-to("tablet") {
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
 
     &-title {
       width: 100%;
-      margin: 0 0 40px;
+      margin: 0 0 29px;
       font-size: 24px;
       line-height: 1.33333;
       font-weight: 700;
@@ -310,7 +338,7 @@
   }
 
   &__news {
-    margin-top: 36px;
+    margin-top: -46px;
 
     @include respond-to("phablet") {
       margin-top: 0;
@@ -318,7 +346,7 @@
   }
 
   &__pagination {
-    margin-top: 93px;
+    margin-top: 58px;
   }
 
   &__reference + &__reference {
