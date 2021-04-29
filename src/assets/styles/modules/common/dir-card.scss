@@ -9,21 +9,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100%;
     height: 100%;
-    pointer-events: none;
     overflow: hidden;
+    z-index: 1;
 
     @include respond-to("phablet") {
       min-height: 275px;
     }
 
     img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      display: none;
     }
   }
 
@@ -33,6 +29,9 @@
     width: 100%;
     height: 100%;
     padding: 36px 36px 22px;
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
 
     @include respond-to("phablet") {
       padding: 24px;
@@ -70,6 +69,7 @@
   &__readmore {
     color: $color-white;
     align-self: baseline;
+    pointer-events: auto;
 
     @include respond-to("phablet") {
       margin-top: 6px;
