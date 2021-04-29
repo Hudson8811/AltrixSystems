@@ -21,6 +21,13 @@
     flex-direction: column;
   }
 
+  @include respond-to-min("tablet-middle") {
+    transition: transform 0.3s ease;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
   &__header {
     margin: 0 0 50px;
 

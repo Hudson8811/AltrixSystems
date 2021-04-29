@@ -70,6 +70,13 @@ $(window).on('load', function() {
     asideMenu.toggleClass('aside-menu--open');
   });
 
+  $(document).click( function(e){
+    if ( !($(e.target).closest('.aside-menu').length || ($(e.target).hasClass('burger') || $(e.target).closest('.burger').length)) ) {
+      burger.removeClass('is-active');
+      asideMenu.removeClass('aside-menu--open');
+    }
+  });
+
   const footerMenuToggle = $('.footer__menu-title');
   
   footerMenuToggle.on('click', function() {
@@ -118,7 +125,7 @@ $(window).on('load', function() {
     let btn = $(this);
     let parent = btn.parent();
 
-    parent.siblings().removeClass(modifierClass).find('.catalog-accordion__item-content').slideUp();
+    parent.find('.catalog-accordion__item-content').slideUp();
     
 
       if (parent.hasClass(modifierClass)) {
