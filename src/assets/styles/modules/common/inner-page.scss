@@ -9,11 +9,11 @@
   }
 
   &__header {
-    padding-top: 48px;
+    padding-top: 24px;
     padding-bottom: 32px;
 
     @include respond-to("tablet-middle") {
-      padding-top: 32px;
+      padding-top: 24px;
     }
 
     &-wrapper {
@@ -109,13 +109,13 @@
   }
 
   &__title {
-    margin: 48px 0 28px;
+    margin: 24px 0 24px;
     font-size: 39px;
     line-height: 1.282;
     font-weight: 700;
 
     @include respond-to("tablet-middle") {
-      margin-top: 32px;
+      margin-top: 24px;
       margin-bottom: 20px;
     }
 
