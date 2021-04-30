@@ -590,6 +590,7 @@ var hoverEffect = function(opts) {
     var texture2 = loader.load(image2);
 
     var disp = loader.load(dispImage);
+
     disp.wrapS = disp.wrapT = THREE.RepeatWrapping;
 
     texture1.magFilter = texture2.magFilter = THREE.LinearFilter;
@@ -604,7 +605,7 @@ var hoverEffect = function(opts) {
             dispFactor: { type: "f", value: 0.0 },
             texture: { type: "t", value: texture1 },
             texture2: { type: "t", value: texture2 },
-            disp: { type: "t", value: disp }
+            disp: { type: "t", value: disp },
         },
 
         vertexShader: vertex,
