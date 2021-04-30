@@ -1,18 +1,14 @@
 .accordion {
   position: relative;
   box-sizing: border-box;
-  padding-bottom: 93px;
+  padding: 45px 0;
 
   @include respond-to("tablet-middle") {
-    padding-bottom: 50px;
+    padding: 35px 0;
   }
 
   .small-title {
-    margin-bottom: 58px;
-
-    @include respond-to("tablet-middle") {
-      margin-bottom: 32px;
-    }
+    margin-bottom: 32px;
   }
 
   //@include respond-to("tablet-wide") {}

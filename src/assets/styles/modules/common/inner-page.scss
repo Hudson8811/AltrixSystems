@@ -1,20 +1,26 @@
 .inner-page {
   $self: &;
   border-top: solid 1px $color-grey;
-  padding-bottom: 93px;
+  padding-bottom: 45px;
   overflow: hidden;
 
   @include respond-to("tablet-middle") {
-    padding-bottom: 50px;
+    padding-bottom: 35px;
+  }
+
+  &--pb{
+    padding-bottom: 90px;
+
+    @include respond-to("tablet-middle") {
+      padding-bottom: 70px;
+    }
   }
 
   &__header {
     padding-top: 24px;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
 
-    @include respond-to("tablet-middle") {
-      padding-top: 24px;
-    }
+
 
     &-wrapper {
       position: relative;
@@ -55,9 +61,6 @@
     &--single {
       position: relative;
 
-      @include respond-to("tablet-middle") {
-        padding-bottom: 0;
-      }
 
       #{$self}__title {
         margin: 0;
@@ -123,6 +126,10 @@
       font-size: 30px;
     }
 
+    &:last-child{
+      margin-bottom: 0 !important;
+    }
+
     &--flex {
       display: flex;
 
@@ -130,9 +137,9 @@
         align-self: baseline;
       }
     }
-
-    .share-btn {
+    .share-block {
       margin-left: 10px;
+      position: relative;
       align-self: baseline;
     }
   }
@@ -151,72 +158,16 @@
       }
     }
 
-    h2,
-    h3 {
-      margin: 0 0 32px;
-      font-size: 19px;
-      line-height: calc(32 / 19);
-      font-weight: 700;
-    }
+  }
 
-    p {
-      margin: 0 0 15px;
-      font-family: $secondFont;
-      font-size: 15px;
-      line-height: calc(26 / 15);
-      color: $color-dark-5a;
-    }
+  &__text-content{
+    padding: 45px 0 45px;
 
-    * + h2,
-    * + h3 {
-      margin-top: 42px;
-    }
-
-    ul,
-    ol {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-family: $secondFont;
-      font-size: 15px;
-      line-height: calc(26 / 15);
-      color: $color-dark-5a;
-
-      &.stylized {
-        li {
-          position: relative;
-          margin-bottom: 9px;
-          padding-left: 20px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background-color: $color-blue;
-          }
-        }
-      }
-    }
-
-    img {
-      display: inline-block;
-      vertical-align: top;
-      max-width: 100%;
-      height: auto;
+    @include respond-to("tablet-middle") {
+      padding: 35px 0;
     }
   }
 
-  &__about + &__about {
-    margin-top: 58px;
-  }
 
   &__archive {
     margin-bottom: 35px;
@@ -229,10 +180,11 @@
   &__tags {
     margin-bottom: 22px;
     &--refer{
-      margin-top: -20px;
+      margin-top: 16px;
       margin-bottom: 58px;
       @include respond-to("tablet-middle") {
         margin-bottom: 22px;
+        margin-top: 0;
       }
     }
   }
@@ -317,16 +269,12 @@
   }
 
   &__text {
-    margin-bottom: 93px;
 
     font-family: $secondFont;
     font-size: 15px;
     line-height: 1.73333;
     color: $color-dark-5a;
 
-    @include respond-to("tablet-middle") {
-      margin-bottom: 50px;
-    }
 
     p {
       margin: 0;
@@ -338,11 +286,7 @@
   }
 
   &__news {
-    margin-top: -46px;
 
-    @include respond-to("phablet") {
-      margin-top: 0;
-    }
   }
 
   &__pagination {
@@ -355,5 +299,94 @@
     @include respond-to("tablet") {
       margin-top: 24px;
     }
+  }
+}
+
+
+.title-single {
+  .inner-page__header-wrapper{
+    margin: 0;
+    padding: 130px 0 175px;
+    @include respond-to("tablet-middle") {
+      padding: 70px 0 105px;
+    }
+
+    @include respond-to("phablet") {
+      padding: 40px 0 65px;
+    }
+  }
+  .inner-page__title{
+    color: #ffffff;
+  }
+}
+
+.text-style{
+  position: relative;
+  h2,
+  h3 {
+    margin: 0 0 32px;
+    font-size: 19px;
+    line-height: calc(32 / 19);
+    font-weight: 700;
+  }
+
+  * + p {
+    margin-top: 30px;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-dark-5a;
+  }
+
+  * + h2,
+  * + h3 {
+    margin-top: 42px;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: $secondFont;
+    font-size: 15px;
+    line-height: calc(26 / 15);
+    color: $color-dark-5a;
+    li {
+      position: relative;
+      margin-bottom: 9px;
+      padding-left: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.text-section,
+.cost-section{
+  padding: 45px 0;
+
+  @include respond-to("tablet-middle") {
+    padding: 35px 0;
   }
 }

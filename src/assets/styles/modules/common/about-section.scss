@@ -1,6 +1,5 @@
 .about-section {
-  padding: 70px 0 70px;
-  //background-color: $color-grey-f8;
+  padding: 60px 0 70px;
 
   @include respond-to("tablet-middle") {
     padding: 50px 0;

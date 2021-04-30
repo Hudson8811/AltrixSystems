@@ -1,6 +1,9 @@
 .about-block {
   $self: &;
-
+  padding: 45px 0;
+  @include respond-to("tablet-middle") {
+    padding: 35px 0;
+  }
   &__container {
     display: flex;
 

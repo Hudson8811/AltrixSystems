@@ -3,12 +3,12 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin: -36px 0 0 -36px !important;
+    margin: 0 0 0 -36px !important;
     padding: 0;
 
     @include respond-to("tablet-middle") {
       margin-left: -15px !important;
-      margin-top: -15px !important;
+      margin-top: 0 !important;
     }
 
     @include respond-to("phablet") {

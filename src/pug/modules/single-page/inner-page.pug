@@ -1,21 +1,25 @@
 article.inner-page
-  header.inner-page__header.inner-page__header--single
+  .inner-page__header.inner-page__header--single
     .container
       +breadcrumbs2(['Защита АСУ ТП'], 'inner-page__breadcrumbs')
-    .inner-page__header-wrapper 
-      .inner-page__header-bg
-        img(src="images/altrix/single-page-bg.jpg", srcset="images/altrix/single-page-bg@2x.jpg 2x", width="1900", height="399", alt="")
-
-      .container
-        h1.inner-page__title
-          span Защита АСУ ТП
-
-        .inner-page__short
-          .inner-page__short-title Таким образом новая модель организационной деятельности способствует подготовки
-          .inner-page__short-text Товарищи! сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Равным образом укрепление и развитие структуры способствует подготовки и реализации дальнейших направлений развития. Равным образом начало повседневной работы по формированию позиции требуют от нас анализа направлений прогрессивного развития.
 
   .inner-page__main
+    section.title-single
+      .inner-page__header-wrapper
+        .inner-page__header-bg
+          img(src="images/altrix/single-page-bg.jpg", srcset="images/altrix/single-page-bg@2x.jpg 2x", width="1900", height="399", alt="")
+
+        .container
+          h1.inner-page__title
+            span Защита АСУ ТП
+
+          .inner-page__short
+            .inner-page__short-title Таким образом новая модель организационной деятельности способствует подготовки
+            .inner-page__short-text Товарищи! сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Равным образом укрепление и развитие структуры способствует подготовки и реализации дальнейших направлений развития. Равным образом начало повседневной работы по формированию позиции требуют от нас анализа направлений прогрессивного развития.
+
     include content-block
     include content
-    
-    
+    include effect
+    include ../common/accordion2
+    include cost
+    include ../common/tariff

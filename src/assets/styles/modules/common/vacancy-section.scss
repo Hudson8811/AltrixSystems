@@ -1,4 +1,9 @@
 .vacancy-section {
+  padding: 45px 0;
+
+  @include respond-to("tablet-middle") {
+    padding: 35px 0;
+  }
   &__title {
     margin: 0 0 58px;
   }

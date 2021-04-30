@@ -1,8 +1,8 @@
 .content-block {
-  padding: 70px 0 93px;
+  padding: 45px 0 45px;
 
   @include respond-to("tablet-middle") {
-    padding: 50px 0;
+    padding: 35px 0;
   }
 
   &__container {
@@ -42,6 +42,7 @@
     font-size: 39px !important;
     line-height: calc(50 / 39) !important;
     color: $color-main;
+    font-weight: 700;
 
     @include respond-to("phablet") {
       font-size: 30px !important;

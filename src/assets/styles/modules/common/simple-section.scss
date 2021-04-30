@@ -1,8 +1,8 @@
 .simple-section {
-  padding-bottom: 93px;
+  padding: 45px 0;
 
   @include respond-to("tablet-middle") {
-    padding-bottom: 50px;
+    padding: 35px 0;
   }
 
   &__title {

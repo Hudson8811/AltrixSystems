@@ -19,3 +19,31 @@
     }
   }
 }
+
+
+.share-block {
+  position: relative;
+}
+
+.share-tip{
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  &__links{
+    display: flex;
+    align-items: center;
+  }
+  &__link{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

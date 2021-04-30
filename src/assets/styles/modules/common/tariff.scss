@@ -1,9 +1,9 @@
 .tariff {
-  padding: 93px 0;
+  padding: 45px 0;
   overflow: hidden;
 
   @include respond-to("tablet-middle") {
-    padding: 50px 0;
+    padding: 35px 0;
   }
 
   &__title {
