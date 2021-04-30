@@ -5,6 +5,11 @@
   z-index: 1;
   //background-color: $white;
 
+
+  @include respond-to("desktop") {
+    padding: 20px 0;
+  }
+
   &__container {
     position: relative;
     display: flex;
