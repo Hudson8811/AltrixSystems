@@ -63,7 +63,7 @@
   &__end {
     width: 100%;
     max-width: 28.49vw;
-    min-width: 250px;
+    min-width: 170px;
     //padding-right: 22px;
     //flex-shrink: 0;
     //min-width: 350px;
@@ -109,8 +109,9 @@
   &__item {
     margin-right: 2.96875vw;
 
-    @include custom-respond-to(1450px) {
+    @include custom-respond-to(1300px) {
       //min-width: calc(100% / 6);
+      margin-right: 2vw;
     }
 
     @include respond-to-min("desktop-huge") {
