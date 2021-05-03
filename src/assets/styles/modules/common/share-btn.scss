@@ -30,6 +30,10 @@
   left: calc(100% + 20px);
   top: 50%;
   transform: translateY(-50%);
+  width: 0;
+  overflow: hidden;
+  transition: 0.2s linear;
+  opacity: 0;
   &__links{
     display: flex;
     align-items: center;
@@ -42,8 +46,14 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s;
+    flex-shrink: 0;
     &:hover{
       transform: scale(1.2);
     }
+  }
+
+  &.active{
+    width: 160px;
+    opacity: 1;
   }
 }

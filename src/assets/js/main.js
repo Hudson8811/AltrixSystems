@@ -213,6 +213,10 @@ $(window).on('load', function() {
   });
 });
 
+$(document).on('click','.share-btn',function (){
+   event.preventDefault();
+   $('.share-tip').toggleClass('active');
+});
 
 
 
