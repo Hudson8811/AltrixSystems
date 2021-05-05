@@ -113,17 +113,22 @@
 
   &__title {
     margin: 24px 0 24px;
-    font-size: 39px;
-    line-height: 1.282;
-    font-weight: 700;
+
 
     @include respond-to("tablet-middle") {
       margin-top: 24px;
       margin-bottom: 20px;
     }
-
-    @include respond-to("phablet") {
-      font-size: 30px;
+    > span,
+    > h1{
+      font-size: 39px;
+      line-height: 1.282;
+      font-weight: 700;
+      align-self: baseline;
+      margin: 0;
+      @include respond-to("phablet") {
+        font-size: 30px;
+      }
     }
 
     &:last-child{

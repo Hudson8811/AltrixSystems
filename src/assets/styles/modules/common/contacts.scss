@@ -149,6 +149,11 @@
 
   &__map {
     height: 635px;
+    iframe{
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
 
     @include respond-to("tablet") {
       height: 400px;

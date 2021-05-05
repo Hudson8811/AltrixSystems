@@ -24,4 +24,7 @@
   &:active {
     opacity: 0.7;
   }
+  &.active{
+    background-color: darken($color-grey-5f9, 15%);
+  }
 }
