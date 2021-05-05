@@ -46,6 +46,16 @@
 
   &__list {
     list-style: none;
+    column-count: 3;
+    column-gap: 24px;
+    width: 100%;
+    @include respond-to("tablet") {
+      column-count: 2;
+    }
+
+    @include respond-to("phablet") {
+      column-count: 1;
+    }
 
     li {
       margin-bottom: 15px;
