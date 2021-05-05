@@ -3,9 +3,6 @@
   min-height: 975px;
   margin-top: -120px;
   padding: 150px 0;
-  background-image: url("../images/altrix/main-bg.png");
-  background-color: $color-grey-e5;
-  background-position: right 20px top 0;
 
   @include respond-to("tablet-middle") {
     min-height: 780px;

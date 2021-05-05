@@ -54,15 +54,16 @@
     line-height: 1.3333;
     color: $color-grey-8e;
     transition: 0.2s;
+    @include respond-to-min("desktop") {
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-main;
+      }
 
-    &:hover,
-    &:focus {
-      outline: none;
-      color: $color-main;
-    }
-
-    &:active {
-      opacity: 0.7;
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
 }

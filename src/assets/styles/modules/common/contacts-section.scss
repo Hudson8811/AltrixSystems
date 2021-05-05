@@ -51,15 +51,16 @@
       color: $color-main;
       transition: 0.2s;
       // white-space: nowrap;
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color-blue;
+        }
 
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $color-blue;
-      }
-
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -82,15 +83,16 @@
       transition: 0.2s;
 
       //white-space: nowrap;
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color-blue;
+        }
 
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $color-blue;
-      }
-
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -209,15 +211,16 @@
       a {
         color: $color-grey-cf;
         text-decoration: underline;
+        @include respond-to-min("desktop") {
+          &:hover,
+          &:focus {
+            outline: none;
+            text-decoration: none;
+          }
 
-        &:hover,
-        &:focus {
-          outline: none;
-          text-decoration: none;
-        }
-
-        &:active {
-          opacity: 0.7;
+          &:active {
+            opacity: 0.7;
+          }
         }
       }
     }

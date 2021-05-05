@@ -10,12 +10,14 @@
     transition: 0.2s;
   }
 
-  &:hover,
-  &:focus {
-    outline: none;
+  @include respond-to-min("desktop") {
+    &:hover,
+    &:focus {
+      outline: none;
 
-    svg {
-      fill: $color-main;
+      svg {
+        fill: $color-main;
+      }
     }
   }
 }
@@ -47,8 +49,10 @@
     justify-content: center;
     transition: transform 0.3s;
     flex-shrink: 0;
-    &:hover{
-      transform: scale(1.2);
+    @include respond-to-min("desktop") {
+      &:hover{
+        transform: scale(1.2);
+      }
     }
   }
 

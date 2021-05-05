@@ -69,10 +69,12 @@
       color: $color-dark-5a;
       transition: 0.2s;
 
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $color-blue;
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color-blue;
+        }
       }
     }
   }

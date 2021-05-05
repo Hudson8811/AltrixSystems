@@ -7,12 +7,14 @@
     height: auto;
   }
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
+  @include respond-to-min("desktop") {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
 
-  &:active {
-    opacity: 0.5;
+    &:active {
+      opacity: 0.5;
+    }
   }
 }

@@ -54,11 +54,13 @@
     border: solid 1px $color-blue;
     transition: 0.2s;
 
-    &:hover,
-    &:focus {
-      outline: none;
-      color: $color-white;
-      background-color: $color-blue;
+    @include respond-to-min("desktop") {
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-white;
+        background-color: $color-blue;
+      }
     }
   }
 }

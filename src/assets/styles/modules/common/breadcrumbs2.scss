@@ -28,19 +28,20 @@
         fill: $color-grey-cf;
         transition: 0.2s;
       }
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color-main;
 
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $color-main;
-
-        svg {
-          fill: $color-main;
+          svg {
+            fill: $color-main;
+          }
         }
-      }
 
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
 

@@ -129,18 +129,19 @@
         fill: $color-blue;
         transition: 0.2s;
       }
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
 
-      &:hover,
-      &:focus {
-        outline: none;
-
-        svg {
-          color: $color-blue-2;
+          svg {
+            color: $color-blue-2;
+          }
         }
-      }
 
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
 

@@ -21,7 +21,7 @@
     flex-direction: column;
   }
 
-  @include respond-to-min("tablet-middle") {
+  @include respond-to-min("desktop") {
     transition: transform 0.3s ease;
     &:hover{
       transform: scale(1.05);

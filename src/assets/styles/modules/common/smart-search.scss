@@ -69,15 +69,17 @@
 
       transition: 0.2s;
 
-      &:hover,
-      &:focus {
-        outline: none;
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
 
-        color: $color-blue-2;
-      }
+          color: $color-blue-2;
+        }
 
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -133,18 +135,19 @@
 
         transition: 0.2s;
       }
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          outline: none;
 
-      &:hover,
-      &:focus {
-        outline: none;
-
-        svg {
-          fill: $color-blue-2;
+          svg {
+            fill: $color-blue-2;
+          }
         }
-      }
 
-      &:active {
-        opacity: 0.7;
+        &:active {
+          opacity: 0.7;
+        }
       }
     }
   }

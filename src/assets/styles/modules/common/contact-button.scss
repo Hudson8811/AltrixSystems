@@ -45,24 +45,25 @@
       font-size: 15px;
     }
   }
+  @include respond-to-min("desktop") {
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $color-blue;
 
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: $color-blue;
+      #{$self}__icon {
+        svg {
+          fill: $color-white;
+        }
+      }
 
-    #{$self}__icon {
-      svg {
-        fill: $color-white;
+      #{$self}__text {
+        color: $color-white;
       }
     }
 
-    #{$self}__text {
-      color: $color-white;
+    &:active {
+      opacity: 0.7;
     }
-  }
-
-  &:active {
-    opacity: 0.7;
   }
 }

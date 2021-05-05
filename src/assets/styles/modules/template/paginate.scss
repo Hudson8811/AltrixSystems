@@ -11,14 +11,16 @@
       background-color: $color-blue;
     }
 
-    &:hover,
-    &:focus {
-      outline: none;
-      border-color: $color-blue-2;
-    }
+    @include respond-to-min("desktop") {
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: $color-blue-2;
+      }
 
-    &:active {
-      opacity: 0.7;
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
 }

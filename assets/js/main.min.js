@@ -104,16 +104,16 @@ $(window).on('load', function() {
   });
 
   //
-  const dropdownLinks = $('.aside-menu__link--dropdown');
+  const dropdownLinks = $('.aside-menu__link-dropdown');
 
   dropdownLinks.on('click', function(evt) {
     evt.preventDefault();
-    $(this).parent().siblings().find('.aside-menu__link--dropdown').removeClass('aside-menu__link--active').next().slideUp();
+    $(this).parent().parent().siblings().find('.aside-menu__link-dropdown').removeClass('active').parent().next().slideUp();
     
-    if ($(this).hasClass('aside-menu__link--active')) {
-      $(this).removeClass('aside-menu__link--active').next().slideUp();
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active').parent().next().slideUp();
     } else {
-      $(this).addClass('aside-menu__link--active').next().slideDown();
+      $(this).addClass('active').parent().next().slideDown();
     }
   });
 
@@ -221,7 +221,7 @@ $(document).on('click','.share-btn',function (){
 
 
 (function() {
-    if ($('#nCanvasRender').length > 0){
+    if ($('#nCanvasRender').length > 0 && $(window).width() > 1250){
         // Hungarian notation
         // (http://en.wikipedia.org/wiki/Hungarian_notation)
         // n - HTML-Node
@@ -310,7 +310,7 @@ $(document).on('click','.share-btn',function (){
             fnSetSize = function() {
                 nCanvasRender.width = w = hero.offsetWidth;
                 nCanvasRender.height = h = hero.offsetHeight;
-                iProjSphereX = w / 1.6;
+                iProjSphereX = w / 1.45;
                 iProjSphereY = h / 1.9;
                 return {
                     w: w,

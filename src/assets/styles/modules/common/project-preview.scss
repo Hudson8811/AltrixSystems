@@ -12,8 +12,10 @@
   box-sizing: border-box;
   transition: box-shadow 0.3s ease;
 
-  &:hover{
-    box-shadow: 2px 2px 19px rgba(97, 69, 134, 0.5);
+  @include respond-to-min("desktop") {
+    &:hover{
+      box-shadow: 2px 2px 19px rgba(97, 69, 134, 0.5);
+    }
   }
 
   @include respond-to("tablet") {

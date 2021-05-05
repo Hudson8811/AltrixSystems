@@ -10,8 +10,10 @@ section.aside-menu
 
     ul.aside-menu__list
       each item in MENU_LIST
-        li.aside-menu__item 
-          a.aside-menu__link.aside-menu__link--dropdown(href="#")= item.text
+        li.aside-menu__item
+          .aside-menu__flex
+            a.aside-menu__link(href="#")= item.text
+            a.aside-menu__link-dropdown(href="javascript:;")
           .aside-menu__dropdown.dropdown 
             ul.dropdown__list.dropdown__list--column
               each subitem in item.dropdown 

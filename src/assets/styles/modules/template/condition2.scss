@@ -20,7 +20,9 @@
     flex-shrink: 0;
 
     & > input:hover + .condition-custom-chekbox {
-      border-color: $color-blue;
+      @include respond-to-min("desktop") {
+        border-color: $color-blue;
+      }
     }
 
     & > input:checked + .condition-custom-checkbox {
@@ -95,9 +97,11 @@
     a {
       text-decoration: underline;
 
-      &:hover,
-      &:focus {
-        text-decoration: none;
+      @include respond-to-min("desktop") {
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
       }
     }
   }

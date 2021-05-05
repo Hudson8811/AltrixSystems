@@ -44,20 +44,22 @@
     transition: transform 0.6s ease;
   }
 
-  &:hover,
-  &:focus {
-    outline: none;
-    #{$self}__icon {
-      transform: translateX(6px);
+  @include respond-to-min("desktop") {
+    &:hover,
+    &:focus {
+      outline: none;
+      #{$self}__icon {
+        transform: translateX(6px);
+      }
+
+      &::before {
+        transform: translateX(50%);
+      }
     }
 
-    &::before {
-      transform: translateX(50%);
+    &:active {
+      opacity: 0.7;
     }
-  }
-
-  &:active {
-    opacity: 0.7;
   }
 
   &--large {
@@ -98,16 +100,18 @@
       display: none;
     }
 
-    &:hover,
-    &:focus {
-      color: $color-white;
-      background-color: $color-blue;
+    @include respond-to-min("desktop") {
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $color-blue;
 
-      #{$self}__icon {
-        transform: translateX(0);
+        #{$self}__icon {
+          transform: translateX(0);
 
-        svg {
-          fill: $color-white;
+          svg {
+            fill: $color-white;
+          }
         }
       }
     }

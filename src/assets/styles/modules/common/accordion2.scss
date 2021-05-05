@@ -46,10 +46,11 @@
         }
       }
     }
-
-    &:hover {
-      background-color: #f3f6f8;
-      border-color: #f3f6f8;
+    @include respond-to-min("desktop") {
+      &:hover {
+        background-color: #f3f6f8;
+        border-color: #f3f6f8;
+      }
     }
   }
 
