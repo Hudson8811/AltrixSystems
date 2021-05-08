@@ -331,6 +331,21 @@
 
 .text-style{
   position: relative;
+
+  font-family: $secondFont;
+  font-size: 15px;
+  line-height: 1.73333;
+  color: $color-dark-5a;
+
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 30px;
+  }
+
   h2,
   h3 {
     margin: 0 0 32px;

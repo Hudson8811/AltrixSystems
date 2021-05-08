@@ -2,13 +2,12 @@
   position: relative;
   z-index: 0;
   padding: 60px 0 70px;
-  background-color: $color-grey-f8;
+  /*background-color: $color-grey-f8;*/
   background-image: linear-gradient(to bottom, transparent 38.38%);
 
   @include respond-to("tablet-middle") {
-    padding: 0 0 70px;
+    padding: 50px 0;
   }
-
   /*&::after {
     content: "";
     position: absolute;
@@ -51,4 +50,9 @@
       width: 100%;
     }
   }
+}
+
+
+.about-section + .direction-section {
+  padding-top: 0 !important;
 }
