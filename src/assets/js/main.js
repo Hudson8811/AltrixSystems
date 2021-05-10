@@ -54,12 +54,18 @@ $(window).on('load', function() {
 
   const mainSlider = new Swiper('.__js_main-slider', {
     slidesPerView: 1,
-		spaceBetween: 0,
-		loop: true,
-		pagination: {
-			el: '.paginate',
-			clickable: true
-		},
+        spaceBetween: 0,
+        loop: true,
+      autoHeight:true,
+        pagination: {
+            el: '.paginate',
+            clickable: true
+        },
+      breakpoints: {
+          768: {
+              autoHeight: false
+          },
+      },
   });
 
   const burger = $('.burger');

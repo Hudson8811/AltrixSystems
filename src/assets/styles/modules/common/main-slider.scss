@@ -20,12 +20,16 @@
       font-size: 39px;
       line-height: 1.282;
       font-weight: 700;
+
+      @include respond-to("phablet") {
+        font-size: 29px;
+      }
     }
 
     &-text {
       margin-bottom: 32px;
       font-size: 19px;
-      line-height: 1.1;
+      line-height: 1.5;
     }
 
     &-btn {

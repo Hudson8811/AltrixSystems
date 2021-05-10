@@ -11,10 +11,13 @@
 
   &__container {
     position: relative;
-    padding-top: 103px;
+    padding-top: 50px;
 
     @include respond-to("tablet-middle") {
       padding-top: 40px;
+    }
+    @include respond-to("tablet-middle") {
+      padding-top: 0;
     }
   }
 

@@ -13,7 +13,7 @@
   &__subtitle {
     margin-top: 8px;
     font-size: 19px;
-    line-height: 1.1;
+    line-height: 1.5;
 
     @include respond-to("phablet") {
       font-size: 16px;

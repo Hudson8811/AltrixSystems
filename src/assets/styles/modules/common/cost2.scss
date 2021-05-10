@@ -3,6 +3,9 @@
     padding: 43px 58px;
     background: $color-grey-f8;
 
+    border: 1px solid #E1E9EF;
+    border-radius: 5px;
+
     @include respond-to("tablet") {
       padding: 24px 32px;
     }
@@ -119,7 +122,7 @@
     height: 100%;
     box-sizing: border-box;
 
-    span {
+    span:not([class^='wpcf7']) {
       bottom: 82%;
 
       @include respond-to("tablet-wide") {
@@ -128,7 +131,9 @@
     }
 
     @include respond-to("tablet-wide") {
-      height: 109px;
+      textarea{
+        height: 100px;
+      }
     }
   }
 

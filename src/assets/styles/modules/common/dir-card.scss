@@ -47,6 +47,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+    align-items: flex-end;
 
     @include respond-to("phablet") {
       flex-wrap: wrap;
@@ -60,7 +61,9 @@
     color: $color-white;
     font-weight: 500;
     align-self: baseline;
-
+    @include respond-to("desktop") {
+      font-size: 23px;
+    }
     @include respond-to("phablet") {
       margin-top: 6px;
       font-size: 24px;
@@ -69,10 +72,14 @@
 
   &__readmore {
     color: $color-white;
-    align-self: baseline;
-
+    line-height: 38px;
+    @include respond-to("desktop") {
+      line-height: 31px;
+    }
     @include respond-to("phablet") {
       margin-top: 6px;
+      line-height: 1;
+      width: 100%;
     }
 
     svg {

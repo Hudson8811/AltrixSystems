@@ -155,6 +155,10 @@
   &__main {
     position: relative;
 
+    > section:first-child{
+      padding-top: 0 !important;
+    }
+
     &--pb {
       padding-bottom: 93px;
 
