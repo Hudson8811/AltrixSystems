@@ -1,0 +1,17 @@
+.graf-section{
+  padding: 60px 0;
+  @include respond-to("tablet-middle") {
+    display: none;
+  }
+  svg{
+    width: 100%;
+    height: auto;
+  }
+  .js-hover-svg{
+    opacity: 0;
+    transition: 0.2s linear;
+    &.active{
+      opacity: 1;
+    }
+  }
+}

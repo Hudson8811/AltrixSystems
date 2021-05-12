@@ -707,3 +707,14 @@ $(window).on('load', function() {
         });
     }
 });
+
+
+
+$(document).ready(function (){
+    $('.js-hover-svg').mouseenter(function (){
+        $(this).addClass('active');
+    });
+    $('.js-hover-svg').mouseleave(function (){
+        $(this).removeClass('active');
+    })
+});
