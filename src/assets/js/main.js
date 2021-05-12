@@ -712,9 +712,13 @@ $(window).on('load', function() {
 
 $(document).ready(function (){
     $('.js-hover-svg').mouseenter(function (){
-        $(this).addClass('active');
+        $(this).animate({
+            opacity: 1,
+        }, 200);
     });
     $('.js-hover-svg').mouseleave(function (){
-        $(this).removeClass('active');
+        $(this).animate({
+            opacity: 0,
+        }, 200);
     })
 });
