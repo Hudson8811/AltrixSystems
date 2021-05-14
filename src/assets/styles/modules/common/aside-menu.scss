@@ -50,15 +50,19 @@
   &__link {
     display: block;
     padding: 12px 0 13px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1;
     color: $color-dark-4d;
     flex-grow: 1;
 
+    @media screen and (max-width: 340px){
+      font-size: 12px;
+    }
+
 
     &-dropdown {
       position: relative;
-      width: 50px;
+      width: 40px;
       height: auto;
       flex-shrink: 0;
       &::before {
