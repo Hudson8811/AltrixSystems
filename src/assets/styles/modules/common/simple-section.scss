@@ -1,8 +1,8 @@
 .simple-section {
-  padding: 45px 0;
+  padding: 45px 0 0;
 
   @include respond-to("tablet-middle") {
-    padding: 35px 0;
+    padding: 35px 0 0;
   }
 
   &__title {
@@ -26,30 +26,57 @@
     padding: 39px 25px;
     background-color: $color-grey-f8;
     &--center{
-      .simple-section__item{
-        width: calc(100% / 4);
-        @include respond-to("tablet-middle") {
-          width: calc(100% / 3);
-        }
-        @include respond-to("tablet") {
-          width: calc(100% / 2);
-        }
-        @include respond-to("phablet") {
-          width: 100%;
-        }
-      }
       .text-icon-block{
         flex-direction: column;
         align-items: center;
         &__icon{
           margin-top: 0;
           align-self: center;
+          margin-right: 0;
           margin-bottom: 10px;
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
         &__main{
           text-align: center;
+        }
+      }
+    }
+    &--cols{
+      &--2{
+        .simple-section__item{
+          width: calc(100% / 2);
+          @include respond-to("tablet-small") {
+            width: 100%;
+          }
+        }
+      }
+      &--3{
+        .simple-section__item{
+          width: calc(100% / 3);
+          @include respond-to("tablet-middle") {
+            width: calc(100% / 2);
+          }
+          @include respond-to("tablet-small") {
+            width: 100%;
+          }
+        }
+      }
+      &--4{
+        .simple-section__item{
+          width: calc(100% / 4);
+          @include respond-to("tablet-middle") {
+            width: calc(100% / 3);
+          }
+          @include respond-to("tablet") {
+            width: calc(100% / 2);
+          }
+          @include respond-to("phablet") {
+            width: 100%;
+          }
         }
       }
     }

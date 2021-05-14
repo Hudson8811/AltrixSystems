@@ -70,9 +70,9 @@
   }
 
   &__short {
-    margin-top: 58px;
+    margin-top: 45px;
     margin-bottom: -130px;
-    padding: 58px;
+    padding: 45px 58px;
     background-color: $color-white;
     box-shadow: 2px 2px 19px rgba(33, 43, 70, 0.05);
 
@@ -319,13 +319,13 @@
 .title-single {
   .inner-page__header-wrapper{
     margin: 0;
-    padding: 130px 0 175px;
+    padding: 130px 0;
     @include respond-to("tablet-middle") {
-      padding: 70px 0 105px;
+      padding: 70px 0;
     }
 
     @include respond-to("phablet") {
-      padding: 40px 0 65px;
+      padding: 40px 0;
     }
   }
   .inner-page__title{
@@ -341,6 +341,9 @@
   line-height: 1.73333;
   color: $color-dark-5a;
 
+  h1,h2,h3,h4,h5,h6{
+    color: #323238;
+  }
 
   p {
     margin: 0;
