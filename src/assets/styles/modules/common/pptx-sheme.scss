@@ -210,7 +210,7 @@
         width: 100%;
       }
       @include respond-to-min("desktop") {
-        width: calc(100% + 12px);
+        width: calc(100% + 15px);
       }
     }
   }
