@@ -190,7 +190,7 @@
     margin-bottom: 22px;
     &--refer{
       margin-top: 16px;
-      margin-bottom: 58px;
+      //margin-bottom: 58px;
       @include respond-to("tablet-middle") {
         margin-bottom: 22px;
         margin-top: 0;

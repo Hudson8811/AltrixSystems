@@ -1,6 +1,8 @@
 .main-slider {
+  margin-left: -10px;
   &__slide {
     box-sizing: border-box;
+    padding: 0 10px;
     &-content {
       max-width: 530px;
     }

@@ -1,7 +1,17 @@
 .text-image-block {
   display: flex;
   background-color: $color-white;
+  border: solid 1px $color-grey-e4;
   box-shadow: 2px 2px 19px rgba(33, 43, 70, 0.05);
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+  @include respond-to-min("desktop") {
+    &:hover{
+      box-shadow: 2px 2px 19px rgba(97, 69, 134, 0.5);
+    }
+  }
 
   @include respond-to("tablet") {
     flex-direction: column;
@@ -77,5 +87,9 @@
         }
       }
     }
+  }
+
+  &__bottom{
+    margin-top: 10px;
   }
 }

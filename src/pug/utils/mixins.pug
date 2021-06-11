@@ -205,8 +205,9 @@ mixin date(date, cl)
 mixin news-card(className, img, title, text, date, tag)
     - let tg = tag ? tag : 'div';
     #{tg}(class= className ? className + ' news-card' : 'news-card')
-        .news-card__image 
-            img(src="images/altrix/" + img + ".jpg", srcset="images/altrix/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
+        .news-card__image
+            .news-card__image-inner
+                img(src="images/altrix/" + img + ".jpg", srcset="images/altrix/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
         .news-card__main 
             .news-card__title!= title
             .news-card__text= text

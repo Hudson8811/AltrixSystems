@@ -2,7 +2,7 @@
 .header {
   position: relative;
   z-index: 999;
-  padding: 15px 22px 14px;
+  padding: 15px 0 14px;
   background-color: $color-white;
   border-bottom: solid 1px $color-grey;
   box-sizing: border-box;
@@ -14,12 +14,13 @@
     width: 100%;
     max-width: 1900px;
     margin: 0 auto;
+    padding: 0 22px;
+    @include respond-to("desktop") {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
-  @include respond-to("desktop") {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 
   &__left,
   &__right {

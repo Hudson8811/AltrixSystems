@@ -11,6 +11,7 @@
   background-color: $color-white;
   box-sizing: border-box;
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
 
   @include respond-to-min("desktop") {
     &:hover{
@@ -35,8 +36,8 @@
 
     img {
       display: block;
-      width: 90%;
-      height: 90%;
+      width: 72%;
+      height: 72%;
       object-fit: contain;
     }
   }

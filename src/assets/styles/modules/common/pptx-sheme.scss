@@ -1,0 +1,267 @@
+.pptx-sheme{
+  &__container{
+    max-width: 1100px;
+    @include respond-to-min("desktop") {
+      max-width: 1330px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #253746;
+    margin-bottom: 28px;
+    @include respond-to-min("desktop") {
+      font-size: 21px;
+    }
+  }
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    @include respond-to("tablet-small") {
+      flex-wrap: wrap;
+    }
+  }
+  &__left{
+    width: 288px;
+    max-width: 100%;
+    @include respond-to("tablet-small") {
+     order: 2;
+      width: calc(50% - 10px);
+    }
+    @include respond-to("phone-mid") {
+      width: 100%;
+      margin: 0 0 35px;
+    }
+    @include respond-to-min("desktop") {
+      width: 350px;
+    }
+    .pptx-sheme__box{
+      &-title{
+        background-color: #446AB1;
+      }
+      &-text{
+        border: 2px solid #446AB1;
+      }
+    }
+    .pptx-sheme__prefs-title{
+      border-bottom: 2px solid #446AB1;
+    }
+  }
+  &__center{
+    width: 360px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond-to("tablet") {
+      width: 200px;
+    }
+    @include respond-to("tablet-small") {
+      order: 1;
+      width: 100%;
+      margin: 0 0 35px;
+    }
+    @include respond-to-min("desktop") {
+      width: 437px;
+    }
+    &-title{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 0.9;
+      text-align: center;
+      background: -webkit-linear-gradient(0deg, #446AB1, #6D489E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include respond-to-min("desktop") {
+        font-size: 24px;
+      }
+    }
+    &-img{
+      margin-top: 10px;
+      max-width: 100%;
+      width: 289px;
+      @include respond-to-min("desktop") {
+        width: 351px;
+      }
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__right{
+    width: 288px;
+    max-width: 100%;
+    @include respond-to("tablet-small") {
+      order: 3;
+      width: calc(50% - 10px);
+    }
+    @include respond-to("phone-mid") {
+      width: 100%;
+    }
+    @include respond-to-min("desktop") {
+      width: 350px;
+    }
+    .pptx-sheme__box{
+      &-title{
+        background-color: #6B499F;
+      }
+      &-text{
+        border: 2px solid #6B499F;
+      }
+    }
+    .pptx-sheme__prefs-title{
+      border-bottom: 2px solid #6B499F;
+    }
+  }
+  &__list{
+    list-style: none;
+    li{
+      font-family: $secondFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 14px;
+      color: #253746;
+      position: relative;
+      padding-left: 10px;
+      @include respond-to-min("desktop") {
+        padding-left: 12px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+      &::before{
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        border-radius: 50%;
+        background: #446AB1;
+        @include respond-to-min("desktop") {
+          top: 5px;
+          width: 6px;
+          height: 6px;
+        }
+      }
+      +li{
+        margin-top: 10px;
+        @include respond-to-min("desktop") {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  &__box{
+    &-title{
+      font-style: italic;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.12;
+      color: #FFFFFF;
+      padding: 6px;
+      text-align: center;
+      @include respond-to-min("desktop") {
+        padding: 7px;
+        font-size: 19px;
+      }
+    }
+    &-text{
+      padding: 15px;
+      font-family: $secondFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 14px;
+      color: #253746;
+      @include respond-to-min("desktop") {
+        padding: 18px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+  &__prefs{
+    margin-top: 35px;
+    @include respond-to-min("desktop") {
+      margin-top: 42px;
+    }
+    &-title{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.12;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      @include respond-to-min("desktop") {
+        font-size: 19px;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+      }
+    }
+    &-list{
+      width: calc(100% + 10px);
+      @include respond-to("tablet-small") {
+        width: 100%;
+      }
+      @include respond-to-min("desktop") {
+        width: calc(100% + 12px);
+      }
+    }
+  }
+  &__new{
+    margin-top: 20px;
+    @include respond-to-min("desktop") {
+      margin-top: 24px;
+    }
+    &-title{
+      font-family: $secondFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 27px;
+      color: #253746;
+      margin-bottom: 10px;
+      @include respond-to-min("desktop") {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 12px;
+      }
+    }
+    &-list{}
+  }
+  &__arrow{
+    margin-top: 20px;
+    width: 272px;
+    max-width: 100%;
+    @include respond-to-min("desktop") {
+      margin-top: 24px;
+      width: 330px;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  &__info{
+    margin: 10px auto 0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #253746;
+    max-width: 240px;
+    @include respond-to-min("desktop") {
+      margin: 12px auto 0;
+      font-size: 12px;
+      line-height: 14px;
+      max-width: 291px;
+    }
+  }
+}

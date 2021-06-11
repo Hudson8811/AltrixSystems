@@ -1,7 +1,7 @@
 .graf-section{
   padding: 60px 0;
   @include respond-to("tablet-middle") {
-    display: none;
+    padding: 35px 0 0;
   }
   svg{
     width: 100%;
@@ -9,8 +9,10 @@
   }
   .js-hover-svg{
     opacity: 0;
-    &.active{
-      opacity: 1;
+    @include respond-to-min("desktop") {
+      &.active{
+        opacity: 1;
+      }
     }
   }
 }
