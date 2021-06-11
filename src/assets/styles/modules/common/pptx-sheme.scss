@@ -126,26 +126,26 @@
       line-height: 14px;
       color: #253746;
       position: relative;
-      padding-left: 10px;
+      padding-left: 10px !important;
       @include respond-to-min("desktop") {
-        padding-left: 12px;
+        padding-left: 12px !important;
         font-size: 12px;
         line-height: 17px;
       }
       &::before{
         content: "";
         display: block;
-        width: 5px;
-        height: 5px;
+        width: 5px !important;
+        height: 5px !important;
         position: absolute;
         left: 0;
-        top: 4px;
+        top: 4px !important;
         border-radius: 50%;
         background: #446AB1;
         @include respond-to-min("desktop") {
-          top: 5px;
-          width: 6px;
-          height: 6px;
+          top: 5px !important;
+          width: 6px !important;
+          height: 6px !important;
         }
       }
       +li{
