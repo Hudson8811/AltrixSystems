@@ -143,13 +143,21 @@
       }
     }
     .share-block {
-      margin-left: 10px;
       position: relative;
       align-self: baseline;
+      &:not(&:first-child){
+        margin-left: 10px;
+      }
     }
   }
 
   &__breadcrumbs {
+    +.inner-page__date{
+      margin-top: 32px;
+      @include respond-to("phablet") {
+        margin-top: 16px;
+      }
+    }
   }
 
   &__main {

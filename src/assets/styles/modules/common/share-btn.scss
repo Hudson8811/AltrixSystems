@@ -60,4 +60,18 @@
     width: 160px;
     opacity: 1;
   }
+
+  &.vertical{
+    height: 0;
+    width: auto !important;
+    left: 50%;
+    top: calc(100% + 20px);
+    transform: translateX(-50%);
+    .share-tip__links{
+      flex-direction: column;
+    }
+    &.active{
+      height: 160px;
+    }
+  }
 }
