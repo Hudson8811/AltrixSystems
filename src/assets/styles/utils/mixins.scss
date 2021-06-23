@@ -38,3 +38,9 @@
     font-display: swap;
   }
 }
+
+
+
+@function sc($px) {
+  @return ($px * ( (100+($scale))/100) ) +px;
+}
