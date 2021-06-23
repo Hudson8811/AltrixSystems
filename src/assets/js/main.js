@@ -224,7 +224,30 @@ $(document).on('click','.share-btn',function (){
    $('.share-tip').toggleClass('active');
 });
 
+(function($) {
 
+    $(".file-upload__close").on('click touch',function() {
+        $(this).closest('.file-upload').find('input').val(null);
+        let value = $(this).closest('.file-upload').find('.file-upload__name').data('empty');
+        $(this).closest('.file-upload').find('.file-upload__name span').text(value);
+        $(this).closest('.file-upload').removeClass('active');
+    });
+
+    $(".file-upload__icon, .file-upload__name span").on('click touch',function() {
+        $(this).closest('.file-upload').find('input').click();
+    });
+
+    $('.file-upload input').change(function() {
+        let value = $(this).val().split('\\').pop();
+        if (value === undefined || value === null || value === ''){
+            value = $(this).closest('.file-upload').find('.file-upload__name').data('empty');
+            $(this).closest('.file-upload').removeClass('active');
+        } else {
+            $(this).closest('.file-upload').addClass('active');
+        }
+        $(this).closest('.file-upload').find('.file-upload__name span').text(value);
+    });
+})(jQuery);
 
 (function() {
     if ($('#nCanvasRender').length > 0 && $(window).width() > 1250){

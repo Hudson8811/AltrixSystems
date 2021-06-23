@@ -138,21 +138,27 @@
   }
 
   &__condition-wrapper {
-    @include respond-to("phablet") {
+    @include respond-to("tablet-middle") {
       flex-direction: column-reverse;
+      align-items: flex-start;
 
       .blue_btn {
         display: none;
+      }
+      .condition-file{
+        order: 1;
+        margin-bottom: 30px;
+        max-width: 100%;
       }
     }
   }
 
   &__condition {
+    max-width: 450px;
     @include respond-to("phablet") {
       .blue_btn {
         display: none;
       }
-
       //margin-top: 20px;
       justify-content: center;
     }

@@ -113,7 +113,7 @@
       margin-bottom: 42px;
     }
 
-    li {
+    /*li {
       position: relative;
       margin-bottom: 9px;
       padding-left: 20px;
@@ -136,7 +136,7 @@
         border-radius: 50%;
         background-color: $color-blue;
       }
-    }
+    }*/
   }
 
   &__btn {
@@ -184,9 +184,11 @@
     }
 
     #{$self}__list {
-      li {
+      color: $color-white;
+      *{
         color: $color-white;
-
+      }
+      li {
         &::before {
           background-color: $color-grey-cf;
         }

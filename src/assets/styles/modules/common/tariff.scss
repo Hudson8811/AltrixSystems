@@ -20,6 +20,7 @@
     padding: 0;
     display: flex;
     margin-left: -36px;
+    justify-content: center;
 
     @include respond-to("desktop") {
       margin-left: -24px;
