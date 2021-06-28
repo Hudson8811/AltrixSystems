@@ -1568,6 +1568,9 @@
       }
       &__address {
         font-size: sc(19);
+        &:not(&:last-child){
+          margin-bottom: sc(10);
+        }
         &-icon {
           width: sc(24);
           margin-right: sc(8);
