@@ -83,6 +83,7 @@
           </div>
         </div>
         <section class="aside-menu">
+          <button class="aside-menu__burger burger is-active" type="button" aria-label="Меню"><span></span></button>
           <div class="aside-menu__inner"><a class="aside-menu__logo logo" href="index.html"><img src="images/altrix/logo.svg" width="326" height="21" alt=""></a>
             <ul class="aside-menu__list">
               <li class="aside-menu__item">
@@ -322,49 +323,55 @@
               </div>
             </div>
             <div class="inner-page__main inner-page__main--pb">
-              <div class="container">
-                <div class="inner-page__tags inner-page__tags--refer tags"><a class="tags__item tag" href="#">здравоохранение</a><a class="tags__item tag" href="#">наука</a><a class="tags__item tag" href="#">транспорт</a><a class="tags__item tag" href="#">телекоммуникации</a><a class="tags__item tag" href="#">финансовый сектор</a><a class="tags__item tag" href="#">ТЭК</a><a class="tags__item tag" href="#">атомная энергия</a><a class="tags__item tag" href="#">Антивирус</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">АСУ</a><a class="tags__item tag" href="#">Blockchain</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">Автоматизация</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__more" href="#">Все теги</a>
-                </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/1.png" srcset="images/altrix/references/1.png 2x" width="163" height="162" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">Системный оператор единой энергетической системы</h3>
-                    <div class="text-image-block__text"><p>1.	Компания «Альтирикс системс» завершила проектирование системы безопасности значимых объектов критической информационной инфраструктуры (ЗОКИИ). Выполнены обследование инфраструктуры в масштабе 56 филиалов, разработан отчет обследовании с подробными рекомендациями, моделирование и анализ угроз по расширенной модели Kill Chain, разработка технического задания и типовых технических требований для различных категорий ЗОКИИ, технорабочее проектирование. Документы направлены на согласование во ФСТЭК и ФСБ России.</p><p>2.	Компания «Альтирикс системс» выполнила НИР на тему «Анализ угроз информационной безопасности при информационном обмене между объектами электроэнергетики и ДЦ по протоколу МЭК 60870-5-104».</p></div>
+              <div class="ref-tags">
+                <div class="container">
+                  <div class="inner-page__tags inner-page__tags--refer tags"><a class="tags__item tag" href="#">здравоохранение</a><a class="tags__item tag" href="#">наука</a><a class="tags__item tag" href="#">транспорт</a><a class="tags__item tag" href="#">телекоммуникации</a><a class="tags__item tag" href="#">финансовый сектор</a><a class="tags__item tag" href="#">ТЭК</a><a class="tags__item tag" href="#">атомная энергия</a><a class="tags__item tag" href="#">Антивирус</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">АСУ</a><a class="tags__item tag" href="#">Blockchain</a><a class="tags__item tag" href="#">Киберучения</a><a class="tags__item tag" href="#">Сетевая безопасность</a><a class="tags__item tag" href="#">Автоматизация</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__item tag" href="#">Патч-менеджмент</a><a class="tags__more" href="#">Все теги</a>
                   </div>
                 </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/2.png" srcset="images/altrix/references/2.png 2x" width="251" height="47" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">АО «Тандер»</h3>
-                    <div class="text-image-block__text">Компания «Альтирикс системс» предоставила услуги по проведению нагрузочного тестирования (имитации DDoS-атак) на исчерпание ширины канала связи и на исчерпание ресурсов сетевого оборудования различными методами: UDP-flood, TCP-flood, SYN/ACK/PUSH ACK-flood, ACK/PUSH ACK-flood fragmentation, Multiple ACK Fake Session Attack, Fake Session Attack, Multiple TCP-flood, Session Attack, HTTP/HTTPS-flood, сформирован перечень рекомендаций по повышению устойчивости функционирования информационной инфраструктуры  от атак типа DDoS. </div>
+              </div>
+              <div class="ref-content">
+                <div class="container">
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/1.png" srcset="images/altrix/references/1.png 2x" width="163" height="162" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">Системный оператор единой энергетической системы</h3>
+                      <div class="text-image-block__text"><p>1.	Компания «Альтирикс системс» завершила проектирование системы безопасности значимых объектов критической информационной инфраструктуры (ЗОКИИ). Выполнены обследование инфраструктуры в масштабе 56 филиалов, разработан отчет обследовании с подробными рекомендациями, моделирование и анализ угроз по расширенной модели Kill Chain, разработка технического задания и типовых технических требований для различных категорий ЗОКИИ, технорабочее проектирование. Документы направлены на согласование во ФСТЭК и ФСБ России.</p><p>2.	Компания «Альтирикс системс» выполнила НИР на тему «Анализ угроз информационной безопасности при информационном обмене между объектами электроэнергетики и ДЦ по протоколу МЭК 60870-5-104».</p></div>
+                    </div>
                   </div>
-                </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/3.png" srcset="images/altrix/references/3.png 2x" width="205" height="82" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">ПАО «Банк Санкт-Петербург»</h3>
-                    <div class="text-image-block__text">Компания «Альтирикс системс» провела штабные киберучения. В ходе проекта был разработан сценарий компьютерной атаки, адаптированный под инфраструктуру Заказчика, проведены киберучения в формате конференции и подготовлен подробный отчет с практическими рекомендациями по улучшению организационных и технических мер защиты. Проведение киберучений позволило повысить эффективность взаимодействия структурных подразделений банка.</div>
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/2.png" srcset="images/altrix/references/2.png 2x" width="251" height="47" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">АО «Тандер»</h3>
+                      <div class="text-image-block__text">Компания «Альтирикс системс» предоставила услуги по проведению нагрузочного тестирования (имитации DDoS-атак) на исчерпание ширины канала связи и на исчерпание ресурсов сетевого оборудования различными методами: UDP-flood, TCP-flood, SYN/ACK/PUSH ACK-flood, ACK/PUSH ACK-flood fragmentation, Multiple ACK Fake Session Attack, Fake Session Attack, Multiple TCP-flood, Session Attack, HTTP/HTTPS-flood, сформирован перечень рекомендаций по повышению устойчивости функционирования информационной инфраструктуры  от атак типа DDoS. </div>
+                    </div>
                   </div>
-                </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/4.png" srcset="images/altrix/references/4.png 2x" width="121" height="135" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">Конституционный суд Российской Федерации</h3>
-                    <div class="text-image-block__text">Компания «Альтирикс системс» выполнила аттестацию автоматизированной системы в защищенном исполнении, включая поставку и пусконаладку средств защиты информации.</div>
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/3.png" srcset="images/altrix/references/3.png 2x" width="205" height="82" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">ПАО «Банк Санкт-Петербург»</h3>
+                      <div class="text-image-block__text">Компания «Альтирикс системс» провела штабные киберучения. В ходе проекта был разработан сценарий компьютерной атаки, адаптированный под инфраструктуру Заказчика, проведены киберучения в формате конференции и подготовлен подробный отчет с практическими рекомендациями по улучшению организационных и технических мер защиты. Проведение киберучений позволило повысить эффективность взаимодействия структурных подразделений банка.</div>
+                    </div>
                   </div>
-                </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/5.png" srcset="images/altrix/references/5.png 2x" width="181" height="56" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">ПАО «Северсталь»</h3>
-                    <div class="text-image-block__text">Компания «Альтирикс системс»  разработала систему анализа больших данных (лог-файлы систем информационной безопасности) с применением моделей машинного обучения для выявления сетевых аномалий для нужд ПАО «Северсталь» с применением Elastic Stack, Hadoop, Python.</div>
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/4.png" srcset="images/altrix/references/4.png 2x" width="121" height="135" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">Конституционный суд Российской Федерации</h3>
+                      <div class="text-image-block__text">Компания «Альтирикс системс» выполнила аттестацию автоматизированной системы в защищенном исполнении, включая поставку и пусконаладку средств защиты информации.</div>
+                    </div>
                   </div>
-                </div>
-                <div class="inner-page__reference text-image-block">
-                  <div class="text-image-block__image"><img src="images/altrix/references/6.png" srcset="images/altrix/references/6.png 2x" width="239" height="52" alt=""/></div>
-                  <div class="text-image-block__main">
-                    <h3 class="text-image-block__title">АО «Севергрупп»</h3>
-                    <div class="text-image-block__text"><p>Компания «Альтирикс системс» разработала интегральную систему лояльности на базе технологии распределенного реестра Hyperledger Fabric, с использованием Node.JS, MongoDB, React, Nginx, RESTAPI, K8s, Docker, Rancher для бизнесов АО «Севергрупп» и их партнеров:</p> <ul><li><a href="https://lenta.com" target="_blank">https://lenta.com/promokodi/</a></li> <li><a href="https://www.tui.ru/" target="_blank">https://www.tui.ru/partner-offers/</a></li> <li><a href="https://www.avaclinic.ru/promokodi/" target="_blank">https://www.avaclinic.ru/promokodi/</a></li> <li><a href="https://foxford.ru/promos" target="_blank">https://foxford.ru/promos</a></li><li><a href="https://netology.ru/partners-gifts" target="_blank">https://netology.ru/partners-gifts</a></li></ul><p>В настоящий момент продолжаются работы по развитию данной системы, трансформации ее в маркетплейс продуктовых предложений с учетом поведенческих паттернов и предпочтений клиентов.</p></div>
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/5.png" srcset="images/altrix/references/5.png 2x" width="181" height="56" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">ПАО «Северсталь»</h3>
+                      <div class="text-image-block__text">Компания «Альтирикс системс»  разработала систему анализа больших данных (лог-файлы систем информационной безопасности) с применением моделей машинного обучения для выявления сетевых аномалий для нужд ПАО «Северсталь» с применением Elastic Stack, Hadoop, Python.</div>
+                    </div>
+                  </div>
+                  <div class="inner-page__reference text-image-block">
+                    <div class="text-image-block__image"><img src="images/altrix/references/6.png" srcset="images/altrix/references/6.png 2x" width="239" height="52" alt=""/></div>
+                    <div class="text-image-block__main">
+                      <h3 class="text-image-block__title">АО «Севергрупп»</h3>
+                      <div class="text-image-block__text"><p>Компания «Альтирикс системс» разработала интегральную систему лояльности на базе технологии распределенного реестра Hyperledger Fabric, с использованием Node.JS, MongoDB, React, Nginx, RESTAPI, K8s, Docker, Rancher для бизнесов АО «Севергрупп» и их партнеров:</p> <ul><li><a href="https://lenta.com" target="_blank">https://lenta.com/promokodi/</a></li> <li><a href="https://www.tui.ru/" target="_blank">https://www.tui.ru/partner-offers/</a></li> <li><a href="https://www.avaclinic.ru/promokodi/" target="_blank">https://www.avaclinic.ru/promokodi/</a></li> <li><a href="https://foxford.ru/promos" target="_blank">https://foxford.ru/promos</a></li><li><a href="https://netology.ru/partners-gifts" target="_blank">https://netology.ru/partners-gifts</a></li></ul><p>В настоящий момент продолжаются работы по развитию данной системы, трансформации ее в маркетплейс продуктовых предложений с учетом поведенческих паттернов и предпочтений клиентов.</p></div>
+                    </div>
                   </div>
                 </div>
               </div>

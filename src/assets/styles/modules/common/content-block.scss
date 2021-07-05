@@ -13,15 +13,19 @@
     }
   }
 
+
   &__main {
     padding-right: 36px;
     font-family: $secondFont;
     font-size: 15px;
     line-height: calc(26 / 15);
     color: $color-dark-5a;
+    width: 50%;
 
     @include respond-to("tablet-middle") {
       padding-right: 0;
+      padding-left: 0;
+      width: 100%;
     }
 
     p {
@@ -65,6 +69,27 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+
+
+
+  &--reverse{
+    .content-block{
+      &__container{
+        flex-direction: row-reverse;
+        @include respond-to("tablet-middle") {
+          flex-direction: column;
+        }
+      }
+      &__main {
+        padding-left: 36px;
+        padding-right: 0;
+        @include respond-to("tablet-middle") {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
     }
   }
 }

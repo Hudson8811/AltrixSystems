@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 1000;
   width: 100%;
   max-width: 392px;
   padding: 0 38px 29px 22px;
@@ -19,6 +19,16 @@
 
   @include respond-to("desktop") {
     padding-left: 15px;
+    z-index: 999;
+  }
+  &__burger{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 9999;
+    @include respond-to("desktop") {
+      display: none;
+    }
   }
 
   &__inner {

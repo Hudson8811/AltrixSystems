@@ -72,13 +72,13 @@ $(window).on('load', function() {
   const asideMenu = $('.aside-menu');
 
   burger.on('click', function() {
-    $(this).toggleClass('is-active');
+    $('.header__burger').toggleClass('is-active');
     asideMenu.toggleClass('aside-menu--open');
   });
 
   $(document).click( function(e){
     if ( !($(e.target).closest('.aside-menu').length || ($(e.target).hasClass('burger') || $(e.target).closest('.burger').length)) ) {
-      burger.removeClass('is-active');
+      $('.header__burger').removeClass('is-active');
       asideMenu.removeClass('aside-menu--open');
     }
   });

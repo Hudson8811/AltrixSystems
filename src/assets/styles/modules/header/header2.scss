@@ -25,6 +25,7 @@
   &__left,
   &__right {
     display: flex;
+    min-height: 19px;
 
     & > * {
       align-self: center;
@@ -92,10 +93,11 @@
     margin-right: 24px;
 
     &.is-active {
-      position: fixed;
-
-      & + .header__lang {
-        margin-left: 45px;
+      @include respond-to("desktop") {
+        position: fixed;
+        & + .header__lang {
+          margin-left: 45px;
+        }
       }
     }
   }

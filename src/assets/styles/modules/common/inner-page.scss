@@ -165,9 +165,9 @@
   &__main {
     position: relative;
 
-    > section:first-child{
+    /*> section:first-child{
       padding-top: 0 !important;
-    }
+    }*/
 
     &--pb {
       padding-bottom: 93px;
@@ -209,7 +209,8 @@
   }
 
   &__reset{
-    margin-bottom: 58px;
+    margin-bottom: 29px;
+    padding-bottom: 29px;
     &-btn{
       font-size: 13px;
       line-height: 16px;
