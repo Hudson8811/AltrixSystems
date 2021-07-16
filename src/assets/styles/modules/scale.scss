@@ -2094,13 +2094,24 @@
   .title-style{
     //margin-bottom: sc(32);
     &--big{
-      font-size: sc(39);
+      font-size: sc(39) !important;
     }
     &--medium{
-      font-size: sc(24);
+      font-size: sc(24) !important;
     }
     &--small{
-      font-size: sc(19);
+      font-size: sc(19) !important;
     }
   }
 }
+
+.file-upload-types{
+  margin-top: 3px;
+  font-size: 10px;
+  line-height: 1;
+  color: #bebfcf;
+  max-width: 100%;
+  white-space: normal;
+}
+
+

@@ -36,6 +36,10 @@
   overflow: hidden;
   transition: 0.2s linear;
   opacity: 0;
+  z-index: 999;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #4365afab;
   &__links{
     display: flex;
     align-items: center;
