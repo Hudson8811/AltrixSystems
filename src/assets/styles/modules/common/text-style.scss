@@ -136,6 +136,15 @@
     }
   }
 
+  table{
+    &.aligncenter{
+      display: table;
+    }
+    &.alignnone{
+      display: table;
+    }
+  }
+
   &::after{
     content: "";
     display: block;
@@ -146,7 +155,6 @@
   table{
     max-width: 100%;
     td{
-      border: 1px solid #323238;
       padding: 5px;
     }
   }
@@ -168,5 +176,14 @@
   }
   &.alignnone{
     display: block;
+  }
+}
+
+table{
+  &.aligncenter{
+    display: table;
+  }
+  &.alignnone{
+    display: table;
   }
 }

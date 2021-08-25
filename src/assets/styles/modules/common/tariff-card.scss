@@ -137,6 +137,14 @@
         background-color: $color-blue;
       }
     }*/
+
+    &--white-li{
+      li {
+        &::before {
+          background-color: $color-grey-cf !important;
+        }
+      }
+    }
   }
 
   &__btn {
@@ -144,6 +152,18 @@
     padding-left: 40px;
     padding-right: 40px;
     align-self: center;
+
+    &--white{
+      color: $color-blue;
+      background-color: $color-white;
+
+      svg {
+        fill: $color-blue;
+      }
+      &::before {
+        display: none;
+      }
+    }
 
     @include respond-to("tablet-middle") {
       /*margin-left: 24px;

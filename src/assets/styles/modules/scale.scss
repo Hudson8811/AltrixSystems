@@ -1521,11 +1521,13 @@
     }
     &__list {
       margin: sc(58) 0;
-      margin-left: sc(-36);
+      margin-left: sc(-18);
+      margin-right: sc(-18);
+      width: calc(100% + #{sc(36)});
     }
     &__item {
       width: calc(33.33% - #{sc(36)});
-      margin-left: sc(36);
+      margin: 0 sc(18);
     }
     &__text {
       font-size: sc(15);
