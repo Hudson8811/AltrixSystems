@@ -31,7 +31,7 @@ mixin m_btn
 
 mixin s_title(black, blue)
     .section_title
-        span=black 
+        span=black
             span=blue
 
 mixin stages-item(title, desc, svg)
@@ -68,7 +68,7 @@ mixin arrow_btn(title)
         svg
             use(xlink:href='images/svg/symbol/sprite.svg#more_btn')
 
-mixin form_btn(text, mod) 
+mixin form_btn(text, mod)
     button.button(type="submit" class=`${mod}__button`)= text
         .button__icon
             svg.button__arrow()
@@ -120,7 +120,7 @@ mixin breadcrumbs2(arr, cl)
     li
       a(href="index.html") Главная
         +svg('#altrix_separator')(width="8", height="14")
-    each item, index in arr 
+    each item, index in arr
       if index === arr.length - 1
         li
           a= item
@@ -213,7 +213,7 @@ mixin social(arr, className)
 
 mixin date(date, cl)
     div(class= cl ? cl + ' date' : 'date')
-        span.date__icon 
+        span.date__icon
             +svg('#altrix_clock')(width="20", height="20")
         time.date__text(datetime= date.attr)= date.text
 
@@ -223,10 +223,10 @@ mixin news-card(className, img, title, text, date, tag)
         .news-card__image
             .news-card__image-inner
                 img(src="images/altrix/" + img + ".jpg", srcset="images/altrix/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
-        .news-card__main 
+        .news-card__main
             .news-card__title!= title
             .news-card__text= text
-            .news-card__bottom 
+            .news-card__bottom
                 if date
                     +date(date, 'news-card__date')
                 a.news-card__readmore.arrow-link(href="#") Подробнее
@@ -244,17 +244,17 @@ mixin download-link(icon, text, href, cl)
         span= text
 
 mixin tag(target, text, isButton, cl)
-    if isButton 
+    if isButton
         button(class= cl ? cl + ' tag' : 'tag', data-target= target ? target : '#', type="button")= text
     else
         a(class= cl ? cl + ' tag' : 'tag', href= target ? target : '#')= text
 
 mixin method(image, title)
     .method
-        .method__image 
+        .method__image
             img(src="images/altrix/" + image + ".jpg", srcset="images/altrix/" + image + "@2x.jpg 2x", width="298", height="305", alt="")
         .method__main
-            .method__title= title 
+            .method__title= title
             .method__text Не следует, однако забывать, что укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Задача организации, в особенности же консультация с широким активом требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации позволяет выполнять важные задания по разработке соответствующий условий активизации. Равным образом рамки и место обучения кадров требуют от нас анализа новых предложений.
             .method__bottom
                 +download-link('altrix_file-pdf', 'Брошюра', null, 'method__link')
@@ -274,11 +274,11 @@ mixin pagination(cl, num)
                 - let i = 1;
                 while i <= count
                     if i === 1
-                        li.pagination__item.pagination__item--current 
-                            a.pagination__link= i 
-                    else 
-                        li.pagination__item 
-                            a.pagination__link(href="#")= i 
+                        li.pagination__item.pagination__item--current
+                            a.pagination__link= i
+                    else
+                        li.pagination__item
+                            a.pagination__link(href="#")= i
                     - i++;
 
 mixin reference-block(item, cl)
@@ -300,3 +300,26 @@ mixin dir-card2(item, tg, cl)
             .dir-card__text= item.text
             a.dir-card__readmore.arrow-link(href="#") Подробнее
                 +svg('#altrix_triangle-right')(width="7", height="10")
+
+
+mixin blog-card(className, img, title, text, views)
+    .blog-card(class=className)
+        .blog-card__image
+            img(src="images/altrix/" + img + ".jpg", srcset="images/altrix/" + img + "@2x.jpg 2x", width="250", height="250", alt="")
+        .blog-card__main
+            .card-tags
+                a.card-tags__item(href="") Наука
+                a.card-tags__item(href="") Техника
+                a.card-tags__item(href="") Программное обеспечение
+            .blog-card__title= title
+            .blog-card__text= text
+            .blog-card__bottom
+                if views
+                    .blog-card__views
+                        +svg('#altrix_page-views')(width="7", height="10")
+                        span=views
+                    a.blog-card__readmore.arrow-link(href="#") Подробнее
+                            +svg('#altrix_triangle-right')(width="7", height="10")
+
+
+

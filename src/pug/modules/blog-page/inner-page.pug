@@ -1,0 +1,45 @@
+article.inner-page.inner-page--pb.inner-page--pb-blog
+  .inner-page__header
+    .container
+      +breadcrumbs2(['Блог'], 'inner-page__breadcrumbs')
+      h1.inner-page__title
+        span Блог
+
+  .ref-tags
+    .container
+      .inner-page__tags.inner-page__tags--refer.tags
+        a.tags__item.tag(href='#') здравоохранение
+        a.tags__item.tag(href='#') наука
+        a.tags__item.tag(href='#') транспорт
+        a.tags__item.tag(href='#') телекоммуникации
+        a.tags__item.tag(href='#') финансовый сектор
+        a.tags__item.tag(href='#') ТЭК
+        a.tags__item.tag(href='#') атомная энергия
+        a.tags__item.tag(href='#') Антивирус
+        a.tags__item.tag(href='#') Сетевая безопасность
+        a.tags__item.tag(href='#') АСУ
+        a.tags__item.tag(href='#') Blockchain
+        a.tags__item.tag(href='#') Киберучения
+        a.tags__item.tag(href='#') Сетевая безопасность
+        a.tags__item.tag(href='#') Автоматизация
+        a.tags__item.tag(href='#') Патч-менеджмент
+        a.tags__item.tag(href='#') Патч-менеджмент
+      //a.tags__more.tags__more--transparent(href='#') Все теги
+        .tags__brake-row
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+        a.tags__item.tag(href='#') н
+
+
+      .inner-page__reset
+        a.inner-page__reset-btn.js-reset-filter(href="javascript:;") Сбросить
+
+  .inner-page__main
+    include blog-list
+
+    +pagination('inner-page__pagination', 7)
