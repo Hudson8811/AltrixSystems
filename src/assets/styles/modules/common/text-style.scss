@@ -187,3 +187,172 @@ table{
     display: table;
   }
 }
+
+
+
+
+
+.text-style-mini{
+  position: relative;
+
+  i, em{
+    font-style: italic;
+  }
+  strong, b{
+    font-weight: 700;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    line-height: 1.333;
+    margin: 0 0 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+
+  h1{
+    font-size: 34px;
+    @include respond-to("phablet") {
+      font-size: 34px;
+    }
+  }
+  h2{
+    font-size: 30px;
+    @include respond-to("phablet") {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-size: 25px;
+    @include respond-to("phablet") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    @include respond-to("phablet") {
+      font-size: 20px;
+    }
+  }
+  h5 {
+    font-size: 18px;
+    @include respond-to("phablet") {
+      font-size: 18px;
+    }
+  }
+  h6 {
+    font-size: 16px;
+    @include respond-to("phablet") {
+      font-size: 16px;
+    }
+  }
+
+  * + p {
+    margin-top: 10px;
+  }
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h6,
+  * + h5, {
+    margin-top: 15px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 10px;
+      overflow: hidden;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  ol{
+    list-style: auto;
+    margin: 0;
+    padding: 0;
+    padding-left: 14px;
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      overflow: hidden;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+  }
+  * {
+    &.alignleft{
+      float: left;
+      margin-right: 10px;
+    }
+    &.alignright{
+      float: right;
+      margin-left: 10px;
+    }
+    &.aligncenter{
+      float: none;
+      margin: 0 auto;
+      display: block;
+    }
+    &.alignnone{
+      display: block;
+    }
+  }
+
+  table{
+    &.aligncenter{
+      display: table;
+    }
+    &.alignnone{
+      display: table;
+    }
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+
+  table{
+    max-width: 100%;
+    td{
+      padding: 3px;
+    }
+  }
+}

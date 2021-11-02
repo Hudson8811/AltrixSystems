@@ -167,7 +167,7 @@
         font-size: sc(19);
         line-height: sc(32);
         color: #446CB2;
-        margin-top: sc(20);
+        margin-top: sc(10);
 
         @media screen and (max-width: 720px) {
             font-size: 15px;
@@ -175,8 +175,10 @@
         }
     }
 
+
+
     &__text {
-        margin-top: sc(28);
+        margin-top: sc(14);
         font-style: normal;
         font-weight: normal;
         font-size: sc(14.4);
@@ -199,6 +201,9 @@
 
 
 
+    }
+    &__date{
+        margin-top: sc(14);
     }
 
     &__views {
