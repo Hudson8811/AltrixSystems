@@ -1,5 +1,5 @@
 let plumber = require('gulp-plumber'),
-    scss = require('gulp-sass'),
+    scss = require('gulp-sass')(require('sass')),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
     csscomb = require('gulp-csscomb'),
